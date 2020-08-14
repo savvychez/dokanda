@@ -14,7 +14,6 @@ const Choice = props => {
     e.preventDefault();
 
     setProf(selection)
-    console.log(getProf())
     props.history.push(`${selection}/chat`)
   }
 

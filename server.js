@@ -1,24 +1,31 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const server = require('http').Server(app)
-const io = require('socket.io')(server)
+const http = require('http')
+const server = http.createServer(app)
+const socketio = require('socket.io')
 const { v4: uuidV4 } = require('uuid')
 const request = require('request');
 const axios = require('axios')
+const { PeerServer } = require('peer');
 var queue = [];
+PeerServer({port: 3001, path: '/' });
 
+const io = socketio(server)
 io.on('connection', socket => {
 
   socket.on('join-room', (roomId, userId) => {
-    //joins room
+    //joins room 
+    console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
     socket.join(roomId)
-
+   
+    console.log(userId)
+    console.log(roomId)
     //broadcasts connection to other users
-    socket.to(roomId).broadcast.emit('user-connected', userId)
+    io.to(roomId).emit('user-connected', userId)
     //disconnects user from room
     socket.on('disconnect', () => {
-      socket.to(roomId).broadcast.emit('user-disconnected', userId)
+      io.to(roomId).emit('user-disconnected', userId)
     })
 
   })

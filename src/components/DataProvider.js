@@ -20,12 +20,13 @@ export const DataProvider = props => {
 
     //Write functions that call api here
 
-    //WEBRTC/LIVE CHAT
-    const getRoomId = (callback, getProf) => {
-        if (getProf === "patient")
-            axios.get("/patient/chat").then(id => { callback(id) })
-        else {
-            axios.get("/doctor/chat").then(id => { callback(id) })
+    const getRoomId = (callback) => {
+        console.log(data.prof);
+        if(data.prof==="patient")
+            axios.get("/patient/chat").then(id => {callback(id)})
+        else
+        {
+            axios.get("/doctor/chat").then(id => {callback(id)})
         }
     }
 
