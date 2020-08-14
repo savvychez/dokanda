@@ -3,11 +3,19 @@ const router = express.Router();
 const pg = require('pg');
 var client = null
 var diseases = []
+var queue = [];
 
 router.get('/articles', (req, res, next) => {
     res.json({
         "hello": true,
     })
+})
+
+router.post('/dequeue', (req, res, next) => {
+    res.json({"roomCode":queue.pop(0)});
+})
+router.get('/enqueue', (req, res, next) => {
+    queue.push(req.body.roomCode);
 })
 
 router.post('/matching', (req, res, next) => 
@@ -45,7 +53,7 @@ router.post('/matching', (req, res, next) =>
         }
     }
     console.log(matchingDiseases)
-    res.json(matchingDiseases)
+    res.json({"matchingDiseases":matchingDiseases})
 })
 
 const init = ()=>
