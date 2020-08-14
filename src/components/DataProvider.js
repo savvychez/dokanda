@@ -8,7 +8,12 @@ export const useData = () => {
 }
 
 export const DataProvider = props => {
-    const [data, setData] = useState(null)
+    const user = {
+        "id": "4",
+        "prof": "g"
+    }
+
+    const [data, setData] = useState(user)
 
     useEffect(() => {
         //Runs on page load
@@ -19,9 +24,18 @@ export const DataProvider = props => {
         return "example"
     }
 
+    const getProf = () => {
+        return data.prof;
+    }
     
+    const setProf = (prof) => {
+        setData({
+            ...data,
+            "prof": prof
+        })
+    }
 
-    const functions = {...data, test/* Add every function you wrote above here */}
+    const functions = {...data, setData, test, getProf, setProf /* Add every function you wrote above here */}
 	return <DataContext.Provider value={functions} {...props} />
 }
 

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../styles/BigButton.css'
 
 const BigButton = props => {
-  const icon = <>props.children</>
-
   return (
-    <div className="bigButton">
+    <div className={`bigButton ${props.className}`} onClick={props.onClick}>
       <h1>{props.text}</h1>
       <div className="icon">
         {props.icon}
