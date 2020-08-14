@@ -80,7 +80,7 @@ const Chat = () => {
 
                     peers[userId] = call
                 })
-            })
+            }).catch(error => console.log(error));
         }
         getRoomId(roomIdCallback)
     }, []);
