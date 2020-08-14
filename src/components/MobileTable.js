@@ -1,23 +1,26 @@
 import React from 'react';
 import '../styles/MobileTable.css'
 import TableRow from './TableRow';
+import Scrollbars from 'react-custom-scrollbars';
 
-const MobileTable = ({ contents }) => {
-  contents = [
-    {
-      "disease": "Corona",
-      "symptoms": "Death, dying, pain"
-    },
-    {
-      "disease": "Swine Flu",
-      "symptoms": "Cheese, ball, explosion"
-    }
-  ]
+const MobileTable = ({ results }) => {
+  // results = [
+  //   {
+  //     "name": "Corona",
+  //     "symptoms": "Death, dying, pain"
+  //   },
+  //   {
+  //     "name": "Swine Flu",
+  //     "symptoms": "Cheese, ball, explosion"
+  //   }
+  // ]
   return (
     <div className="table">
-      {contents.map((entry, i) => (
-        <TableRow className={i != contents.length-1 ? "leading" : ""} header={entry.disease} content={entry.symptoms}/>
-      ))}
+      <Scrollbars>
+        {results.map((entry, i) => (
+          <TableRow className={i != results.length - 1 ? "leading" : ""} header={entry.name} content={entry.symptoms} />
+        ))}
+      </Scrollbars>
     </div>
   )
 }

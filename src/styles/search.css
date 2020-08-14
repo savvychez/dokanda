@@ -3,6 +3,7 @@ input {
     margin: 20px auto;
     font-family: 'metropolisregular';
     font-size: 1.4em;
+    width: 100%;
     padding: 10px 00px 10px 40px ;
     background: rgba(252, 252, 252, 1)  url(../assets/search.svg);
     background-color: white;

@@ -1,13 +1,24 @@
-.table {
+.table  {
     border: 1.2px solid #999999;
     border-radius: 5px;
+    height: 80vh;
+    /* overflow-y: scroll; */
 }
 
-.tablerow {
-    padding: 5%;
+
+.tablerow > h1 {
+    font-family: 'metropolisbold';
+    font-size: 1.4em;
+    padding: 4% 5% 2.5% 5%;
+
 }
 
-.tablerow > h
+.tablerow > h2 {
+    font-family: 'metropolislight';
+    font-size: 1em;
+    padding: 1% 5% 5% 5%;
+
+}
 
 .leading {
     border-bottom: 1.2px solid #999999;
