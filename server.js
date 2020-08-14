@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+const { v4: uuidV4 } = require('uuid')
 
 io.on('connection', socket => {
 
@@ -37,6 +38,58 @@ app.use(bodyParser.json())
 const apiRoute = require('./routes/api');
 app.use('/api', apiRoute)
 
+
+
 server.listen(port, () => {
   console.log(`Server running on port ${port}`)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Room ID redirect
+app.get('/doctor/chat', (req, res) => {
+  res.send(`/${uuidV4()}`)
+})
+
+app.get('/patient/chat', (req, res) => {
+  res.send(`/${uuidV4()}`)
+})
+
+app.get('/doctor/chat:room', (req, res) => {
+  res.render('room', {
+      roomId: req.params.room
+  })
+})
+
+app.get('/patient/chat:room', (req, res) => {
+  res.render('room', {
+      roomId: req.params.room
+  })
+})
