@@ -1,0 +1,26 @@
+.switchButton {
+  bottom: 6%;
+  right: 6%;
+  margin: 0 0;
+  position: fixed;
+  color: #fff !important;
+  text-transform: none;
+  text-decoration: none;
+  background: #2979FF;
+  border: 2px solid #619bff;
+  border-radius: 20em;
+  padding: 5px 20px;
+  display: flex;
+  width: min-content;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.switchButton:active {
+  background: #005eff;
+}
+
+.switchButton>* {
+  float: right;
+  padding-left: 20px;
+}

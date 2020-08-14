@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import './Join.css';
+// import './Join.css';
 
 const Join = () => {
     const [name, setName] = useState('');

@@ -1,6 +1,6 @@
-input {
+.search-input {
     display: block;
-    margin: 20px auto;
+    margin: 10px auto 20px auto;
     font-family: 'metropolisregular';
     font-size: 1.4em;
     width: 100%;
@@ -16,7 +16,14 @@ input {
     transition: 0.25s;
 }
 
-input:active, input:focus{
+.search-input:active, .search-input:focus{
     border: 1.2px solid #0045a0;
     color: #001e44;
+}
+
+h2.empty {
+    font-family: "metropolisregular";
+    text-align: center;
+    margin: 20px;
+    color: #7c7c7c;
 }

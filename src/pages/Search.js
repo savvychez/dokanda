@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { FaSearch } from "react-icons/fa"
 import { useData } from '../components/DataProvider';
 import '../styles/search.css'
 import MobileTable from '../components/MobileTable';
 import { DebounceInput } from 'react-debounce-input';
+import SwitchModeButton from '../components/SwitchModeButton';
 
 
 const Search = props => {
@@ -24,10 +24,15 @@ const Search = props => {
     setInput(e.target.value)
   }
 
+  const goToDoctor = (e) => {
+    props.history.push("/patient/chat")
+  }
+
   return (
     <div className="search">
-      <DebounceInput className="input-field" type="text" placeholder="Enter Symptoms..." value={input} debounceTimeout={300} onChange={handleInput} />
+      <DebounceInput className="input-field search-input" type="text" placeholder="Enter Symptoms..." value={input} debounceTimeout={300} onChange={handleInput} />
       <MobileTable results={res} />
+      <SwitchModeButton onClick={goToDoctor}/>
     </div>
   )
 }
