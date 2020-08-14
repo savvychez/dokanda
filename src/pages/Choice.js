@@ -15,7 +15,7 @@ const Choice = props => {
 
     setProf(selection)
     console.log(getProf())
-    props.history.push("patient/chat")
+    props.history.push(`${selection}/chat`)
   }
 
   const clickDoctor = () => {

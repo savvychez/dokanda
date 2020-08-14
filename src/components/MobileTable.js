@@ -16,7 +16,7 @@ const MobileTable = ({ contents }) => {
   return (
     <div className="table">
       {contents.map((entry, i) => (
-        <TableRow className={i != contents.length-1 && "leading"} header={entry.disease} content={entry.symptoms}/>
+        <TableRow className={i != contents.length-1 ? "leading" : ""} header={entry.disease} content={entry.symptoms}/>
       ))}
     </div>
   )

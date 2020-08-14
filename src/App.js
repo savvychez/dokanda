@@ -16,6 +16,7 @@ const App = () => {
           <Route path="/choice" component={Choice} />
           <Route path="/search" component={Search} />
           <Route path="/patient/chat" component={Chat} />
+          <Route path="/doctor/chat" component={Chat} />
           <Redirect to="/choice" />
         </Switch>
       </Router>
