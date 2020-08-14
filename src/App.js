@@ -4,14 +4,18 @@ import DataProvider from './components/DataProvider';
 import Choice from './pages/Choice';
 import './assets/metropolis/metropolis.css'
 import './styles/styles.css'
+import Search from './pages/Search';
 
 
 const App = () => {
   return (
     <DataProvider>
       <Router>
-        <Route path="/choice" component={Choice} />
-        <Redirect to="/choice"/>
+        <Switch>
+          <Route path="/choice" component={Choice} />
+          <Route path="/search" component={Search} />
+          <Redirect to="/choice" />
+        </Switch>
       </Router>
     </DataProvider>
   );
