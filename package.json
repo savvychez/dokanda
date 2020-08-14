@@ -18,13 +18,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "socket.io": "^2.3.0",
-<<<<<<< HEAD
     "styled-components": "^5.1.1",
     "uuid": "^8.3.0"
-=======
-    "uuid": "^8.3.0",
-    "styled-components": "^5.1.1"
->>>>>>> b26eb33d15790807f135d0a023603bbaba73ff39
   },
   "scripts": {
     "express-start": "node server.js",

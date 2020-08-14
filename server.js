@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const app = express();
 const server = require('http').Server(app)
 const io = require('socket.io')(server)
+const request = require('request');
+const axios = require('axios')
 
 io.on('connection', socket => {
 
@@ -35,8 +37,9 @@ app.use((req, res, next) => {
 app.use(bodyParser.json())
 
 const apiRoute = require('./routes/api');
-app.use('/api', apiRoute)
+app.use('/api', apiRoute.router)
 
 server.listen(port, () => {
   console.log(`Server running on port ${port}`)
+  apiRoute.init()
 });
