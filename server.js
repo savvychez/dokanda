@@ -6,6 +6,7 @@ const io = require('socket.io')(server)
 const { v4: uuidV4 } = require('uuid')
 const request = require('request');
 const axios = require('axios')
+var queue = [];
 
 io.on('connection', socket => {
 
@@ -15,7 +16,6 @@ io.on('connection', socket => {
 
     //broadcasts connection to other users
     socket.to(roomId).broadcast.emit('user-connected', userId)
-
     //disconnects user from room
     socket.on('disconnect', () => {
       socket.to(roomId).broadcast.emit('user-disconnected', userId)
@@ -23,6 +23,15 @@ io.on('connection', socket => {
 
   })
 })
+
+const enqueue = (roomId)=>
+{
+    queue.push(roomId);
+}
+const dequeue = ()=>
+{
+  return queue.pop(0);
+}
 
 require('dotenv').config();
 
@@ -78,11 +87,13 @@ server.listen(port, () => {
 
 // Room ID redirect
 app.get('/doctor/chat', (req, res) => {
-  res.send(`${uuidV4()}`)
+  res.send(dequeue())
 })
 
 app.get('/patient/chat', (req, res) => {
-  res.send(`${uuidV4()}`)
+  id = uuidV4()
+  enqueue(id);
+  res.send(`${id}`)
 })
 
 app.get('/doctor/chat:room', (req, res) => {

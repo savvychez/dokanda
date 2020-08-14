@@ -12,7 +12,8 @@ import socketIOClient from "socket.io-client";
 const Chat = () => {
     const [stream, setStream] = useState();
     const [callAccepted, setCallAccepted] = useState(false);
-    const {getRoomId} = useData();
+    const {getRoomId, getProf} = useData();
+    
     const userVideo = useRef();
     const partnerVideo = useRef();
     // const socket = useRef();
@@ -24,10 +25,11 @@ const Chat = () => {
     `;
 
     useEffect( () => {
-        function roomIdCallback(result){
+        function roomIdCallback(result)
+        {
             const ROOM_ID = result.data;
             const peers = {}
-            console.log(ROOM_ID);
+            console.log(ROOM_ID+"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
             // var ROOM_ID = await getRoomId();
             // console.log(ROOM_ID);
 
@@ -42,7 +44,8 @@ const Chat = () => {
             })
 
             socket.on('user-disconnected', userId => {
-                if (peers[userId]) peers[userId].close()
+                if (peers[userId]) 
+                    peers[userId].close()
                 setCallAccepted(false)
             })
 
@@ -82,7 +85,7 @@ const Chat = () => {
                 })
             }).catch(error => console.log(error));
         }
-        getRoomId(roomIdCallback)
+        getRoomId(roomIdCallback, getProf)
     }, []);
 
     let UserVideo;
