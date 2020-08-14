@@ -15,10 +15,13 @@
     "socket.io": "^2.3.0"
   },
   "scripts": {
+    "express-start": "node server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start-watch": "nodemon server.js",
+    "dev": "concurrently \"npm run start-watch\" \"npm start\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -37,6 +40,7 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.4"
   }
 }
