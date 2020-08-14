@@ -12,23 +12,23 @@ var queue = [];
 PeerServer({port: 3001, path: '/' });
 
 const io = socketio(server)
-io.on('connection', socket => {
-  // console.log("A");
-  socket.on('join-room', (roomId, userId) => {
-    //joins room 
-    // console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
-    socket.join(roomId)
-   
-    // console.log(userId)
-    // console.log(roomId)
-    //broadcasts connection to other users
-    // io.to(roomId).emit('user-connected', userId)
-    socket.broadcast.to(roomId).emit('user-connected', userId); 
-    //disconnects user from room
-    socket.on('disconnect', () => {
-      io.to(roomId).emit('user-disconnected', userId)
-    })
 
+const users = {}
+io.on('connection', socket => {
+  if(!users[socket.id]){
+    users[socket.id] = socket.id;
+  }
+  socket.emit("yourID", socket.id);
+  io.sockets.emit("allUsers", users);
+  socket.on('discconect', () => {
+    delete users[socket.id];
+  })
+  socket.on("callUser", (data) => {
+    io.to(data.userToCall).emit('hey', {signal: data.signalData, from: data.from});
+  })
+
+  socket.on("acceptCall", (data) => {
+    io.to(data.to).emit('callAccepted', data.signal);
   })
 })
 
