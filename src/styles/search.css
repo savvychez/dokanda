@@ -1,0 +1,21 @@
+input {
+    display: block;
+    margin: 20px auto;
+    font-family: 'metropolisregular';
+    font-size: 1.4em;
+    padding: 10px 00px 10px 40px ;
+    background: rgba(252, 252, 252, 1)  url(../assets/search.svg);
+    background-color: white;
+    background-position: 10px 15px;
+    background-repeat: no-repeat;
+    background-size: 0.8em;
+    outline: none;
+    border: 1.2px solid #999999;
+    border-radius: 5px;
+    transition: 0.25s;
+}
+
+input:active, input:focus{
+    border: 1.2px solid #0045a0;
+    color: #001e44;
+}
