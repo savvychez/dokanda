@@ -7,6 +7,7 @@ export const useData = () => {
     return useContext(DataContext)
 }
 
+
 export const DataProvider = props => {
     const user = {
         "id": "4",
@@ -24,6 +25,10 @@ export const DataProvider = props => {
         return "example"
     }
 
+    const getRoomId = (callback) => {
+        axios.get("/patient/chat").then(id => {callback(id)})
+    }
+
     const getProf = () => {
         return data.prof;
     }
@@ -35,7 +40,7 @@ export const DataProvider = props => {
         })
     }
 
-    const functions = {...data, setData, test, getProf, setProf /* Add every function you wrote above here */}
+    const functions = {...data, setData, test, getProf, setProf, getRoomId /* Add every function you wrote above here */}
 	return <DataContext.Provider value={functions} {...props} />
 }
 
