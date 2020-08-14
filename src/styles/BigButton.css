@@ -5,10 +5,11 @@
 }
 
 .bigButton {
-    padding: 20px;
-    background-color: rgba(255, 255, 255,1);
-    border: 1px solid #707070;
-    border-radius: 5px;
+    margin: 5% 0;
+    padding: 15%;
+    background-color: #fdfdfd;
+    border: 1.5px solid #a5a5a5;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +17,18 @@
     transition: .2s;
 }
 
+.bigButton:active, .bigButton:hover {
+    border-color: #0063c0;
+    background-color: #f9f9ff;
+}
+
 .bigButton > h1 {
-    font-family: 'metropolisbold';
+    font-family: 'metropolisregular';
+    padding-right: 20px;
+    color: #505050;
+}
+
+.bigButton > .icon {
+    color: #505050;
+
 }
