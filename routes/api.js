@@ -3,6 +3,7 @@ const router = express.Router();
 const pg = require('pg');
 var client = null
 var diseases = []
+var queue = [];
 
 router.get('/articles', (req, res, next) => {
     res.json({
@@ -10,11 +11,19 @@ router.get('/articles', (req, res, next) => {
     })
 })
 
+router.post('/dequeue', (req, res, next) => {
+    res.json({"roomCode":queue.pop(0)});
+})
+router.get('/enqueue', (req, res, next) => {
+    queue.push(req.body.roomCode);
+})
+
 router.post('/matching', (req, res, next) => 
 {
     //Input is [String text, String language]
-    var matchingSymptoms = new Set();
+    var matchingDiseases = [];
     var langLoc = 0;
+    var matched = new Set();
     if(req.body.data[1]==="i")
     {
         langLoc = 1;
@@ -25,12 +34,26 @@ router.post('/matching', (req, res, next) =>
         symptoms.forEach((symptom)=>
         {
             var s = symptom.split("|")[langLoc].toLowerCase();
-            if(s.includes(req.body.data[0].toLowerCase()))
-                matchingSymptoms.add(s);
+            if(s.includes(req.body.data[0].toLowerCase()) && !matched.has(d.name))
+            {
+                matchingDiseases.push(new disease(d.name.split("|")[langLoc].toLowerCase(),d.symptoms.map((s)=>s)));
+                matched.add(d.name);
+            }
         })
     })
-    console.log(matchingSymptoms)
-    res.json(matchingSymptoms)
+    console.log("AAAAAAAA")
+
+    for(var x=0;x<matchingDiseases.length;x++)
+    {
+        s = matchingDiseases[x].symptoms;
+
+        for(var i=0;i<s.length;i++)
+        {
+            s[i] = s[i].split("|")[langLoc].toLowerCase();
+        }
+    }
+    console.log(matchingDiseases)
+    res.json({"matchingDiseases":matchingDiseases})
 })
 
 const init = ()=>
