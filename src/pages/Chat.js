@@ -3,26 +3,78 @@ import React, {
   useState,
   useRef
 } from 'react';
+import queryString from 'query-string';
 import styled from "styled-components";
-import io from "socket.io-client";
+import io, { Socket } from 'socket.io-client';
 import Peer from "simple-peer";
 import { useData } from '../components/DataProvider';
 import socketIOClient from "socket.io-client";
 
-const Chat = () => {
+import '../styles/Chat.css';
+
+import InfoBar from '../components/InfoBar';
+import Input from '../components/Input';
+import Messages from '../components/Messages'
+
+let socket;
+
+const Chat = ( {location}) => {
   const [stream, setStream] = useState();
   const [callAccepted, setCallAccepted] = useState(false);
   const {getRoomId, getProf} = useData();
+
+  const [name, setName] = useState('');
+  const [room, setRoom] = useState('');
+  const [users, setUsers] = useState('');
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
   
   const userVideo = useRef();
   const partnerVideo = useRef();
   // const socket = useRef();
   const socket = socketIOClient("localhost:3000");
+  const ENDPOINT = 'localhost:3000';
+
   const Video = styled.video `
       border: 1px solid blue;
       width: 50%;
       height: 50%;
   `;
+
+  useEffect(() => {
+    const { name, room } = queryString.parse(location.search);
+
+    setName(name);
+    setRoom(room);
+
+    socket.emit('join', { name, room },  () => {
+
+    });
+
+    
+    return () => {
+        socket.emit('discconect');
+
+        socket.off();
+    }
+  }, [ENDPOINT, location.search]);
+
+  useEffect(() => {
+    socket.on('message', (message) => {
+        setMessages([...messages, message]);
+    })
+  }, [messages])
+
+  const sendMessage = (event) => {
+      event.preventDefault();
+
+      if(message) {
+            socket.emit('sendMessage', message, () => setMessage(''));
+      }
+  }
+
+
+
 
   useEffect( () => {
       function roomIdCallback(result)
@@ -102,10 +154,20 @@ const Chat = () => {
       );
   }
   return ( 
-      <div> 
-          { UserVideo } 
-          {PartnerVideo} 
+      <div>
+        <div> 
+            { UserVideo } 
+            {PartnerVideo} 
+        </div>
+        <div className="outerContainer">
+        <div className="container">
+            <InfoBar room={room}/>
+            <Messages messages={messages} name={name}/>
+            <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+        </div>
+        </div>
       </div>
+      
   );
 }
 
