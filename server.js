@@ -98,7 +98,7 @@ app.get('/doctor/chat', (req, res) => {
 })
 
 app.get('/patient/chat', (req, res) => {
-  id = uuidV4()
+  var id = uuidV4()
   enqueue(id);
   res.send(`${id}`)
 })
