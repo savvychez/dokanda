@@ -1,11 +1,12 @@
 Name
-"['Abdominal aortic aneurysm', 'nausea or pulsating abdominal mass']"
-"['Acne', 'Whiteheads (closed plugged pores)', 'Blackheads (open plugged pores)', 'Small red, tender bumps (papules)']"
-"['Acute cholecystitis', 'Severe pain in your upper right or center abdomen', 'Pain that spreads to your right shoulder or back', ""Tenderness over your abdomen when it's touched"", 'Nausea', 'Vomiting', 'Fever', 'clay-colored stool', 'vomiting', 'nausea', 'fever', 'pain, typically after a meal', 'chills', 'abdominal bloating']"
-"['Acute lymphoblastic leukaemia', 'Bleeding from the gums', 'Bone pain', 'Fever', 'Frequent infections', 'Frequent or severe nosebleeds', 'Pale skin', 'Shortness of breath']"
-"['Acute lymphoblastic leukaemia: Children', 'Frequent infections', 'Fever', 'Easy bruising', 'Bleeding that is hard to stop', 'Pain in the bones or joints', 'Lumps in the neck, underarm, stomach or groin', 'Pain or fullness below the ribs', 'Anemia ', 'Bleeding and/or bruising ', 'Bone and joint pain ', 'Recurrent fevers/infections ', 'Abdominal pain ', 'Swollen lymph nodes ', 'Difficulty breathing']"
-"['Acute myeloid leukaemia', 'skin looking pale or ""washed out""', 'tiredness', 'breathlessness', 'sweating a lot', 'losing weight without trying', 'frequent infections']"
-"['Acute myeloid leukaemia: Children', 'Fever', 'Infection', 'Easy bruising and bleeding', 'Frequent nosebleeds', 'Pain in bones or joints', 'Swollen glands', 'Poor appetite']"
+"['Abdominal aortic aneurysm|Aneurisma aorta abdominal', 'nausea or pulsating abdominal mass|mual atau massa perut yang berdenyut']"
+"['Acne|Jerawat', 'Whiteheads (closed plugged pores)|Komedo putih (pori-pori tersumbat tertutup)', 'Blackheads (open plugged pores)|Komedo (pori-pori tersumbat terbuka)', 'Small red, tender bumps (papules)|Benjolan kecil berwarna merah dan lembut (papula)']"
+"['Acute cholecystitis|Kolesistitis akut', 'Severe pain in your upper right or center abdomen|Nyeri hebat di perut kanan atas atau tengah', 'Pain that spreads to your right shoulder or back|Nyeri yang menyebar ke bahu kanan atau punggung', ""Tenderness over your abdomen when it's touched|Nyeri pada perut Anda saat disentuh"", 'Nausea|Mual', 'Vomiting|Muntah', 'Fever|Demam', 'clay-colored stool|bangku berwarna tanah liat', 'vomiting|muntah', 'nausea|mual', 'fever|demam', 'pain, typically after a meal|nyeri, biasanya setelah makan', 'chills|panas dingin', 'abdominal bloating|perut kembung']"
+['Acute lymphoblastic leukaemia']
+['Acute lymphoblastic leukaemia: Children']
+['Acute lymphoblastic leukaemia: Teenagers and young adults']
+['Acute myeloid leukaemia']
+['Acute myeloid leukaemia: Children']
 ['Acute myeloid leukaemia: Teenagers and young adults']
 ['Acute pancreatitis']
 "[""Addison's disease""]"

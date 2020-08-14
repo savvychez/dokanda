@@ -4,8 +4,9 @@ import pandas as pd
 import requests
 import time
 import psycopg2
+from googletrans import Translator
 
-
+translator = Translator()
 driver = webdriver.Chrome(executable_path=r'C:/Vatsal/Python/chromedriver.exe')
 page = "https://www.nhsinform.scot/illnesses-and-conditions/a-to-z"
 
@@ -23,7 +24,7 @@ print("finished")
 # df = pd.DataFrame({'Name':names}) 
 # df.to_csv('stored.csv', index=False, encoding='utf-8')
 loc = 0
-while loc!=7:
+while loc!=3:
     print(loc)
     page = "https://www.google.com/search?q=symptoms+of+"+names[loc][0].replace(" ","+")
     driver.get(page)
@@ -61,6 +62,9 @@ while loc!=7:
         loc-=1
 
     print(names[loc])
+    for index in range(len(names[loc])):
+        translation = translator.translate(names[loc][index], dest='id')
+        names[loc][index] = names[loc][index]+"|"+translation.text
     loc+=1
 
 print("finished2")
