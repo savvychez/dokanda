@@ -1,17 +1,15 @@
 .choices {
     height: 100%;
-    padding: 10% 0;    
+    padding: 1% 0;    
 }
 
 .choices-header {
     font-family: 'metropolisbold';
-    padding: 10% 0 5% 0;
+    padding: 100px 0 0% 0;
     text-align: center;
 }
 
-.choices-ctr {
-    height: 100%;
-}
+
 
 button {
     display: block;
@@ -25,7 +23,7 @@ button {
     border: 0;
     border-radius: 5px;
     transition: 0.25s;
-    margin: 10% auto;
+    margin: 5% auto;
     outline: 0;
     cursor: pointer;
 }

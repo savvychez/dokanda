@@ -21,7 +21,7 @@ export const DataProvider = props => {
 
     
 
-    const functions = {...data, test/* Add every function you wrote above here */}
+    const functions = {...data, setData, test, /* Add every function you wrote above here */}
 	return <DataContext.Provider value={functions} {...props} />
 }
 
