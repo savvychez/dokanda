@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bigButton {
+    padding: 20px;
+    background-color: rgba(255, 255, 255,1);
+    border: 1px solid #707070;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.bigButton > h1 {
+    font-family: 'metropolisbold';
+}
