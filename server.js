@@ -13,7 +13,7 @@ PeerServer({port: 3001, path: '/' });
 
 const io = socketio(server)
 io.on('connection', socket => {
-
+  // console.log("A");
   socket.on('join-room', (roomId, userId) => {
     //joins room 
     // console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
@@ -22,7 +22,8 @@ io.on('connection', socket => {
     // console.log(userId)
     // console.log(roomId)
     //broadcasts connection to other users
-    io.to(roomId).emit('user-connected', userId)
+    // io.to(roomId).emit('user-connected', userId)
+    socket.broadcast.to(roomId).emit('user-connected', userId); 
     //disconnects user from room
     socket.on('disconnect', () => {
       io.to(roomId).emit('user-disconnected', userId)
