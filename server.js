@@ -5,7 +5,20 @@ const server = require('http').Server(app)
 const io = require('socket.io')(server)
 
 io.on('connection', socket => {
-  // socket.on()
+
+  socket.on('join-room', (roomId, userId) => {
+    //joins room
+    socket.join(roomId)
+
+    //broadcasts connection to other users
+    socket.to(roomId).broadcast.emit('user-connected', userId)
+
+    //disconnects user from room
+    socket.on('disconnect', () => {
+      socket.to(roomId).broadcast.emit('user-disconnected', userId)
+    })
+
+  })
 })
 
 require('dotenv').config();
@@ -23,11 +36,6 @@ app.use(bodyParser.json())
 
 const apiRoute = require('./routes/api');
 app.use('/api', apiRoute)
-
-app.use((err, req, res, next) => {
-    console.log(err)
-    next();
-})
 
 server.listen(port, () => {
   console.log(`Server running on port ${port}`)
