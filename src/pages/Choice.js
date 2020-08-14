@@ -8,15 +8,12 @@ import '../styles/choices.css'
 const Choice = props => {
 
   const [selection, setSelection] = useState("");
-  const { data, setData } = useData();
+  const { getProf, setProf } = useData();
 
   const formHandler = (e) => {
     e.preventDefault();
-    setData({
-      ...data,
-      userMode: 'doctor'
-    })
-    console.log(data)
+
+    console.log(getProf())
     props.history.push("patient/chat")
   }
 
@@ -26,7 +23,6 @@ const Choice = props => {
 
   const clickPatient = () => {
     setSelection("patient")
-    // console.log(selection)
   }
 
 

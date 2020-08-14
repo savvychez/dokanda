@@ -19,7 +19,6 @@
 
 .bigButton:active, .bigButton:hover {
     border-color: #0063c0;
-    background-color: #f9f9ff;
 }
 
 .bigButton>h1 {
@@ -35,5 +34,5 @@
 .bigButton.pat.patient, .bigButton.bigButton.pat.patient>*, .bigButton.doc.doctor, .bigButton.doc.doctor>* {
     color: #004483;
     border-color: #00529e;
-    background-color: #f6f6ff;
+    background-color: #f7f7ff;
 }
