@@ -10,7 +10,7 @@ import Peer from "simple-peer";
 import { useData } from '../components/DataProvider';
 import socketIOClient from "socket.io-client";
 
-import '../styles/Chat.css';
+// import '../styles/Chat.css';
 
 import InfoBar from '../components/InfoBar';
 import Input from '../components/Input';
