@@ -24,8 +24,9 @@ export const DataProvider = props => {
         return "example"
     }
 
-    const getRoomId = (callback, getProf) => {
-        if(getProf==="patient")
+    const getRoomId = (callback) => {
+        console.log(data.prof);
+        if(data.prof==="patient")
             axios.get("/patient/chat").then(id => {callback(id)})
         else
         {
