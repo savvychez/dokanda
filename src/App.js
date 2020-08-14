@@ -5,15 +5,19 @@ import Choice from './pages/Choice';
 import Chat from './pages/Chat';
 import './assets/metropolis/metropolis.css'
 import './styles/styles.css'
+import Search from './pages/Search';
 
 
 const App = () => {
   return (
     <DataProvider>
       <Router>
-        {/* <Route path="/choice" component={Choice} /> */}
-        {/* <Redirect to="/patient/"/> */}
-        <Route path = "/patient/chat" component = {Chat}/>
+        <Switch>
+          <Route path="/choice" component={Choice} />
+          <Route path="/search" component={Search} />
+          <Route path="/patient/chat" component={Chat} />
+          <Redirect to="/choice" />
+        </Switch>
       </Router>
     </DataProvider>
   );

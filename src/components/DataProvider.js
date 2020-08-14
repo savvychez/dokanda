@@ -10,8 +10,7 @@ export const useData = () => {
 
 export const DataProvider = props => {
     const user = {
-        "id": "4",
-        "prof": "g"
+        "id": "4"
     }
 
     const [data, setData] = useState(user)

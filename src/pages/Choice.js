@@ -13,6 +13,7 @@ const Choice = props => {
   const formHandler = (e) => {
     e.preventDefault();
 
+    setProf(selection)
     console.log(getProf())
     props.history.push("patient/chat")
   }
