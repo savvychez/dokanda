@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const pg = require('pg');
+var client = null
+var diseases = []
 
 router.get('/articles', (req, res, next) => {
     res.json({
@@ -8,7 +10,30 @@ router.get('/articles', (req, res, next) => {
     })
 })
 
-router.get('/dbtesting', async (req, res, next) => 
+router.post('/matching', (req, res, next) => 
+{
+    //Input is [String text, String language]
+    var matchingSymptoms = new Set();
+    var langLoc = 0;
+    if(req.body.data[1]==="i")
+    {
+        langLoc = 1;
+    }
+    diseases.forEach((d)=>
+    {
+        var symptoms = d.symptoms
+        symptoms.forEach((symptom)=>
+        {
+            var s = symptom.split("|")[langLoc].toLowerCase();
+            if(s.includes(req.body.data[0].toLowerCase()))
+                matchingSymptoms.add(s);
+        })
+    })
+    console.log(matchingSymptoms)
+    res.json(matchingSymptoms)
+})
+
+const init = ()=>
 {
     const config = {
         host: 'ec2-52-72-34-184.compute-1.amazonaws.com',
@@ -21,21 +46,21 @@ router.get('/dbtesting', async (req, res, next) =>
         rejectUnauthorized: false
     };
     
-    const client = new pg.Client(config);
+    const clientInstance = new pg.Client(config);
     
-    client.connect(async (err) => 
+    clientInstance.connect(async (err) => 
     {
         if (err) 
             console.log(err) ;
         else 
         {
-            await readData(client);
-            await client.end();
+            client = clientInstance;
+            await initData(client);
         }
     });
-})
+}
 
-const readData = async (client) =>
+const initData = async (client) =>
 {
     const query = "SELECT * FROM diseases";
 
@@ -43,7 +68,8 @@ const readData = async (client) =>
     {
         res.rows.forEach((row)=>
         {
-            console.log(row.name+" "+row.symptoms)
+            // console.log(row.name+" "+row.symptoms)
+            diseases.push(new disease(row.name,row.symptoms))
         })
     }).catch
     (
@@ -51,4 +77,11 @@ const readData = async (client) =>
     )
 }
 
-module.exports = router
+module.exports.router = router;
+module.exports.init = init;
+
+function disease(name,symptoms)
+{
+    this.name=name;
+    this.symptoms=symptoms;
+}
