@@ -82,9 +82,11 @@ const Chat = ( {location}) => {
 
                     //get existing partner stream on return
                 call.on('stream', partnerVideoStream => {
+                    setCallAccepted(true);
+                    console.log(partnerVideo);
                     partnerVideo.current.srcObject = partnerVideoStream;
                         
-                    setCallAccepted(true);
+                    
                 })
                     
             })                
@@ -100,10 +102,10 @@ const Chat = ( {location}) => {
 
                         //we get new person's stream
                 call.on('stream', partnerVideoStream => {
-                    partnerVideo.current.srcObject = partnerVideoStream;
-                        
 
                     setCallAccepted(true);
+                    partnerVideo.current.srcObject = partnerVideoStream;
+                        
                 })
 
                 peers[userId] = call

@@ -16,11 +16,11 @@ io.on('connection', socket => {
 
   socket.on('join-room', (roomId, userId) => {
     //joins room 
-    console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
+    // console.log("DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD")
     socket.join(roomId)
    
-    console.log(userId)
-    console.log(roomId)
+    // console.log(userId)
+    // console.log(roomId)
     //broadcasts connection to other users
     io.to(roomId).emit('user-connected', userId)
     //disconnects user from room
