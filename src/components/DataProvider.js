@@ -7,7 +7,6 @@ export const useData = () => {
     return useContext(DataContext)
 }
 
-
 export const DataProvider = props => {
     const user = {
         "id": "4"
@@ -20,9 +19,6 @@ export const DataProvider = props => {
     })
 
     //Write functions that call api here
-    const test = () => {
-        return "example"
-    }
 
     const getRoomId = (callback) => {
         console.log(data.prof);
@@ -37,7 +33,7 @@ export const DataProvider = props => {
     const getProf = () => {
         return data.prof;
     }
-    
+
     const setProf = (prof) => {
         setData({
             ...data,
@@ -45,8 +41,26 @@ export const DataProvider = props => {
         })
     }
 
-    const functions = {...data, setData, test, getProf, setProf, getRoomId /* Add every function you wrote above here */}
-	return <DataContext.Provider value={functions} {...props} />
+    //SEARCH FUNCTIONS
+    const query = (qString, lang, callback) => {
+        axios.post(
+            "/api/matching",
+            {
+                "data": [qString, "e"]
+            }
+        )
+            .then(res => {
+                if (res.data.matchingDiseases) {
+                    callback(res.data.matchingDiseases)
+                }
+            })
+            .catch(err => {
+                console.error(err)
+            })
+    }
+
+    const functions = { ...data, setData, getProf, setProf, getRoomId, query /* Add every function you wrote above here */ }
+    return <DataContext.Provider value={functions} {...props} />
 }
 
 export default DataProvider
