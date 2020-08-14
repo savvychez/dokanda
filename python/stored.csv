@@ -1,316 +1,281 @@
-Name
-"['Abdominal aortic aneurysm|Aneurisma aorta abdominal', 'nausea or pulsating abdominal mass|mual atau massa perut yang berdenyut']"
-"['Acne|Jerawat', 'Whiteheads (closed plugged pores)|Komedo putih (pori-pori tersumbat tertutup)', 'Blackheads (open plugged pores)|Komedo (pori-pori tersumbat terbuka)', 'Small red, tender bumps (papules)|Benjolan kecil berwarna merah dan lembut (papula)']"
-"['Acute cholecystitis|Kolesistitis akut', 'Severe pain in your upper right or center abdomen|Nyeri hebat di perut kanan atas atau tengah', 'Pain that spreads to your right shoulder or back|Nyeri yang menyebar ke bahu kanan atau punggung', ""Tenderness over your abdomen when it's touched|Nyeri pada perut Anda saat disentuh"", 'Nausea|Mual', 'Vomiting|Muntah', 'Fever|Demam', 'clay-colored stool|bangku berwarna tanah liat', 'vomiting|muntah', 'nausea|mual', 'fever|demam', 'pain, typically after a meal|nyeri, biasanya setelah makan', 'chills|panas dingin', 'abdominal bloating|perut kembung']"
-['Acute lymphoblastic leukaemia']
-['Acute lymphoblastic leukaemia: Children']
-['Acute lymphoblastic leukaemia: Teenagers and young adults']
-['Acute myeloid leukaemia']
-['Acute myeloid leukaemia: Children']
-['Acute myeloid leukaemia: Teenagers and young adults']
-['Acute pancreatitis']
-"[""Addison's disease""]"
-['Alcohol-related liver disease']
-['Allergic rhinitis']
-['Allergies']
-"[""Alzheimer's disease""]"
-['Anal cancer']
-['Anaphylaxis']
-['Angioedema']
-['Ankylosing spondylitis']
-['Anorexia nervosa']
-['Anxiety']
-['Anxiety disorders in children']
-['Appendicitis']
-['Arthritis']
-['Asbestosis']
-['Asthma']
-['Atopic eczema']
-['Attention deficit hyperactivity disorder (ADHD)']
-['Autistic spectrum disorder (ASD)']
-['Bacterial vaginosis']
-['Benign prostate enlargement']
-['Bile duct cancer (cholangiocarcinoma)']
-['Binge eating']
-['Bipolar disorder']
-['Bladder cancer']
-['Blood poisoning (sepsis)']
-['Bone cancer']
-['Bone cancer: Teenagers and young adults']
-['Bowel cancer']
-['Bowel incontinence']
-['Bowel polyps']
-['Brain stem death']
-['Brain tumours']
-['Brain tumours: Children']
-['Brain tumours: Teenagers and young adults']
-['Breast cancer (female)']
-['Breast cancer (male)']
-['Bronchiectasis']
-['Bronchitis']
-['Bulimia']
-['Bunion']
-['Carcinoid syndrome and carcinoid tumours']
-['Catarrh']
-['Cellulitis']
-['Cervical cancer']
-['Chest infection']
-['Chest pain']
-['Chickenpox']
-['Chilblains']
-['Chronic fatigue syndrome']
-['Chronic kidney disease']
-['Chronic lymphocytic leukaemia']
-['Chronic myeloid leukaemia']
-['Chronic obstructive pulmonary disease']
-['Chronic pancreatitis']
-['Cirrhosis']
-['Clostridium difficile']
-['Coeliac disease']
-['Cold sore']
-['Coma']
-['Common cold']
-['Common heart conditions']
-['Congenital heart disease']
-['Conjunctivitis']
-['Constipation']
-['Coronavirus (COVID-19)']
-['Cough']
-"[""Crohn's disease""]"
-['Croup']
-['Cystic fibrosis']
-['Cystitis']
-['Deafblindness']
-['Deep vein thrombosis']
-['Dehydration']
-['Dementia']
-['Dementia with Lewy bodies']
-['Dental abscess']
-['Depression']
-['Dermatitis herpetiformis']
-['Diabetes']
-['Diarrhoea']
-['Discoid eczema']
-['Diverticular disease and diverticulitis']
-['Dizziness (Lightheadedness)']
-"[""Down's syndrome""]"
-['Dry mouth']
-['Dysphagia (swallowing problems)']
-['Dystonia']
-['Earache']
-['Earwax build-up']
-['Ebola virus disease']
-['Ectopic pregnancy']
-['Endometriosis']
-['Epilepsy']
-['Erectile dysfunction (impotence)']
-['Escherichia coli (E. coli) O157']
-['Ewing sarcoma']
-['Ewing sarcoma: Children']
-['Eye cancer']
-['Febrile seizures']
-['Fever in children']
-['Fibroids']
-['Fibromyalgia']
-['Flatulence']
-['Flu']
-['Foetal alcohol syndrome']
-['Food poisoning']
-['Fungal nail infection']
-['Gallbladder cancer']
-['Gallstones']
-['Ganglion cyst']
-['Gastroenteritis']
-['Gastro-oesophageal reflux disease (GORD)']
-['Genital herpes']
-['Genital warts']
-['Germ cell tumours']
-['Glandular fever']
-['Gout']
-['Gum disease']
-['Haemorrhoids (piles)']
-['Hairy cell leukaemia']
-"['Hand, foot and mouth disease']"
-['Hay fever']
-['Head and neck cancer']
-['Head lice and nits']
-['Headaches']
-['Hearing loss']
-['Heart failure']
-['Hepatitis A']
-['Hepatitis B']
-['Hepatitis C']
-['Hiatus hernia']
-['High cholesterol']
-['HIV']
-['Hodgkin lymphoma']
-['Hodgkin lymphoma: Children']
-['Hodgkin lymphoma: Teenagers and young adults']
-"[""Huntington's disease""]"
-['Hyperglycaemia (high blood sugar)']
-['Hyperhidrosis']
-['Hypoglycaemia (low blood sugar)']
-['Idiopathic pulmonary fibrosis']
-['Impetigo']
-['Indigestion']
-['Ingrown toenail']
-['Inherited heart conditions']
-['Insomnia']
-['Iron deficiency anaemia']
-['Irritable bowel syndrome (IBS)']
-['Irritable hip']
-['Itching']
-['Itchy bottom']
-"[""Kaposi's sarcoma""]"
-['Kidney cancer']
-['Kidney infection']
-['Kidney stones']
-['Labyrinthitis']
-['Lactose intolerance']
-['Langerhans cell histiocytosis']
-['Laryngeal (larynx) cancer']
-['Laryngitis']
-['Leg cramps']
-['Lichen planus']
-['Liver cancer']
-['Liver disease']
-['Liver tumours']
-['Loss of libido']
-['Lung cancer']
-['Lupus']
-['Lyme disease']
-['Lymphoedema']
-['Malaria']
-['Malignant brain tumour (cancerous)']
-['Malnutrition']
-['Measles']
-['Meningitis']
-['Menopause']
-['Mesothelioma']
-['Middle ear infection (otitis media)']
-['Migraine']
-['Miscarriage']
-['Motor neurone disease (MND)']
-['Mouth cancer']
-['Mouth ulcer']
-['Multiple myeloma']
-['Multiple sclerosis (MS)']
-['Mumps']
-"[""Meniere's disease""]"
-['Nasal and sinus cancer']
-['Nasopharyngeal cancer']
-['Neuroblastoma']
-['Neuroblastoma: Children']
-['Neuroendocrine tumours']
-['Non-alcoholic fatty liver disease (NAFLD)']
-['Non-Hodgkin lymphoma']
-['Non-Hodgkin lymphoma: Children']
-['Norovirus']
-['Nosebleed']
-['Obesity']
-['Obsessive compulsive disorder (OCD)']
-['Obstructive sleep apnoea']
-['Oesophageal cancer']
-['Oral thrush in adults']
-['Osteoarthritis']
-['Osteoporosis']
-['Osteosarcoma']
-['Otitis externa']
-['Ovarian cancer']
-['Ovarian cancer: Teenagers and young adults']
-['Ovarian cyst']
-['Overactive thyroid']
-"[""Paget's disease of the nipple""]"
-['Pancreatic cancer']
-['Panic disorder']
-"[""Parkinson's disease""]"
-['Pelvic organ prolapse']
-['Penile cancer']
-['Peripheral neuropathy']
-['Personality disorder']
-['Pleurisy']
-['Pneumonia']
-['Polymyalgia rheumatica']
-['Post-traumatic stress disorder (PTSD)']
-['Postnatal depression']
-['Pregnancy and baby']
-['Pressure ulcers']
-['Prostate cancer']
-['Psoriasis']
-['Psoriatic arthritis']
-['Psychosis']
-['Rare tumours']
-"[""Raynaud's phenomenon""]"
-['Reactive arthritis']
-['Restless legs syndrome']
-['Retinoblastoma']
-['Retinoblastoma: Children']
-['Rhabdomyosarcoma']
-['Rheumatoid arthritis']
-['Ringworm and other fungal infections']
-['Rosacea']
-['Scabies']
-['Scarlet fever']
-['Schizophrenia']
-['Scoliosis']
-['Septic shock']
-['Sexually transmitted infections (STIs)']
-['Shingles']
-['Shortness of breath']
-['Sickle cell disease']
-['Sinusitis']
-"[""Sjogren's syndrome""]"
-['Skin cancer (melanoma)']
-['Skin cancer (non-melanoma)']
-['Slapped cheek syndrome']
-['Soft tissue sarcomas']
-['Soft tissue sarcomas: Teenagers and young adults']
-['Sore throat']
-['Spleen problems and spleen removal']
-['Stillbirth']
-['Stomach ache and abdominal pain']
-['Stomach cancer']
-['Stomach ulcer']
-"['Stress, anxiety and low mood']"
-['Stroke']
-['Sudden infant death syndrome (SIDS)']
-['Suicide']
-['Sunburn']
-['Swollen glands']
-['Testicular cancer']
-['Testicular cancer: Teenagers and young adults']
-['Testicular lumps and swellings']
-['Thirst']
-['Threadworms']
-['Thrush in men']
-['Thyroid cancer']
-['Thyroid cancer: Teenagers and young adults']
-['Tinnitus']
-['Tonsillitis']
-['Tooth decay']
-['Toothache']
-['Transient ischaemic attack (TIA)']
-['Trigeminal neuralgia']
-['Tuberculosis (TB)']
-['Type 1 diabetes']
-['Type 2 diabetes']
-['Ulcerative colitis']
-['Underactive thyroid']
-['Urinary incontinence']
-['Urinary tract infection (UTI)']
-['Urinary tract infection (UTI) in children']
-['Urticaria (hives)']
-['Vaginal cancer']
-['Vaginal thrush']
-['Varicose eczema']
-['Varicose veins']
-['Venous leg ulcer']
-['Vertigo']
-['Vitamin B12 or folate deficiency anaemia']
-['Vomiting in adults']
-['Vulval cancer']
-['Warts and verrucas']
-['Whooping cough']
-['Wilms’ tumour']
-['Womb (uterus) cancer']
-['Yellow fever']
+Name,Symptoms
+Abdominal aortic aneurysm|Aneurisma aorta abdominal,['nausea or pulsating abdominal mass|mual atau massa perut yang berdenyut']
+Acne|Jerawat,"['Whiteheads (closed plugged pores)|Komedo putih (pori-pori tersumbat tertutup)', 'Blackheads (open plugged pores)|Komedo (pori-pori tersumbat terbuka)', 'Small red, tender bumps (papules)|Benjolan kecil berwarna merah dan lembut (papula)']"
+Acute cholecystitis|Kolesistitis akut,"['Severe pain in your upper right or center abdomen|Nyeri hebat di perut kanan atas atau tengah', 'Pain that spreads to your right shoulder or back|Nyeri yang menyebar ke bahu kanan atau punggung', ""Tenderness over your abdomen when it's touched|Nyeri pada perut Anda saat disentuh"", 'Nausea|Mual', 'Vomiting|Muntah', 'Fever|Demam', 'clay-colored stool|bangku berwarna tanah liat', 'vomiting|muntah', 'nausea|mual', 'fever|demam', 'pain, typically after a meal|nyeri, biasanya setelah makan', 'chills|panas dingin', 'abdominal bloating|perut kembung']"
+Acute lymphoblastic leukaemia|Leukemia limfoblastik akut,"['Bleeding from the gums|Pendarahan dari gusi', 'Bone pain|Sakit tulang', 'Fever|Demam', 'Frequent infections|Infeksi yang sering', 'Frequent or severe nosebleeds|Mimisan yang sering atau parah', 'Pale skin|Kulit pucat', 'Shortness of breath|Sesak napas']"
+Acute lymphoblastic leukaemia: Children|Leukemia limfoblastik akut: Anak-anak,"['Frequent infections|Infeksi yang sering', 'Fever|Demam', 'Easy bruising|Mudah memar', 'Bleeding that is hard to stop|Pendarahan yang sulit dihentikan', 'Pain in the bones or joints|Nyeri pada tulang atau persendian', 'Lumps in the neck, underarm, stomach or groin|Benjolan di leher, ketiak, perut, atau selangkangan', 'Pain or fullness below the ribs|Nyeri atau rasa penuh di bawah tulang rusuk', 'Anemia |Anemia', 'Bleeding and/or bruising |Pendarahan dan / atau memar', 'Bone and joint pain |Nyeri tulang dan sendi', 'Recurrent fevers/infections |Demam / infeksi berulang', 'Abdominal pain |Sakit perut', 'Swollen lymph nodes |Kelenjar getah bening membengkak', 'Difficulty breathing|Sulit bernafas']"
+Acute myeloid leukaemia|Leukemia myeloid akut,"['skin looking pale or ""washed out""|kulit tampak pucat atau ""luntur""', 'tiredness|kelelahan', 'breathlessness|sesak napas', 'sweating a lot|banyak berkeringat', 'losing weight without trying|menurunkan berat badan tanpa mencoba', 'frequent infections|infeksi yang sering terjadi']"
+Acute myeloid leukaemia: Children|Leukemia myeloid akut: Anak-anak,"['Fever|Demam', 'Infection|Infeksi', 'Easy bruising and bleeding|Mudah memar dan berdarah', 'Frequent nosebleeds|Sering mimisan', 'Pain in bones or joints|Nyeri pada tulang atau persendian', 'Swollen glands|Kelenjar bengkak', 'Poor appetite|Nafsu makan buruk']"
+Acute pancreatitis|Pankreatitis akut,"['Upper abdominal pain|Nyeri perut bagian atas', 'Abdominal pain that radiates to your back|Sakit perut yang menjalar ke punggung Anda', 'Abdominal pain that feels worse after eating|Sakit perut yang terasa semakin parah setelah makan', 'Fever|Demam', 'Rapid pulse|Denyut nadi cepat', 'Nausea|Mual', 'Vomiting|Muntah', 'Tenderness when touching the abdomen|Nyeri saat menyentuh perut']"
+Addison's disease|penyakit Addison,"['Extreme fatigue|Kelelahan yang ekstrim', 'Weight loss and decreased appetite|Penurunan berat badan dan penurunan nafsu makan', 'Darkening of your skin (hyperpigmentation)|Kulit Anda menjadi gelap (hiperpigmentasi)', 'Low blood pressure, even fainting|Tekanan darah rendah, bahkan sampai pingsan', 'Salt craving|Mengidam garam', 'Low blood sugar (hypoglycemia)|Gula darah rendah (hipoglikemia)', 'Abdominal pain|Sakit perut']"
+Alcohol-related liver disease|Penyakit hati terkait alkohol,"['feeling sick|merasa sakit', 'weight loss|penurunan berat badan', 'loss of appetite|kehilangan selera makan', 'yellowing of the eyes and skin (jaundice)|menguningnya mata dan kulit (penyakit kuning)', 'swelling in the ankles and tummy|bengkak di pergelangan kaki dan perut', 'confusion or drowsiness|kebingungan atau kantuk', 'vomiting blood or passing blood in your stools|muntah darah atau mengeluarkan darah di tinja Anda']"
+Allergic rhinitis|Rinitis alergi,"['sneezing|bersin', 'a runny nose|pilek', 'a stuffy nose|hidung tersumbat', 'an itchy nose|hidung yang gatal', 'coughing|batuk', 'a sore or scratchy throat|tenggorokan yang sakit atau gatal', 'itchy eyes|mata gatal', 'watery eyes|mata berair']"
+Allergies|Alergi,"['itchy, red, watering eyes (conjunctivitis)|gatal, merah, mata berair (konjungtivitis)', 'a raised, itchy, red rash (hives)|timbul, gatal, ruam merah (gatal-gatal)', 'swollen lips, tongue, eyes or face|bibir, lidah, mata atau wajah bengkak', 'tummy pain, feeling sick, vomiting or diarrhoea|sakit perut, rasa mual, muntah atau diare']"
+Alzheimer's disease|Penyakit Alzheimer,"['Memory loss that disrupts daily life |Kehilangan memori yang mengganggu kehidupan sehari-hari', 'Challenges in planning or solving problems |Tantangan dalam merencanakan atau memecahkan masalah', 'Difficulty completing familiar tasks |Kesulitan menyelesaikan tugas yang sudah dikenal', 'Confusion with time or place |Kebingungan dengan waktu atau tempat', 'New problems with words in speaking or writing|Masalah baru dengan kata-kata dalam berbicara atau menulis']"
+Anal cancer|Kanker dubur,"['Bleeding from the anus or rectum|Pendarahan dari anus atau rektum', 'A lump near the anus|Benjolan di dekat anus', 'Pain or pressure in the area around the anus|Nyeri atau tekanan di daerah sekitar anus', 'Itching or discharge from the anus|Gatal atau keluarnya cairan dari anus', 'A change in bowel habits|Perubahan kebiasaan buang air besar']"
+Anaphylaxis|Anafilaksis,"['Low blood pressure (hypotension)|Tekanan darah rendah (hipotensi)', 'A weak and rapid pulse|Denyut nadi lemah dan cepat', 'Nausea, vomiting or diarrhea|Mual, muntah atau diare', 'Dizziness or fainting|Pusing atau pingsan']"
+Ankylosing spondylitis|Spondilitis ankilosa,"['bone tissue formation|pembentukan jaringan tulang', 'fatigue|kelelahan', 'hunched back|membungkuk kembali', 'inflamed tendons|tendon yang meradang', 'inflammatory bowel disease|penyakit radang usus', 'physical deformity|deformitas fisik', 'or sleep disorder|atau gangguan tidur']"
+Anorexia nervosa|Anoreksia nervosa,"['brittle nails|kuku rapuh', 'bruising|memar', 'depression|depresi', 'dieting|diet', 'dry hair|rambut Kering', 'dry skin|kulit kering', 'headache|sakit kepala', 'sensitivity to cold|kepekaan terhadap dingin', 'or slow heart rate|atau detak jantung lambat']"
+Anxiety|Kegelisahan,"['anxiety|kegelisahan', 'excessive worry|kekhawatiran yang berlebihan', 'fear|takut', 'feeling of impending doom|perasaan malapetaka yang akan datang', 'insomnia|insomnia', 'nausea|mual', 'palpitations|palpitasi', 'or trembling|atau gemetar']"
+Anxiety disorders in children|Gangguan kecemasan pada anak,"['finding it hard to concentrate|merasa sulit berkonsentrasi', 'not eating properly|tidak makan dengan benar', 'constantly worrying or having negative thoughts|terus-menerus khawatir atau memiliki pikiran negatif', 'Trouble falling asleep|Kesulitan tidur', 'Fear of being alone|Takut sendirian', 'Picking at skin|Memilih kulit', 'Nail biting|Menggigit kuku', 'Strong startle response|Respon kejut yang kuat', 'Being overly self-critical|Menjadi terlalu kritis terhadap diri sendiri']"
+Appendicitis|Radang usus buntu,"['Nausea and vomiting|Mual dan muntah', 'Loss of appetite|Kehilangan selera makan']"
+Arthritis|Radang sendi,"['Pain|Rasa sakit', 'Stiffness|Kekakuan', 'Swelling|Pembengkakan', 'Redness|Kemerahan', 'Decreased range of motion|Rentang gerak berkurang']"
+Asbestosis|Asbestosis,"['Shortness of breath|Sesak napas', 'A persistent, dry cough|Batuk kering yang terus-menerus', 'Loss of appetite with weight loss|Kehilangan nafsu makan dengan penurunan berat badan', 'Chest tightness or pain|Sesak atau nyeri dada']"
+Asthma|Asma,"['Shortness of breath|Sesak napas', 'Chest tightness or pain|Sesak atau nyeri dada']"
+Atopic eczema|Eksim atopik,['itching|gatal']
+Attention deficit hyperactivity disorder (ADHD)|Attention deficit hyperactivity disorder (ADHD),"['Impulsiveness|Impulsif', 'Disorganization and problems prioritizing|Disorganisasi dan memprioritaskan masalah', 'Poor time management skills|Keterampilan manajemen waktu yang buruk', 'Problems focusing on a task|Masalah fokus pada tugas', 'Trouble multitasking|Masalah multitasking', 'Excessive activity or restlessness|Aktivitas berlebihan atau kegelisahan', 'Poor planning|Perencanaan yang buruk', 'Low frustration tolerance|Toleransi frustrasi yang rendah']"
+Autistic spectrum disorder (ASD)|Gangguan spektrum autistik (ASD),"['Making little or inconsistent eye contact|Membuat kontak mata yang sedikit atau tidak konsisten', 'Tending not to look at or listen to people|Cenderung tidak melihat atau mendengarkan orang']"
+Bacterial vaginosis|Bakteri vaginosis,"['Thin, gray, white or green vaginal discharge|Keputihan tipis, abu-abu, putih atau hijau', 'Foul-smelling ""fishy"" vaginal odor|Bau vagina ""amis"" yang tidak sedap', 'Vaginal itching|Gatal vagina', 'Burning during urination|Terbakar saat buang air kecil']"
+Benign prostate enlargement|Pembesaran prostat jinak,"['Frequent or urgent need to urinate|Sering atau mendesak ingin buang air kecil', 'Difficulty starting urination|Kesulitan mulai buang air kecil', 'Dribbling at the end of urination|Dribbling di akhir buang air kecil', 'Inability to completely empty the bladder|Ketidakmampuan untuk mengosongkan kandung kemih sepenuhnya']"
+Bile duct cancer (cholangiocarcinoma)|Kanker saluran empedu (kolangiokarsinoma),"['Intensely itchy skin|Kulit sangat gatal', 'White-colored stools|Feses berwarna putih', 'Fatigue|Kelelahan', 'Abdominal pain|Sakit perut', 'Unintended weight loss|Penurunan berat badan yang tidak diinginkan']"
+Bipolar disorder|Gangguan bipolar,"['Abnormally upbeat, jumpy or wired|Secara tidak normal ceria, gelisah atau kaku', 'Increased activity, energy or agitation|Peningkatan aktivitas, energi atau agitasi', 'Decreased need for sleep|Penurunan kebutuhan tidur', 'Unusual talkativeness|Banyak bicara yang tidak biasa', 'Racing thoughts|Pikiran balap', 'Distractibility|Distractibility']"
+Bladder cancer|Kanker kandung kemih,"['Blood or blood clots in the urine|Darah atau bekuan darah di urin', 'Pain or burning sensation during urination|Nyeri atau sensasi terbakar saat buang air kecil', 'Frequent urination|Sering buang air kecil', 'Lower back pain on 1 side of the body|Nyeri punggung bawah pada 1 sisi tubuh']"
+Blood poisoning (sepsis)|Keracunan darah (sepsis),"['delirium|igauan', 'fast heart rate|detak jantung cepat', 'insufficient urine production|produksi urin tidak mencukupi', 'organ dysfunction|disfungsi organ', 'skin discoloration|perubahan warna kulit', 'or sleepiness|atau kantuk']"
+Bone cancer|Kanker tulang,"['Bone pain|Sakit tulang', 'Swelling and tenderness near the affected area|Pembengkakan dan nyeri di dekat area yang terkena', 'Weakened bone, leading to fracture|Tulang melemah, menyebabkan patah tulang', 'Fatigue|Kelelahan', 'Unintended weight loss|Penurunan berat badan yang tidak diinginkan']"
+Bone cancer: Teenagers and young adults|Kanker tulang: Remaja dan dewasa muda,"['reduced movement |gerakan berkurang', 'a broken bone|patah tulang']"
+Bowel cancer|Kanker usus,"['Unexplained weight loss|Penurunan berat badan yang tidak bisa dijelaskan', 'Extreme tiredness for no obvious reason|Kelelahan yang ekstrim tanpa alasan yang jelas', 'A pain or lump in your tummy|Nyeri atau benjolan di perut Anda', 'Rectal bleeding|Pendarahan rektal', 'Dark stools, or blood in the stool|Tinja berwarna gelap, atau darah di tinja']"
+Bowel incontinence|Inkontinensia usus,"['Constipation |Sembelit', 'Muscle injury or weakness |Cedera atau kelemahan otot', 'Nerve damage |Kerusakan saraf', 'Neurologic diseases |Penyakit neurologis', 'Loss of stretch in the rectum |Hilangnya regangan di rektum', 'Hemorrhoids |Wasir', 'Rectal prolapse|Prolaps rektum']"
+Brain tumours|Tumor otak,"['Personality or memory changes|Kepribadian atau perubahan memori', 'Nausea or vomiting|Mual atau muntah', 'Fatigue|Kelelahan', 'Drowsiness|Kantuk', 'Sleep problems|Masalah tidur', 'Memory problems|Masalah memori']"
+Brain tumours: Children|Tumor otak: Anak-anak,"['3: Sleepiness |3: Kantuk', '4: Vision, Hearing or Speech Changes |4: Penglihatan, Pendengaran atau Perubahan Ucapan', '5: Personality Changes |5: Perubahan Kepribadian', '6: Balance Problems |6: Masalah Keseimbangan', '7: Seizures |7: Kejang', '8: Increased Head Size|8: Ukuran Kepala Meningkat']"
+Brain tumours: Teenagers and young adults|Tumor otak: Remaja dan dewasa muda,"['Frequent headaches|Sering sakit kepala', 'Drowsiness or fatigue|Mengantuk atau kelelahan', 'Problems with vision, balance or coordination|Masalah dengan visi, keseimbangan atau koordinasi', 'Tingling or weakness in the arms or legs|Kesemutan atau kelemahan di lengan atau tungkai']"
+Breast cancer (female)|Kanker payudara (wanita),"['A lump or mass in the breast|Benjolan atau massa di payudara', 'Skin irritation or dimpling|Iritasi kulit atau lesung pipit', 'Breast or nipple pain|Nyeri payudara atau puting', 'Nipple retraction (turning inward)|Retraksi puting (berputar ke dalam)', 'Nipple discharge|Keluarnya cairan dari puting']"
+Breast cancer (male)|Kanker payudara (pria),"['Skin dimpling or puckering|Kulit lesung atau kerutan', 'Nipple retraction (turning inward)|Retraksi puting (berputar ke dalam)', 'Redness or scaling of the nipple or breast skin|Kemerahan atau bersisik pada puting susu atau kulit payudara', 'Discharge from the nipple|Keluarnya cairan dari puting']"
+Bronchiectasis|Bronkiektasis,"['A daily cough that occurs over months or years|Batuk harian yang terjadi selama berbulan-bulan atau bertahun-tahun', 'Chest pain|Nyeri dada', 'Coughing up yellow or green mucus daily|Batuk lendir kuning atau hijau setiap hari', 'Fatigue, feeling run-down or tired|Kelelahan, merasa lesu atau lelah', 'Fevers and/or chills|Demam dan / atau menggigil', 'Wheezing or whistling sound while you breathe|Suara mengi atau bersiul saat Anda bernapas']"
+Bronchitis|Bronchitis,"['Cough|Batuk', 'Fatigue|Kelelahan', 'Shortness of breath|Sesak napas', 'Slight fever and chills|Demam ringan dan menggigil', 'Chest discomfort|Ketidaknyamanan dada', 'wheezing|mengi', 'shortness of breath|sesak napas', 'sore ribs and stomach due to coughing|sakit rusuk dan perut karena batuk', 'sore throat|sakit tenggorokan', 'nasal congestion|hidung tersumbat', 'a headache|sakit kepala', 'body aches|pegal-pegal']"
+Bulimia|Bulimia,"['abnormality of taste|kelainan rasa', 'depression|depresi', 'poor self-esteem|harga diri yang buruk', 'or sore throat|atau sakit tenggorokan']"
+Bunion|Bunion,['Ongoing pain or pain that comes and goes|Sakit atau nyeri yang datang dan pergi']
+Carcinoid syndrome and carcinoid tumours|Sindrom karsinoid dan tumor karsinoid,"['Abdominal pain|Sakit perut', 'Diarrhea|Diare', 'Rectal bleeding|Pendarahan rektal', 'Rectal pain|Nyeri rektal', 'Facial flushing (redness and warm feeling)|Kemerahan pada wajah (kemerahan dan perasaan hangat)', 'Severe diarrhea|Diare berat', 'Wheezing|Desah', 'Fast heartbeat|Detak jantung cepat']"
+Catarrh|Penyakit selesema,"['constant need to clear your throat|kebutuhan konstan untuk membersihkan tenggorokan Anda', 'feeling that your throat is blocked|merasa tenggorokan Anda tersumbat', 'blocked or stuffy nose that you cannot clear|hidung tersumbat atau tersumbat yang tidak bisa Anda bersihkan', 'runny nose|pilek', 'persistent cough|batuk terus-menerus', 'headache or facial pain|sakit kepala atau nyeri wajah', 'reduced sense of smell and taste|berkurangnya indera penciuman dan perasa']"
+Cellulitis|Selulitis,"['Red area of skin that tends to expand|Area kulit merah yang cenderung membesar', 'Swelling|Pembengkakan', 'Tenderness|Kelembutan', 'Pain|Rasa sakit', 'Warmth|Kehangatan', 'Fever|Demam', 'Red spots|Bintik merah', 'Blisters|Lepuh']"
+Cervical cancer|Kanker serviks,"['Increased vaginal discharge|Peningkatan keputihan', 'Pain during sexual intercourse|Nyeri saat berhubungan seksual', 'Bleeding after menopause|Pendarahan setelah menopause', 'Unexplained, persistent pelvic and/or back pain|Nyeri panggul dan / atau punggung yang tidak dapat dijelaskan, persisten']"
+Chest infection|Infeksi dada,"['a persistent cough|batuk terus-menerus', 'breathlessness or rapid and shallow breathing|sesak napas atau pernapasan cepat dan dangkal', 'wheezing|mengi', 'a high temperature (fever)|suhu tinggi (demam)', 'a rapid heartbeat|detak jantung yang cepat', 'chest pain or tightness|nyeri dada atau sesak', 'feeling confused and disorientated|merasa bingung dan bingung']"
+Chest pain|Nyeri dada,"['Shortness of breath|Sesak napas', 'Cold sweats|Keringat dingin', 'Dizziness or weakness|Pusing atau lemas']"
+Chickenpox|Cacar air,"['Fever|Demam', 'Loss of appetite|Kehilangan selera makan', 'Headache|Sakit kepala']"
+Chilblains|Bengkak karena kedinginan,"['Possible blistering or skin ulcers|Kemungkinan melepuh atau bisul kulit', 'Swelling of your skin|Pembengkakan kulit Anda', 'Burning sensation on your skin|Sensasi terbakar di kulit Anda']"
+Chronic fatigue syndrome|Sindrom kelelahan kronis,"['sleep problems|masalah tidur', 'muscle or joint pain|nyeri otot atau sendi', 'headaches|sakit kepala', 'a sore throat or sore glands that are not swollen|sakit tenggorokan atau sakit kelenjar yang tidak bengkak', 'problems thinking, remembering or concentrating|masalah berpikir, mengingat atau berkonsentrasi', 'flu-like symptoms|gejala seperti flu', 'feeling dizzy or sick|merasa pusing atau mual', 'fast or irregular heartbeats (heart palpitations)|detak jantung cepat atau tidak teratur (palpitasi jantung)']"
+Chronic kidney disease|Penyakit ginjal kronis,"['weight loss and poor appetite|penurunan berat badan dan nafsu makan yang buruk', 'shortness of breath|sesak napas', 'tiredness|kelelahan', 'blood in your pee (urine)|darah di kencingmu (urin)', 'an increased need to pee – particularly at night|peningkatan kebutuhan untuk buang air kecil - terutama di malam hari', 'difficulty sleeping (insomnia)|kesulitan tidur (insomnia)', 'itchy skin|kulit yang gatal']"
+Chronic lymphocytic leukaemia|Leukemia limfositik kronis,"['getting infections often|sering terkena infeksi', 'bleeding and bruising more easily than normal|lebih mudah berdarah dan memar dari biasanya', 'a high temperature|suhu tinggi', 'night sweats|keringat malam', 'swollen glands in your neck, armpits or groin|kelenjar bengkak di leher, ketiak atau selangkangan', 'swelling and discomfort in your tummy|bengkak dan ketidaknyamanan di perut Anda', 'unintentional weight loss|penurunan berat badan yang tidak disengaja', 'Enlarged, but painless, lymph nodes|Kelenjar getah bening membesar, tapi tidak menimbulkan rasa sakit', 'Fatigue|Kelelahan', 'Fever|Demam', 'Night sweats|Keringat malam', 'Weight loss|Penurunan berat badan', 'Frequent infections|Infeksi yang sering']"
+Chronic myeloid leukaemia|Leukemia myeloid kronis,"['Weakness|Kelemahan', 'Fatigue|Kelelahan', 'Night sweats|Keringat malam', 'Weight loss|Penurunan berat badan', 'Fever|Demam', 'Pain or a sense of ""fullness"" in the belly|Nyeri atau rasa ""kenyang"" di perut', 'tiredness|kelelahan', 'weight loss|penurunan berat badan', 'night sweats|keringat malam', 'feeling full after small meals|merasa kenyang setelah makan kecil', 'pale skin and shortness of breath|kulit pucat dan sesak napas', 'a high temperature|suhu tinggi', 'bruising and bleeding easily|mudah memar dan berdarah']"
+Chronic obstructive pulmonary disease|Penyakit paru obstruktif kronis,"['Wheezing|Desah', 'Chest tightness|Sesak dada', 'Frequent respiratory infections|Infeksi saluran pernafasan yang sering', 'Lack of energy|Kekurangan energi', 'Unintended weight loss (in later stages)|Penurunan berat badan yang tidak disengaja (pada tahap selanjutnya)', 'Swelling in ankles, feet or legs|Bengkak di pergelangan kaki, tungkai atau tungkai']"
+Chronic pancreatitis|Pankreatitis kronis,"['Diarrhea or oily stools|Diare atau tinja berminyak', 'Nausea and vomiting|Mual dan muntah', 'Weight loss|Penurunan berat badan']"
+Cirrhosis|Sirosis,"['Fatigue|Kelelahan', 'Easily bleeding or bruising|Mudah berdarah atau memar', 'Loss of appetite|Kehilangan selera makan', 'Nausea|Mual', 'Swelling in your legs, feet or ankles (edema)|Pembengkakan di tungkai, kaki atau pergelangan kaki (edema)', 'Weight loss|Penurunan berat badan', 'Itchy skin|Kulit yang gatal']"
+Clostridium difficile|Clostridium difficile,"['Fever|Demam', 'Stomach tenderness or pain|Sakit perut atau nyeri', 'Loss of appetite|Kehilangan selera makan', 'Nausea|Mual', 'Toxic megacolon |Megakolon beracun', 'Death|Kematian']"
+Coeliac disease|Penyakit seliaka,"['Nausea and vomiting|Mual dan muntah', 'Chronic diarrhea|Diare kronis', 'Swollen belly|Perut bengkak', 'Constipation|Sembelit', 'Gas|Gas', 'Pale, foul-smelling stools|Kotoran pucat dan berbau busuk']"
+Cold sore|Herpes simpleks,['Oozing and crusting|Mengalir dan mengeras']
+Coma|Koma,"['Closed eyes|Mata tertutup', 'Irregular breathing|Nafas tidak teratur']"
+Common cold|Flu biasa,"['chest pressure|tekanan dada', 'headache|sakit kepala', 'swollen lymph nodes|kelenjar getah bening bengkak', 'or throat irritation|atau iritasi tenggorokan']"
+Common heart conditions|Kondisi jantung umum,['Shortness of breath|Sesak napas']
+Congenital heart disease|Penyakit jantung bawaan,"['a blue tinge to the skin (cyanosis)|semburat biru pada kulit (sianosis)', 'rapid breathing|pernapasan cepat', 'rapid heartbeat|detak jantung cepat', 'swelling in the legs, tummy and around the eyes|bengkak di kaki, perut, dan di sekitar mata']"
+Conjunctivitis|Konjungtivitis,"['Redness in the white of the eye or inner eyelid|Kemerahan di bagian putih mata atau kelopak mata bagian dalam', 'Swollen conjunctiva|Konjungtiva bengkak', 'More tears than usual|Lebih banyak air mata dari biasanya', 'Green or white discharge from the eye|Keluarnya cairan berwarna hijau atau putih dari mata', 'Itchy eyes|Mata gatal', 'Burning eyes|Mata membara', 'Blurred vision|Penglihatan kabur']"
+Constipation|Sembelit,"['Passing fewer than three stools a week|Buang air besar kurang dari tiga kali seminggu', 'Having lumpy or hard stools|Feses yang menggumpal atau keras', 'Straining to have bowel movements|Mengejan untuk buang air besar']"
+Cough|Batuk,"['A runny or stuffy nose|Hidung meler atau tersumbat', 'Frequent throat clearing and sore throat|Sering berdehem dan sakit tenggorokan', 'Hoarseness|Suara serak', 'Wheezing and shortness of breath|Mengi dan sesak napas', 'Heartburn or a sour taste in your mouth|Mulas atau rasa asam di mulut Anda', 'Wheezing or difficulty breathing|Mengi atau kesulitan bernapas', 'Fever|Demam', 'Chest pain|Nyeri dada', 'Coughing up blood or yellow or green phlegm|Batuk darah atau dahak kuning atau hijau', 'Coughing so hard it makes you vomit|Batuk sangat keras sampai membuat Anda muntah', 'You have a cough with unexplained weight loss|Anda batuk dengan penurunan berat badan yang tidak bisa dijelaskan']"
+Crohn's disease|Penyakit Crohn,"['Diarrhea|Diare', 'Fever|Demam', 'Fatigue|Kelelahan', 'Abdominal pain and cramping|Sakit perut dan kram', 'Blood in your stool|Darah di bangku Anda', 'Mouth sores|Sariawan', 'Reduced appetite and weight loss|Mengurangi nafsu makan dan penurunan berat badan', 'Persistent diarrhea|Diare persisten', 'Rectal bleeding|Pendarahan rektal', 'Urgent need to move bowels|Kebutuhan mendesak untuk buang air besar', 'Abdominal cramps and pain|Kram dan nyeri perut', 'Sensation of incomplete bowel evacuation|Sensasi evakuasi usus tidak tuntas', 'Constipation, which can lead to bowel obstruction|Sembelit, yang dapat menyebabkan obstruksi usus']"
+Croup|Croup,"['agitation|agitasi', 'drooling|air liur', 'phlegm|dahak', 'or sore throat|atau sakit tenggorokan']"
+Cystic fibrosis|Fibrosis kistik,"['Very salty-tasting skin|Kulit terasa sangat asin', 'Persistent coughing, at times with phlegm|Batuk terus-menerus, terkadang disertai dahak', 'Wheezing or shortness of breath|Mengi atau sesak napas', 'Male infertility|Infertilitas pria']"
+Cystitis|Sistitis,"['A strong, persistent urge to urinate|Dorongan yang kuat dan terus menerus untuk buang air kecil', 'A burning sensation when urinating|Sensasi terbakar saat buang air kecil', 'Passing frequent, small amounts of urine|Sering buang air kecil dalam jumlah sedikit', 'Blood in the urine (hematuria)|Darah dalam urin (hematuria)', 'Passing cloudy or strong-smelling urine|Buang air kecil keruh atau berbau menyengat', 'Pelvic discomfort|Ketidaknyamanan panggul', 'A feeling of pressure in the lower abdomen|Perasaan tertekan di perut bagian bawah', 'Low-grade fever|Demam ringan']"
+Deafblindness|Tuli,"['difficulty following a conversation|kesulitan mengikuti percakapan', 'not hearing noises such as a knock at the door|tidak mendengar suara-suara seperti ketukan di pintu']"
+Deep vein thrombosis|Trombosis vena dalam,"['swelling in 1 leg (rarely both legs)|bengkak di 1 kaki (jarang kedua kaki)', 'warm skin around the painful area|kulit hangat di sekitar area yang sakit', 'red or darkened skin around the painful area|kulit merah atau gelap di sekitar area yang sakit']"
+Dehydration|Dehidrasi,"['Feeling very thirsty|Merasa sangat haus', 'Dry mouth|Mulut kering', 'Urinating and sweating less than usual|Buang air kecil dan berkeringat lebih sedikit dari biasanya', 'Dark-colored urine|Urine berwarna gelap', 'Dry skin|Kulit kering', 'Feeling tired|Merasa lelah', 'Dizziness|Pusing', 'Thirst|Haus', 'Dry or sticky mouth|Mulut kering atau lengket', 'Not peeing very much|Tidak banyak kencing', 'Dark yellow pee|Kencing kuning tua', 'Dry, cool skin|Kulit kering dan dingin', 'Headache|Sakit kepala', 'Muscle cramps|Kram otot']"
+Dementia|Demensia,"['Difficulty communicating or finding words|Kesulitan berkomunikasi atau menemukan kata-kata', 'Difficulty reasoning or problem-solving|Kesulitan bernalar atau pemecahan masalah', 'Difficulty handling complex tasks|Kesulitan menangani tugas-tugas kompleks', 'Difficulty with planning and organizing|Kesulitan dalam perencanaan dan pengorganisasian', 'increasing confusion|meningkatkan kebingungan', 'reduced concentration|konsentrasi berkurang', 'personality or behaviour changes|kepribadian atau perubahan perilaku', 'apathy and withdrawal or depression|apatis dan penarikan diri atau depresi', 'loss of ability to do everyday tasks|kehilangan kemampuan untuk melakukan tugas sehari-hari']"
+Dementia with Lewy bodies|Demensia dengan tubuh Lewy,"['Movement disorders |Gangguan pergerakan', 'Cognitive problems |Masalah kognitif', 'Sleep difficulties |Kesulitan tidur', 'Fluctuating attention |Perhatian yang berfluktuasi', 'Depression |Depresi', 'Apathy|Apati', 'Changes in thinking and reasoning|Perubahan pemikiran dan penalaran', 'Well-formed visual hallucinations|Halusinasi visual yang terbentuk dengan baik', 'Delusions|Delusi']"
+Dental abscess|Abses gigi,"['Sensitivity to hot and cold temperatures|Sensitivitas terhadap suhu panas dan dingin', 'Sensitivity to the pressure of chewing or biting|Sensitivitas terhadap tekanan mengunyah atau menggigit', 'Fever|Demam', 'Swelling in your face or cheek|Bengkak di wajah atau pipi Anda']"
+Dermatitis herpetiformis|Dermatitis herpetiformis,"['Severe itching and burning|Rasa gatal dan terbakar yang parah', 'Erosions and scratches are often seen on the skin|Erosi dan goresan sering terlihat di kulit']"
+Diabetes|Diabetes,"['Urinate (pee) a lot, often at night|Banyak buang air kecil (kencing), seringkali pada malam hari', 'Are very thirsty|Sangat haus', 'Lose weight without trying|Menurunkan berat badan tanpa berusaha', 'Are very hungry|Sangat lapar', 'Have blurry vision|Memiliki penglihatan kabur', 'Have numb or tingling hands or feet|Memiliki tangan atau kaki yang mati rasa atau kesemutan', 'Feel very tired|Merasa sangat lelah', 'Have very dry skin|Memiliki kulit yang sangat kering']"
+Diarrhoea|Diare,"['Loose, watery stools|Tinja encer dan encer', 'Abdominal cramps|Kram perut', 'Abdominal pain|Sakit perut', 'Fever|Demam', 'Blood in the stool|Darah di bangku', 'Mucus in the stool|Lendir di bangku', 'Bloating|Kembung', 'Nausea|Mual', 'blood in the faeces|darah di tinja', 'pus in the faeces|nanah di feses', 'painful passage of faeces|bagian kotoran yang menyakitkan', 'repeated vomiting|muntah berulang', 'inability to increase fluid intake|ketidakmampuan untuk meningkatkan asupan cairan', 'reduced or absent urination|kencing berkurang atau tidak ada', 'fever (temperature greater than 38 ºc)|demam (suhu lebih dari 38 ºc)']"
+Discoid eczema|Eksim diskoid,['lesion or itching|lesi atau gatal']
+Diverticular disease and diverticulitis|Penyakit divertikular dan divertikulitis,"['constipation, diarrhoea, or both|sembelit, diare, atau keduanya', 'occasionally, blood in your poo|kadang-kadang, darah di kotoran Anda']"
+Dizziness (Lightheadedness)|Pusing (Kepala terasa ringan),"['A false sense of motion or spinning (vertigo)|Rasa salah gerak atau berputar (vertigo)', 'Lightheadedness or feeling faint|Kepala terasa ringan atau merasa lemas', 'Unsteadiness or a loss of balance|Goyah atau kehilangan keseimbangan']"
+Down's syndrome|Sindrom Down,"['Decreased or poor muscle tone|Tonus otot menurun atau buruk', 'Flattened facial profile and nose|Profil wajah dan hidung yang rata', 'Small head, ears, and mouth|Kepala, telinga, dan mulut kecil']"
+Dry mouth|Mulut kering,"['Dryness or a feeling of stickiness in your mouth|Kekeringan atau rasa lengket di mulut Anda', 'Saliva that seems thick and stringy|Air liur yang tampak kental dan berserabut', 'Bad breath|Bau mulut', 'Difficulty chewing, speaking and swallowing|Kesulitan mengunyah, berbicara dan menelan', 'Dry or sore throat and hoarseness|Tenggorokan kering atau sakit dan suara serak', 'Dry or grooved tongue|Lidah kering atau beralur', 'A changed sense of taste|Indera perasa yang berubah', 'Problems wearing dentures|Masalah memakai gigi palsu']"
+Dysphagia (swallowing problems)|Disfagia (masalah menelan),"['Having pain while swallowing (odynophagia)|Mengalami nyeri saat menelan (odynophagia)', 'Being unable to swallow|Tidak bisa menelan', 'Drooling|Ngiler', 'Being hoarse|Menjadi parau', 'Bringing food back up (regurgitation)|Membawa makanan kembali (regurgitasi)', 'Having frequent heartburn|Sering mengalami mulas', 'Frequent choking on food|Sering tersedak makanan', 'Pain when swallowing|Nyeri saat menelan']"
+Dystonia|Dystonia,"['Eyelids |Kelopak mata', 'Jaw or tongue (oromandibular dystonia) |Rahang atau lidah (oromandibular dystonia)', 'Voice box and vocal cords (spasmodic dystonia) |Kotak suara dan pita suara (distonia spasmodik)', 'Hand and forearm|Tangan dan lengan bawah']"
+Earache|Sakit telinga,"['A feeling of fullness in the ear|Perasaan kenyang di telinga', 'Nausea|Mual', 'Muffled hearing|Pendengaran teredam', 'Ear drainage|Drainase telinga']"
+Earwax build-up|Penumpukan kotoran telinga,"['Hearing loss|Kehilangan pendengaran', 'Earache|Sakit telinga', 'Sense of ear fullness|Rasa telinga terasa penuh', 'Itching in the ear|Gatal di telinga', 'Dizziness|Pusing', 'Ringing in the ears|Telinga berdenging', 'Cough|Batuk', 'earache|sakit telinga', 'hearing loss|gangguan pendengaran', 'tinnitus (hearing sounds from inside your body)|tinnitus (mendengar suara dari dalam tubuh Anda)', 'itchiness in or around the ear|gatal di dalam atau di sekitar telinga', 'vertigo (a spinning sensation)|vertigo (a spinning sensation)', 'ear infections|infeksi telinga']"
+Ebola virus disease|Ebola virus disease,"['Fever|Demam', 'Weakness and fatigue|Kelemahan dan kelelahan', 'Abdominal (stomach) pain|Sakit perut (perut)']"
+Ectopic pregnancy|Kehamilan ektopik,['abnormal vaginal bleeding or cramping|perdarahan atau kram vagina abnormal']
+Endometriosis|Endometriosis,"['Pain with intercourse |Nyeri saat berhubungan', 'Pain with bowel movements or urination |Nyeri saat buang air besar atau buang air kecil', 'Excessive bleeding |Pendarahan yang berlebihan', 'Infertility |Infertilitas', 'Other signs and symptoms|Tanda dan gejala lainnya']"
+Epilepsy|Epilepsi,"['Temporary confusion|Kebingungan sementara', 'A staring spell|Mantra menatap', 'Loss of consciousness or awareness|Kehilangan kesadaran atau kesadaran', 'Psychic symptoms such as fear, anxiety or deja vu|Gejala psikis seperti ketakutan, kecemasan atau deja vu']"
+Erectile dysfunction (impotence)|Disfungsi ereksi (impotensi),"['Trouble getting an erection|Kesulitan mendapatkan ereksi', 'Trouble keeping an erection|Kesulitan mempertahankan ereksi', 'Reduced sexual desire|Keinginan seksual berkurang']"
+Ewing sarcoma|Sarkoma Ewing,"['Bone pain|Sakit tulang', 'Unexplained tiredness|Kelelahan yang tidak bisa dijelaskan', 'Fever with no known cause|Demam tanpa penyebab yang diketahui', 'Losing weight without trying|Menurunkan berat badan tanpa berusaha']"
+Ewing sarcoma: Children|Sarkoma Ewing: Anak-anak,"['Swelling around the site of the tumor|Pembengkakan di sekitar lokasi tumor', 'A lump (mass)|Benjolan (massa)', 'A bone breaks for no known reason|Patah tulang tanpa alasan yang diketahui', 'Fever|Demam', 'Weight loss|Penurunan berat badan', 'Feeling tired|Merasa lelah']"
+Eye cancer|Kanker mata,"['blurred vision|penglihatan kabur', ""a dark patch in your eye that's getting bigger|bercak gelap di mata Anda yang semakin membesar"", 'partial or total loss of vision|kehilangan penglihatan sebagian atau total', 'bulging of 1 eye|menonjol dari 1 mata', 'pain in or around your eye, although this is rare|nyeri di dalam atau di sekitar mata Anda, meskipun ini jarang terjadi']"
+Febrile seizures|Kejang demam,['severe shaking or staring spells|mantra gemetar atau menatap yang parah']
+Fever in children|Demam pada anak-anak,"['Sweating|Berkeringat', 'Chills and shivering|Menggigil dan menggigil', 'Headache|Sakit kepala', 'Muscle aches|Nyeri otot', 'Loss of appetite|Kehilangan selera makan', 'Irritability|Sifat lekas marah', 'Dehydration|Dehidrasi', 'General weakness|Kelemahan umum']"
+Fibroids|Fibroid,"['Heavy menstrual bleeding|Pendarahan menstruasi yang berat', 'Menstrual periods lasting more than a week|Periode menstruasi berlangsung lebih dari seminggu', 'Pelvic pressure or pain|Tekanan atau nyeri panggul', 'Frequent urination|Sering buang air kecil', 'Difficulty emptying the bladder|Kesulitan mengosongkan kandung kemih', 'Constipation|Sembelit', 'Backache or leg pains|Sakit punggung atau kaki']"
+Fibromyalgia|Fibromyalgia,"['Pain and tender points|Titik nyeri dan nyeri tekan', 'Fatigue|Kelelahan', 'Sleep problems|Masalah tidur', 'Anxiety or depression|Kecemasan atau depresi', 'Morning stiffness|Kekakuan pagi', 'Headaches|Sakit kepala']"
+Flatulence|Perut kembung,"['passing wind often|sering melewati angin', 'smelly flatus|kentut bau', 'loud flatus|ledakan keras', 'abdominal distension and discomfort|perut kembung dan ketidaknyamanan', 'rumblings in the lower abdomen|gemuruh di perut bagian bawah', 'indigestion|gangguan pencernaan', 'constipation|sembelit']"
+Flu|Flu,"['chest pressure|tekanan dada', 'head congestion|kemacetan kepala', 'headache|sakit kepala', 'nausea|mual', 'shortness of breath|sesak napas', 'sore throat|sakit tenggorokan', 'or swollen lymph nodes|atau pembengkakan kelenjar getah bening']"
+Food poisoning|Keracunan makanan,['headache or weakness|sakit kepala atau kelemahan']
+Fungal nail infection|Infeksi kuku jamur,"['Thickened|Menebal', 'Whitish to yellow-brown discoloration|Perubahan warna keputihan menjadi kuning kecokelatan', 'Brittle, crumbly or ragged|Rapuh, rapuh atau compang-camping', 'Distorted in shape|Bentuknya terdistorsi', 'Smelling slightly foul|Berbau sedikit', 'The nail may thicken and could be hard to trim|Kuku bisa menebal dan sulit dipotong', 'Your nail may become misshapen|Kuku Anda mungkin berubah bentuk']"
+Gallbladder cancer|Kanker kandung empedu,"['Abdominal bloating|Perut kembung', 'Fever|Demam', 'Losing weight without trying|Menurunkan berat badan tanpa berusaha', 'Nausea|Mual']"
+Gallstones|Batu empedu,"['Back pain between your shoulder blades|Nyeri punggung di antara tulang belikat Anda', 'Pain in your right shoulder|Sakit di bahu kanan Anda', 'Nausea or vomiting|Mual atau muntah']"
+Ganglion cyst|Kista ganglion,['lump or pain in the affected area|benjolan atau nyeri di area yang terkena']
+Gastroenteritis|Gastroenteritis,"['Abdominal cramps and pain|Kram dan nyeri perut', 'Nausea, vomiting or both|Mual, muntah atau keduanya', 'Occasional muscle aches or headache|Nyeri otot atau sakit kepala sesekali', 'Low-grade fever|Demam ringan', 'A fever above 101° Fahrenheit|Demam di atas 101 ° Fahrenheit', 'Blood or pus in your stool|Darah atau nanah di tinja Anda', 'Diarrhea that lasts more than one week|Diare yang berlangsung lebih dari satu minggu']"
+Gastro-oesophageal reflux disease (GORD)|Penyakit refluks gastroesofagus (GORD),"['Chronic heartburn|Sakit maag kronis', 'Regurgitation|Regurgitasi', 'Chest pain or discomfort|Nyeri dada atau ketidaknyamanan', 'Chronic cough, sore throat, and/or hoarseness|Batuk kronis, sakit tenggorokan, dan / atau suara serak', 'Sleep disturbances and nighttime symptoms|Gangguan tidur dan gejala malam hari', 'Belching, gas, and bloating|Bersendawa, gas, dan kembung', 'Nausea|Mual', 'Intolerance of certain foods|Intoleransi makanan tertentu', 'oesophagitis (a sore, inflamed oesophagus)|esofagitis (esofagus yang sakit dan meradang)', 'bad breath|bau mulut', 'bloating and belching|kembung dan sendawa', 'feeling or being sick|merasa atau sakit']"
+Genital herpes|Genital herpes,"['Ulcers |Bisul', 'Scabs|Keropeng', 'fever|demam', 'chills|panas dingin', 'headache|sakit kepala', 'feeling achy and tired|merasa pegal dan lelah']"
+Genital warts|Kutil kelamin,"['Itching or discomfort in your genital area|Gatal atau ketidaknyamanan di area genital Anda', 'Bleeding with intercourse|Pendarahan saat berhubungan']"
+Glandular fever|Demam kelenjar,"['Feeling tired|Merasa lelah', 'Muscle aches|Nyeri otot', 'Fever|Demam', 'Sore throat|Sakit tenggorokan', 'Swollen lymph nodes|Kelenjar getah bening membengkak', 'Headache|Sakit kepala', 'Flu-like symptoms |Gejala mirip flu', 'Malaise |Tidak nyaman', 'Swelling around eyes |Bengkak di sekitar mata', 'Spleen |Limpa', 'No symptoms|Tidak ada gejala']"
+Gout|Encok,['physical deformity or redness|deformitas fisik atau kemerahan']
+Gum disease|Penyakit gusi,"[""Bad breath that won't go away|Bau mulut yang tak kunjung hilang"", 'Red or swollen gums|Gusi merah atau bengkak', 'Tender or bleeding gums|Gusi lunak atau berdarah', 'Painful chewing|Mengunyah yang menyakitkan', 'Loose teeth|Gigi tanggal', 'Sensitive teeth|Gigi sensitif', 'Receding gums or longer appearing teeth|Gusi surut atau gigi yang tumbuh lebih lama']"
+Haemorrhoids (piles)|Wasir (wasir),"['bright red blood after you poo|darah merah cerah setelah kamu buang air', 'an itchy anus|anus yang gatal', 'lumps around your anus|benjolan di sekitar anus Anda', 'pain around your anus|nyeri di sekitar anus Anda']"
+Hairy cell leukaemia|Leukemia sel rambut,"['Weakness or feeling tired|Lemah atau merasa lelah', 'Fever or frequent infections|Demam atau sering terkena infeksi', 'Easy bruising or bleeding|Mudah memar atau berdarah', 'Shortness of breath|Sesak napas', 'Weight loss for no known reason|Penurunan berat badan tanpa alasan yang diketahui', 'Pain or a feeling of fullness below the ribs|Nyeri atau perasaan kenyang di bawah tulang rusuk']"
+"Hand, foot and mouth disease|Penyakit tangan, kaki dan mulut","['Fever|Demam', 'Sore throat|Sakit tenggorokan', 'Feeling of being unwell (malaise)|Merasa tidak sehat (malaise)', 'Irritability in infants and toddlers|Iritabilitas pada bayi dan balita', 'Loss of appetite|Kehilangan selera makan']"
+Hay fever|Ada demam,"['sneezing and coughing|bersin dan batuk', 'a runny or blocked nose|hidung meler atau tersumbat', 'itchy, red or watery eyes|mata gatal, merah atau berair', 'itchy throat, mouth, nose and ears|tenggorokan gatal, mulut, hidung dan telinga', 'loss of smell|kehilangan bau', 'pain around your temples and forehead|nyeri di sekitar pelipis dan dahi Anda', 'headache|sakit kepala', 'earache|sakit telinga']"
+Head and neck cancer|Kanker kepala dan leher,"['A persistent sore throat|Sakit tenggorokan yang terus-menerus', 'Trouble swallowing (dysphagia)|Kesulitan menelan (disfagia)', 'Unexplained weight loss|Penurunan berat badan yang tidak bisa dijelaskan', 'Frequent coughing|Sering batuk', 'Change in voice or hoarseness|Perubahan suara atau serak', 'Ear pain or trouble hearing|Sakit telinga atau kesulitan mendengar', 'Headaches|Sakit kepala', 'a lump or thickening in the lips|benjolan atau penebalan di bibir', 'unusual bleeding or numbness in the mouth|perdarahan yang tidak biasa atau mati rasa di mulut', 'loose teeth for no clear reason|gigi tanggal tanpa alasan yang jelas', 'dentures that no longer fit|gigi palsu yang tidak lagi pas', 'difficulty moving the jaw|kesulitan menggerakkan rahang']"
+Head lice and nits|Kutu rambut dan telur kutu,"['Tickling feeling from movement of hair|Rasa menggelitik dari gerakan rambut', 'Lice eggs (nits) on hair shafts |Telur kutu (nits) di batang rambut', 'Sores on the scalp, neck and shoulders|Luka di kulit kepala, leher dan bahu']"
+Headaches|Sakit kepala,"['Sensitivity to light, noise or odors|Kepekaan terhadap cahaya, kebisingan, atau bau', 'Blurred vision|Penglihatan kabur', 'Nausea or vomiting, stomach upset, abdominal pain|Mual atau muntah, sakit perut, sakit perut', 'Loss of appetite|Kehilangan selera makan', 'Dull, aching head pain|Sakit kepala yang terasa nyeri dan tumpul']"
+Hearing loss|Kehilangan pendengaran,"['Muffling of speech and other sounds|Meredam ucapan dan suara lainnya', 'Trouble hearing consonants|Kesulitan mendengar konsonan']"
+Heart failure|Gagal jantung,"['Fatigue and weakness|Kelelahan dan kelemahan', 'Swelling (edema) in your legs, ankles and feet|Pembengkakan (edema) di tungkai, pergelangan kaki dan kaki Anda', 'Rapid or irregular heartbeat|Detak jantung cepat atau tidak teratur', 'Reduced ability to exercise|Berkurangnya kemampuan untuk berolahraga', 'Increased need to urinate at night|Meningkatnya kebutuhan buang air kecil di malam hari', 'Fluid and water retention |Retensi cairan dan air', 'Dizziness , fatigue, andweakness |Pusing, kelelahan, dan lemas', 'Rapid or irregular heartbeats|Detak jantung cepat atau tidak teratur']"
+Hepatitis A|Hepatitis A,"['Fatigue|Kelelahan', 'Sudden nausea and vomiting|Mual dan muntah tiba-tiba', 'Clay-colored bowel movements|Buang air besar berwarna tanah liat', 'Loss of appetite|Kehilangan selera makan', 'Low-grade fever|Demam ringan', 'Dark urine|Urine berwarna gelap', 'Joint pain|Nyeri sendi']"
+Hepatitis B|Hepatitis B,"['Abdominal pain|Sakit perut', 'Dark urine|Urine berwarna gelap', 'Fever|Demam', 'Joint pain|Nyeri sendi', 'Loss of appetite|Kehilangan selera makan', 'Nausea and vomiting|Mual dan muntah', 'Weakness and fatigue|Kelemahan dan kelelahan']"
+Hepatitis C|Hepatitis C,"['Bleeding easily|Mudah berdarah', 'Bruising easily|Mudah memar', 'Fatigue|Kelelahan', 'Poor appetite|Nafsu makan buruk', 'Dark-colored urine|Urine berwarna gelap', 'Itchy skin|Kulit yang gatal', 'Fluid buildup in your abdomen (ascites)|Penumpukan cairan di perut Anda (asites)', 'Feeling very tired|Merasa sangat lelah', 'Sore muscles|Sore muscles', 'Joint pain|Nyeri sendi', 'Fever|Demam', 'Nausea or poor appetite|Mual atau nafsu makan buruk', 'Stomach pain|Sakit perut', 'Itchy skin|Kulit yang gatal', 'Dark urine|Urine berwarna gelap']"
+Hiatus hernia|Hiatus hernia,"['Heartburn|Maag', 'Regurgitation of food or liquids into the mouth|Regurgitasi makanan atau cairan ke dalam mulut', 'Difficulty swallowing|Kesulitan menelan', 'Chest or abdominal pain|Sakit dada atau perut', 'Shortness of breath|Sesak napas']"
+HIV|HIV,"['Fever|Demam', 'Chills|Panas dingin', 'Rash|Ruam', 'Night sweats|Keringat malam', 'Muscle aches|Nyeri otot', 'Sore throat|Sakit tenggorokan', 'Fatigue|Kelelahan', 'Swollen lymph nodes|Kelenjar getah bening membengkak']"
+Hodgkin lymphoma|Limfoma hodgkin,"['Persistent fatigue|Kelelahan terus-menerus', 'Fever|Demam', 'Night sweats|Keringat malam', 'Unexplained weight loss|Penurunan berat badan yang tidak bisa dijelaskan', 'Severe itching|Gatal parah']"
+Hodgkin lymphoma: Children|Limfoma Hodgkin: Anak-anak,"['Extreme fatigue|Kelelahan yang ekstrim', 'Loss of appetite|Kehilangan selera makan', 'Weight loss|Penurunan berat badan', 'Fever|Demam', 'Night sweats|Keringat malam', 'Itchy skin|Kulit yang gatal']"
+Hodgkin lymphoma: Teenagers and young adults|Limfoma Hodgkin: Remaja dan dewasa muda,"['Poor appetite|Nafsu makan buruk', 'Weight loss|Penurunan berat badan', 'Night sweats|Keringat malam', 'Fever|Demam', 'Fatigue or sense of ill-feeling|Kelelahan atau perasaan tidak enak badan']"
+Huntington's disease|Penyakit Huntington,"['Slow or abnormal eye movements|Gerakan mata lambat atau tidak normal', 'Impaired gait, posture and balance|Kiprah, postur, dan keseimbangan terganggu', 'Difficulty with speech or swallowing|Kesulitan berbicara atau menelan']"
+Hyperglycaemia (high blood sugar)|Hiperglikemia (gula darah tinggi),"['Increased thirst|Meningkatnya rasa haus', 'Headaches|Sakit kepala', 'Trouble concentrating|Kesulitan berkonsentrasi', 'Blurred vision|Penglihatan kabur', 'Frequent peeing|Sering buang air kecil', 'Fatigue (weak, tired feeling)|Kelelahan (lemas, perasaan lelah)', 'Weight loss|Penurunan berat badan', 'Blood sugar more than 180 mg/dL|Gula darah lebih dari 180 mg / dL']"
+Hypoglycaemia (low blood sugar)|Hipoglikemia (gula darah rendah),"['Feeling shaky|Merasa gemetar', 'Being nervous or anxious|Menjadi gugup atau cemas', 'Sweating, chills and clamminess|Berkeringat, menggigil, dan lembap', 'Irritability or impatience|Iritabilitas atau ketidaksabaran', 'Confusion|Kebingungan', 'Fast heartbeat|Detak jantung cepat', 'Feeling lightheaded or dizzy|Merasa pusing atau pusing', 'Hunger|Kelaparan', 'Visual disturbances, such as blurred vision|Gangguan penglihatan, seperti penglihatan kabur', 'Seizures|Kejang', 'Loss of consciousness|Hilang kesadaran']"
+Idiopathic pulmonary fibrosis|Fibrosis paru idiopatik,"['shortness of breath|sesak napas', 'a persistent dry cough|batuk kering yang terus-menerus', 'tiredness|kelelahan', 'loss of appetite and weight loss|kehilangan nafsu makan dan penurunan berat badan', 'rounded and swollen fingertips (clubbed fingers)|ujung jari membulat dan bengkak (jari-jari dipukul)']"
+Impetigo|Impetigo,['itching|gatal']
+Indigestion|Gangguan pencernaan,"['Burning in the stomach or upper abdomen|Terbakar di perut atau perut bagian atas', 'Abdominal pain|Sakit perut', 'Bloating (full feeling)|Kembung (perasaan penuh)', 'Belching and gas|Bersendawa dan gas', 'Nausea and vomiting|Mual dan muntah', 'Acidic taste|Rasa asam', 'Growling stomach|Perut keroncongan']"
+Ingrown toenail|Kuku tumbuh ke dalam,"['Redness around your toenail|Kemerahan di sekitar kuku kaki Anda', 'Swelling of your toe around the nail|Jari kaki bengkak di sekitar kuku', 'Infection of the tissue around your toenail|Infeksi jaringan di sekitar kuku kaki Anda']"
+Inherited heart conditions|Kondisi jantung yang diwariskan,"['Chest pain|Nyeri dada', 'Dizziness|Pusing', 'Fainting|Pingsan', 'Fatigue or inability to exercise|Kelelahan atau ketidakmampuan untuk berolahraga', 'Shortness of breath|Sesak napas']"
+Insomnia|Insomnia,"['Difficulty falling asleep at night|Kesulitan tidur di malam hari', 'Waking up during the night|Bangun di malam hari', 'Waking up too early|Bangun terlalu pagi', ""Not feeling well-rested after a night's sleep|Tidak merasa cukup istirahat setelah tidur malam"", 'Daytime tiredness or sleepiness|Kelelahan atau kantuk di siang hari', 'Irritability, depression or anxiety|Iritabilitas, depresi atau kecemasan', 'Increased errors or accidents|Meningkatnya kesalahan atau kecelakaan']"
+Iron deficiency anaemia|Anemia defisiensi zat besi,"['Extreme fatigue|Kelelahan yang ekstrim', 'Weakness|Kelemahan', 'Pale skin|Kulit pucat', 'Chest pain, fast heartbeat or shortness of breath|Nyeri dada, detak jantung cepat atau sesak napas', 'Headache, dizziness or lightheadedness|Sakit kepala, pusing atau pusing', 'Cold hands and feet|Tangan dan kaki dingin', 'Inflammation or soreness of your tongue|Peradangan atau nyeri lidah Anda', 'Brittle nails|Kuku rapuh', 'Unusual Tiredness Share on Pinterest |Kelelahan yang Tidak Biasa Bagikan di Pinterest', 'Paleness |Kepucatan', 'Shortness of Breath |Sesak napas', 'Headaches and Dizziness |Sakit Kepala dan Pusing', 'Heart Palpitations |Palpitasi jantung', 'Dry and Damaged Hair and Skin |Rambut dan Kulit Kering dan Rusak', 'Swelling and Soreness of the Tongue and Mouth |Pembengkakan dan Nyeri pada Lidah dan Mulut', 'Restless Legs|Kaki Gelisah']"
+Irritable bowel syndrome (IBS)|Sindrom iritasi usus besar (IBS),"['Constipation |Sembelit', 'Alternating Constipation and Diarrhea |Sembelit dan Diare Bergantian', 'Changes in Bowel Movements |Perubahan Pergerakan Usus', 'Gas and Bloating |Gas dan Kembung', 'Food Intolerance |Intoleransi Makanan', 'Fatigue and Difficulty Sleeping|Kelelahan dan Kesulitan Tidur']"
+Irritable hip|Pinggul yang mudah tersinggung,"['pain in the knee or thigh|nyeri di lutut atau paha', 'restricted movement in one of the hip joints|gerakan terbatas di salah satu sendi pinggul']"
+Itching|Gatal,"['Internal diseases |Penyakit dalam', 'Nerve disorders |Gangguan saraf', 'Psychiatric diseases |Penyakit kejiwaan', 'Irritation and allergic reactions |Iritasi dan reaksi alergi', 'Pregnancy|Kehamilan']"
+Kaposi's sarcoma|Sarkoma Kaposi,"['Unexplained cough or chest pain|Batuk atau nyeri dada yang tidak dapat dijelaskan', 'Unexplained stomach or intestinal pain|Sakit perut atau usus yang tidak bisa dijelaskan']"
+Kidney cancer|Kanker ginjal,"['Blood in the urine (hematuria)|Darah dalam urin (hematuria)', 'Low back pain on one side (not caused by injury)|Nyeri punggung bawah di satu sisi (bukan karena cedera)', 'A mass (lump) on the side or lower back|Massa (benjolan) di samping atau punggung bawah', 'Fatigue (tiredness)|Kelelahan (kelelahan)', 'Loss of appetite|Kehilangan selera makan', 'Weight loss not caused by dieting|Penurunan berat badan tidak disebabkan oleh diet']"
+Kidney infection|Infeksi ginjal,"['Fever|Demam', 'Chills|Panas dingin', 'Back, side (flank) or groin pain|Nyeri punggung, samping (panggul) atau selangkangan', 'Abdominal pain|Sakit perut', 'Frequent urination|Sering buang air kecil', 'Strong, persistent urge to urinate|Dorongan yang kuat dan terus menerus untuk buang air kecil', 'Burning sensation or pain when urinating|Sensasi terbakar atau nyeri saat buang air kecil', 'Nausea and vomiting|Mual dan muntah', 'Blood or pus in your pee|Darah atau nanah di kencing Anda', 'Fever and chills|Demam dan menggigil', 'Loss of appetite|Kehilangan selera makan', 'Pain in your lower back, side, or groin|Nyeri di punggung bawah, samping, atau selangkangan', 'Upset stomach or vomiting|Sakit perut atau muntah', 'Weakness or fatigue|Kelemahan atau kelelahan']"
+Kidney stones|Batu ginjal,"['Pink, red or brown urine|Urine berwarna merah muda, merah atau coklat', 'Cloudy or foul-smelling urine|Urine keruh atau berbau tidak sedap', 'Nausea and vomiting|Mual dan muntah', 'Fever and chills if an infection is present|Demam dan menggigil jika ada infeksi']"
+Labyrinthitis|Labirinitis,"['dizziness|pusing', 'vertigo|vertigo', 'loss of balance|kehilangan keseimbangan', 'nausea and vomiting|mual dan muntah', 'difficulty focusing your eyes|kesulitan memfokuskan mata Anda']"
+Lactose intolerance|Intoleransi laktosa,"['Diarrhea|Diare', 'Nausea, and sometimes, vomiting|Mual, dan terkadang, muntah', 'Stomach cramps|Keram perut', 'Bloating|Kembung', 'Gas|Gas']"
+Langerhans cell histiocytosis|Histiositosis sel Langerhans,"['Loose teeth (when not expected) or swollen gums|Gigi tanggal (jika tidak diharapkan) atau gusi bengkak', 'Skin rash, such as on the scalp or buttocks|Ruam kulit, seperti di kulit kepala atau bokong']"
+Laryngeal (larynx) cancer|Kanker laring (laring),"['a change in your voice, such as sounding hoarse|perubahan suara Anda, seperti terdengar parau', 'pain when swallowing or difficulty swallowing|nyeri saat menelan atau kesulitan menelan', 'a lump or swelling in your neck|benjolan atau bengkak di leher Anda', 'a long-lasting cough|batuk yang berlangsung lama', 'a persistent sore throat or earache|sakit tenggorokan atau sakit telinga yang terus-menerus', 'in severe cases, difficulty breathing|dalam kasus yang parah, kesulitan bernapas']"
+Laryngitis|Radang tenggorokan,"['Hoarseness|Suara serak', 'Weak voice or voice loss|Suara lemah atau kehilangan suara', 'Tickling sensation and rawness in your throat|Sensasi menggelitik dan terasa kasar di tenggorokan Anda', 'Sore throat|Sakit tenggorokan', 'Dry throat|Tenggorokan kering', 'Dry cough|Batuk kering']"
+Lichen planus|Rencana pribadi,"['Itching|Gatal', 'Blisters that break to form scabs or crusts|Lepuh yang pecah membentuk koreng atau kerak', 'Painful sores in the mouth or vagina|Luka yang menyakitkan di mulut atau vagina', 'Hair loss|Rambut rontok', 'Change in scalp color|Berubah warna kulit kepala']"
+Liver cancer|Kanker hati,"['Losing weight without trying|Menurunkan berat badan tanpa berusaha', 'Loss of appetite|Kehilangan selera makan', 'Upper abdominal pain|Nyeri perut bagian atas', 'Nausea and vomiting|Mual dan muntah', 'General weakness and fatigue|Kelemahan dan kelelahan umum', 'Abdominal swelling|Pembengkakan perut', 'White, chalky stools|Kotoran putih berkapur', 'Weight loss (without trying)|Penurunan berat badan (tanpa mencoba)', 'Loss of appetite|Kehilangan selera makan', 'Feeling very full after a small meal|Merasa sangat kenyang setelah makan kecil', 'Nausea or vomiting|Mual atau muntah']"
+Liver disease|Penyakit hati,"['Skin and eyes that appear yellowish (jaundice)|Kulit dan mata yang tampak kekuningan (ikterus)', 'Abdominal pain and swelling|Sakit perut dan bengkak', 'Swelling in the legs and ankles|Bengkak di tungkai dan pergelangan kaki', 'Itchy skin|Kulit yang gatal', 'Dark urine color|Warna urine gelap', 'Pale stool color|Warna feses pucat', 'Chronic fatigue|Kelelahan kronis', 'Nausea or vomiting|Mual atau muntah']"
+Liver tumours|Tumor hati,"['Losing weight without trying|Menurunkan berat badan tanpa berusaha', 'Loss of appetite|Kehilangan selera makan', 'Upper abdominal pain|Nyeri perut bagian atas', 'Nausea and vomiting|Mual dan muntah', 'General weakness and fatigue|Kelemahan dan kelelahan umum', 'Abdominal swelling|Pembengkakan perut', 'White, chalky stools|Kotoran putih berkapur', 'Weight loss (without trying)|Penurunan berat badan (tanpa mencoba)', 'Loss of appetite|Kehilangan selera makan', 'Feeling very full after a small meal|Merasa sangat kenyang setelah makan kecil', 'Nausea or vomiting|Mual atau muntah']"
+Lung cancer|Kanker paru-paru,"['A cough that does not go away or gets worse|Batuk yang tidak kunjung sembuh atau semakin parah', 'Hoarseness|Suara serak', 'Loss of appetite|Kehilangan selera makan', 'Unexplained weight loss|Penurunan berat badan yang tidak bisa dijelaskan', 'Shortness of breath|Sesak napas', 'Feeling tired or weak|Merasa lelah atau lemah']"
+Lupus|Lupus,"['Pain or swelling in joints|Nyeri atau bengkak pada persendian', 'Muscle pain|Nyeri otot', 'Fever with no known cause|Demam tanpa penyebab yang diketahui', 'Chest pain when taking a deep breath|Nyeri dada saat menarik napas dalam', 'Hair loss|Rambut rontok', 'Pale or purple fingers or toes|Jari tangan atau kaki pucat atau ungu', 'Sensitivity to the sun|Sensitivitas terhadap sinar matahari']"
+Lyme disease|Penyakit Lyme,"['Fever|Demam', 'Chills|Panas dingin', 'Headache|Sakit kepala', 'Fatigue|Kelelahan', 'Muscle and joint aches|Nyeri otot dan sendi', 'Swollen lymph nodes|Kelenjar getah bening membengkak']"
+Lymphoedema|Limfedema,"['A feeling of heaviness or tightness|Perasaan berat atau sesak', 'Restricted range of motion|Rentang gerak yang dibatasi', 'Aching or discomfort|Sakit atau tidak nyaman', 'Recurring infections|Infeksi berulang', 'Hardening and thickening of the skin (fibrosis)|Pengerasan dan penebalan kulit (fibrosis)']"
+Malaria|Malaria,"['fast heart rate|detak jantung cepat', 'headache|sakit kepala', 'mental confusion|kebingungan mental', 'or pallor|atau pucat']"
+Malignant brain tumour (cancerous)|Tumor otak ganas (bersifat kanker),"['severe, persistent headaches|sakit kepala parah dan terus-menerus', 'seizures (fits)|kejang (pas)', 'persistent nausea, vomiting and drowsiness|mual terus menerus, muntah dan mengantuk']"
+Malnutrition|Malnutrisi,"['reduced appetite|nafsu makan berkurang', 'lack of interest in food and drink|kurangnya minat pada makanan dan minuman', 'feeling tired all the time|merasa lelah sepanjang waktu', 'feeling weaker|merasa lebih lemah', 'wounds taking a long time to heal|luka membutuhkan waktu lama untuk sembuh', 'poor concentration|konsentrasi yang buruk', 'feeling cold most of the time|merasa kedinginan hampir sepanjang waktu']"
+Measles|Campak,"['a runny or blocked nose|hidung meler atau tersumbat', 'sneezing|bersin', 'watery eyes|mata berair', 'swollen eyelids|kelopak mata bengkak', 'sore, red eyes that may be sensitive to light|sakit, mata merah yang mungkin sensitif terhadap cahaya', 'small greyish-white spots in the mouth|bintik putih keabu-abuan kecil di mulut', 'aches and pains|sakit dan nyeri']"
+Meningitis|Meningitis,"['Sudden high fever|Demam tinggi mendadak', 'Stiff neck|Leher kaku', 'Severe headache that seems different than normal|Sakit kepala parah yang tampaknya berbeda dari biasanya', 'Headache with nausea or vomiting|Sakit kepala disertai mual atau muntah', 'Confusion or difficulty concentrating|Kebingungan atau kesulitan berkonsentrasi', 'Seizures|Kejang', 'Sleepiness or difficulty waking|Kantuk atau sulit bangun', 'Sensitivity to light|Sensitivitas terhadap cahaya']"
+Menopause|Menopause,"['Irregular periods|Menstruasi tidak teratur', 'Vaginal dryness|Kekeringan vagina', 'Hot flashes|Hot flashes', 'Chills|Panas dingin', 'Night sweats|Keringat malam', 'Sleep problems|Masalah tidur', 'Mood changes|Perubahan mood', 'Weight gain and slowed metabolism|Penambahan berat badan dan metabolisme yang lambat', 'insomnia|insomnia', 'vaginal dryness|kekeringan vagina', 'weight gain|penambahan berat badan', 'depression|depresi', 'anxiety|kegelisahan', 'difficulty concentrating|kesulitan berkonsentrasi', 'memory problems|masalah memori', 'reduced libido, or sex drive|penurunan libido, atau dorongan seks']"
+Mesothelioma|Mesothelioma,"['coughing|batuk', 'shortness of breath|sesak napas', 'or weight loss|atau penurunan berat badan']"
+Middle ear infection (otitis media)|Infeksi telinga tengah (otitis media),"['earache|sakit telinga', 'a high temperature (fever)|suhu tinggi (demam)', 'being sick|sedang sakit', 'a lack of energy|kekurangan energi']"
+Migraine|Migrain,"['Pain that throbs or pulses|Nyeri yang berdenyut atau berdenyut', 'Nausea and vomiting|Mual dan muntah']"
+Miscarriage|Keguguran,"['Vaginal spotting or bleeding|Bercak atau perdarahan vagina', 'Pain or cramping in your abdomen or lower back|Nyeri atau kram di perut atau punggung bawah', 'Fluid or tissue passing from your vagina|Cairan atau jaringan keluar dari vagina Anda']"
+Motor neurone disease (MND)|Penyakit neuron motorik (MND),"['muscle aches, cramps, twitching|nyeri otot, kram, kedutan', 'clumsiness, stumbling|kecanggungan, tersandung', 'slurred speech, swallowing or chewing difficulty|bicara cadel, kesulitan menelan atau mengunyah', 'fatigue|kelelahan', 'muscle wasting, weight loss|pengecilan otot, penurunan berat badan']"
+Mouth cancer|Kanker mulut,"[""A lip or mouth sore that doesn't heal|Sakit bibir atau mulut yang tidak kunjung sembuh"", 'Loose teeth|Gigi tanggal', 'A growth or lump inside your mouth|Pertumbuhan atau benjolan di dalam mulut Anda', 'Mouth pain|Sakit mulut', 'Ear pain|Sakit telinga', 'Difficult or painful swallowing|Sulit atau menyakitkan saat menelan']"
+Mouth ulcer|Sariawan,"['swollen skin around the sores|kulit bengkak di sekitar luka', 'loss of appetite|kehilangan selera makan']"
+Multiple myeloma|Mieloma multipel,"['Bone pain, especially in your spine or chest|Nyeri tulang, terutama di tulang belakang atau dada', 'Nausea|Mual', 'Constipation|Sembelit', 'Loss of appetite|Kehilangan selera makan', 'Mental fogginess or confusion|Kebingungan atau kebingungan mental', 'Fatigue|Kelelahan', 'Frequent infections|Infeksi yang sering', 'Weight loss|Penurunan berat badan']"
+Multiple sclerosis (MS)|Multiple sclerosis (MS),"['Slurred speech|Ucapan cadel', 'Fatigue|Kelelahan', 'Dizziness|Pusing', 'Tingling or pain in parts of your body|Kesemutan atau nyeri di bagian tubuh Anda', 'Problems with sexual, bowel and bladder function|Masalah dengan fungsi seksual, usus dan kandung kemih']"
+Mumps|Penyakit gondok,"['Pain while chewing or swallowing|Nyeri saat mengunyah atau menelan', 'Fever|Demam', 'Headache|Sakit kepala', 'Muscle aches|Nyeri otot', 'Weakness and fatigue|Kelemahan dan kelelahan', 'Loss of appetite|Kehilangan selera makan']"
+Meniere's disease|Penyakit Meniere,"['Ringing in the ear (tinnitus) |Dering di telinga (tinnitus)', 'Feeling of fullness in the ear|Perasaan penuh di telinga']"
+Nasal and sinus cancer|Kanker hidung dan sinus,"['Pain above or below the eyes|Nyeri di atas atau di bawah mata', 'Blockage of one side of the nose|Penyumbatan di satu sisi hidung', 'Nosebleeds|Mimisan', 'Pus draining from the nose|Nanah mengalir dari hidung', 'Decreased or loss of sense of smell|Penurunan atau hilangnya indra penciuman', 'Numbness or pain in parts of the face|Mati rasa atau nyeri di beberapa bagian wajah', 'swollen glands in the neck|kelenjar bengkak di leher', 'partial loss of vision or double vision|kehilangan sebagian penglihatan atau penglihatan ganda', 'a bulging or persistently watering eye|mata menonjol atau mata berair terus-menerus', 'pain or pressure in 1 ear|nyeri atau tekanan di 1 telinga']"
+Nasopharyngeal cancer|Kanker nasofaring,"['Blood in your saliva|Darah di air liur Anda', 'Bloody discharge from your nose|Keluarnya darah dari hidung Anda', 'Nasal congestion or ringing in your ears|Hidung tersumbat atau telinga Anda berdenging', 'Hearing loss|Kehilangan pendengaran', 'Frequent ear infections|Infeksi telinga yang sering', 'Sore throat|Sakit tenggorokan', 'Headaches|Sakit kepala', 'Lump in neck (most common)|Benjolan di leher (paling umum)', 'Blurry or double vision|Penglihatan kabur atau ganda', 'Ear infections that recur|Infeksi telinga yang kambuh', 'Face pain or numbness|Wajah sakit atau mati rasa', 'Headache|Sakit kepala', 'Difficulty opening mouth|Kesulitan membuka mulut', 'Nosebleeds|Mimisan']"
+Neuroblastoma|Neuroblastoma,"['Enlarged belly|Perut membesar', 'Problems breathing or swallowing|Kesulitan bernapas atau menelan', 'Weight loss|Penurunan berat badan', 'Not eating or complaining about feeling full|Tidak makan atau mengeluh merasa kenyang', 'Problems with bowel movements or urinating|Masalah dengan buang air besar atau buang air kecil', 'Pain in bones|Nyeri pada tulang']"
+Neuroblastoma: Children|Neuroblastoma: Anak-anak,"['Enlarged belly|Perut membesar', 'Problems breathing or swallowing|Kesulitan bernapas atau menelan', 'Weight loss|Penurunan berat badan', 'Not eating or complaining about feeling full|Tidak makan atau mengeluh merasa kenyang', 'Problems with bowel movements or urinating|Masalah dengan buang air besar atau buang air kecil', 'Pain in bones|Nyeri pada tulang']"
+Neuroendocrine tumours|Tumor neuroendokrin,"['Hyperglycemia (too much sugar in the blood)|Hiperglikemia (terlalu banyak gula dalam darah)', 'Hypoglycemia (too little sugar in the blood)|Hipoglikemia (terlalu sedikit gula dalam darah)', 'Diarrhea|Diare', 'Persistent pain in a specific area|Nyeri yang terus-menerus di area tertentu', 'Loss of appetite/weight loss|Kehilangan nafsu makan / penurunan berat badan', 'Persistent cough or hoarseness|Batuk terus menerus atau suara serak', 'Thickening or lump in any part of the body|Penebalan atau benjolan di bagian tubuh manapun', 'Changes in bowel or bladder habits|Perubahan kebiasaan buang air besar atau kandung kemih']"
+Non-Hodgkin lymphoma|Limfoma non-Hodgkin,"['Abdominal pain or swelling|Sakit perut atau bengkak', 'Chest pain, coughing or trouble breathing|Nyeri dada, batuk atau kesulitan bernapas', 'Persistent fatigue|Kelelahan terus-menerus', 'Fever|Demam', 'Night sweats|Keringat malam', 'Unexplained weight loss|Penurunan berat badan yang tidak bisa dijelaskan']"
+Non-Hodgkin lymphoma: Children|Limfoma non-Hodgkin: Anak-anak,"['Swollen abdomen (belly)|Perut bengkak (perut)', 'Feeling full after only a small amount of food|Merasa kenyang setelah hanya makan sedikit', 'Shortness of breath or cough|Sesak napas atau batuk', 'Fever|Demam', 'Weight loss|Penurunan berat badan', 'Night sweats|Keringat malam', 'Fatigue (feeling very tired)|Kelelahan (merasa sangat lelah)']"
+Norovirus|Norovirus,"['Nausea|Mual', 'Vomiting|Muntah', 'Stomach pain or cramps|Sakit perut atau kram', 'Watery or loose diarrhea|Diare encer atau longgar', 'Feeling ill|Merasa sakit', 'Low-grade fever|Demam ringan', 'Muscle pain|Nyeri otot', 'Low-grade fever|Demam ringan', 'Chills|Panas dingin', 'Headache|Sakit kepala', 'Muscle aches|Nyeri otot', 'Fatigue|Kelelahan']"
+Nosebleed|Mimisan,"['bleeding from either or both nostrils|pendarahan dari salah satu atau kedua lubang hidung', 'the urge to swallow frequently|keinginan untuk sering menelan']"
+Obesity|Kegemukan,"['breathlessness|sesak napas', 'increased sweating|peningkatan keringat', 'snoring|keruh', 'inability to cope with sudden physical activity|ketidakmampuan untuk mengatasi aktivitas fisik yang tiba-tiba', 'feeling very tired every day|merasa sangat lelah setiap hari', 'back and joint pains|nyeri punggung dan sendi', 'low confidence and self esteem|kepercayaan diri dan harga diri rendah', 'feeling isolated|merasa terisolasi']"
+Obsessive compulsive disorder (OCD)|Gangguan obsesif kompulsif (OCD),['Excessive focus on religious or moral ideas|Fokus berlebihan pada ide-ide agama atau moral']
+Obstructive sleep apnoea|Apnea tidur obstruktif,"['Excessive daytime sleepiness|Mengantuk secara berlebihanan di siang hari', 'Loud snoring|Mendengkur keras', 'Awakening with a dry mouth or sore throat|Bangun dengan mulut kering atau sakit tenggorokan', 'Morning headache|Sakit kepala pagi', 'Difficulty concentrating during the day|Kesulitan berkonsentrasi pada siang hari']"
+Oesophageal cancer|Kanker esofagus,"['persistent indigestion or heartburn|gangguan pencernaan atau mulas yang terus-menerus', 'bringing up food soon after eating|membesarkan makanan segera setelah makan', 'loss of appetite and weight loss|kehilangan nafsu makan dan penurunan berat badan', 'persistent vomiting|muntah terus menerus', 'a persistent cough|batuk terus-menerus', 'hoarseness|suara serak', 'tiredness, shortness of breath and pale skin|kelelahan, sesak napas dan kulit pucat']"
+Oral thrush in adults|Sariawan oral pada orang dewasa,"['loss of taste or an unpleasant taste in the mouth|kehilangan rasa atau rasa tidak enak di mulut', 'redness inside the mouth and throat|kemerahan di dalam mulut dan tenggorokan', 'cracks at the corners of the mouth|retakan di sudut mulut', 'a painful, burning sensation in the mouth|sensasi terbakar yang menyakitkan di mulut']"
+Osteoarthritis|Osteoartritis,"['Tenderness |Kelembutan', 'Loss of flexibility |Kehilangan fleksibilitas', 'Grating sensation |Sensasi kisi', 'Bone spurs |Bone spurs', 'Swelling|Pembengkakan']"
+Osteoporosis|Osteoporosis,"['Loss of height over time|Kehilangan tinggi seiring waktu', 'A stooped posture|Postur membungkuk', 'A bone that breaks much more easily than expected|Tulang yang patah jauh lebih mudah dari yang diperkirakan']"
+Osteosarcoma|Osteosarcoma,"['Bone pain or tenderness|Nyeri atau nyeri tulang', 'A mass (tumor) that can be felt through the skin|Massa (tumor) yang bisa dirasakan melalui kulit', 'Swelling and redness at the site of the tumor|Pembengkakan dan kemerahan di lokasi tumor', 'Limping (if it affects a leg)|Pincang (jika mempengaruhi kaki)', 'Limited movement (if it affects a joint)|Gerakan terbatas (jika mempengaruhi sendi)', 'A bump, depending on where the tumor is located|Benjolan, tergantung di mana tumor itu berada', 'Redness and warmth at the site of the tumor|Kemerahan dan kehangatan di lokasi tumor', 'Anemia|Anemia', 'Fever|Demam', 'Exhaustion|Kelelahan', 'Unexplained weight loss|Penurunan berat badan yang tidak bisa dijelaskan']"
+Otitis externa|Otitis externa,['ear pain|sakit telinga']
+Ovarian cancer|Kanker ovarium,"['Abdominal bloating or swelling|Perut kembung atau bengkak', 'Quickly feeling full when eating|Cepat merasa kenyang saat makan', 'Weight loss|Penurunan berat badan', 'Discomfort in the pelvis area|Ketidaknyamanan di daerah panggul', 'Changes in bowel habits, such as constipation|Perubahan kebiasaan buang air besar, seperti sembelit', 'A frequent need to urinate|Sering ingin buang air kecil', 'Pelvic pain|Nyeri panggul', 'Nausea or vomiting|Mual atau muntah', 'Pressure, swelling or pain in the abdomen|Tekanan, bengkak atau nyeri di perut', 'A dull ache in the lower back and thighs|Sakit di punggung bawah dan paha', 'Difficulty emptying your bladder|Kesulitan mengosongkan kandung kemih Anda', 'Pain during sex|Sakit saat berhubungan seks', 'Abnormal bleeding|Pendarahan tidak normal']"
+Ovarian cancer: Teenagers and young adults|Kanker ovarium: Remaja dan dewasa muda,"['A firm, painless swelling in the lower abdomen|Pembengkakan yang keras dan tidak nyeri di perut bagian bawah', 'Frequent urination or retention of urine|Sering buang air kecil atau retensi urine', 'Persistent abdominal pain|Sakit perut yang terus-menerus', 'Nausea|Mual', 'Vomiting|Muntah']"
+Ovarian cyst|Kista ovarium,"['Pelvic pain|Nyeri panggul', 'Dull ache in the lower back and thighs|Nyeri tumpul di punggung bawah dan paha', 'Problems emptying the bladder or bowel completely|Masalah mengosongkan kandung kemih atau usus sepenuhnya', 'Pain during sex|Sakit saat berhubungan seks', 'Unexplained weight gain|Pertambahan berat badan yang tidak bisa dijelaskan', 'Pain during your period|Nyeri selama menstruasi', 'Unusual (not normal) vaginal bleeding|Perdarahan vagina yang tidak biasa (tidak normal)', 'Breast tenderness|Nyeri payudara']"
+Overactive thyroid|Tiroid yang terlalu aktif,"['nervousness, anxiety and irritability|gugup, cemas dan mudah tersinggung', 'mood swings|perubahan suasana hati', 'difficulty sleeping|kesulitan tidur', 'persistent tiredness and weakness|kelelahan dan kelemahan yang terus-menerus', 'sensitivity to heat|kepekaan terhadap panas', 'twitching or trembling|berkedut atau gemetar', 'Irregular heartbeat (arrhythmia)|Detak jantung tidak teratur (aritmia)', 'Pounding of your heart (palpitations)|Berdebar-debar jantung Anda (palpitasi)', 'Increased appetite|Nafsu makan meningkat', 'Nervousness, anxiety and irritability|Gugup, cemas dan mudah tersinggung']"
+Paget's disease of the nipple|Penyakit Paget pada puting,"['Flaky or scaly skin on your nipple|Kulit bersisik atau bersisik pada puting Anda', 'Itching|Gatal', 'Redness|Kemerahan', 'A tingling or burning sensation|Sensasi kesemutan atau terbakar', 'Straw-colored or bloody nipple discharge|Keluarnya cairan dari puting berwarna jerami atau berdarah', 'A flattened or turned-in (inverted) nipple|Puting pipih atau terbalik (terbalik)']"
+Pancreatic cancer|Kanker pankreas,"['Weight loss and poor appetite |Penurunan berat badan dan nafsu makan yang buruk', 'Nausea and vomiting |Mual dan muntah', 'Gallbladder or liver enlargement |Pembesaran kantung empedu atau hati', 'Blood clots |Gumpalan darah', 'Diabetes|Diabetes']"
+Panic disorder|Gangguan panik,"['Sense of impending doom or danger|Rasa malapetaka atau bahaya yang akan datang', 'Fear of loss of control or death|Takut kehilangan kendali atau kematian', 'Rapid, pounding heart rate|Detak jantung yang cepat dan berdebar kencang', 'Sweating|Berkeringat', 'Trembling or shaking|Gemetar atau gemetar', 'Shortness of breath or tightness in your throat|Sesak napas atau sesak di tenggorokan Anda', 'Chills|Panas dingin', 'Hot flashes|Hot flashes', 'Sweating|Berkeringat', 'Trembling or shaking|Gemetar atau gemetar', 'Sensations of shortness of breath or smothering|Sensasi sesak napas atau tercekik', 'Feelings of choking|Perasaan tercekik', 'Chest pain or discomfort|Nyeri dada atau ketidaknyamanan', 'Nausea or abdominal distress|Mual atau gangguan perut', 'Feeling dizzy, unsteady, light-headed, or faint|Merasa pusing, goyah, pusing, atau pingsan']"
+Parkinson's disease|penyakit Parkinson,"['Slowed movement (bradykinesia) |Gerakan melambat (bradykinesia)', 'Rigid muscles |Otot kaku', 'Impaired posture and balance |Postur dan keseimbangan terganggu', 'Loss of automatic movements |Hilangnya gerakan otomatis', 'Speech changes |Perubahan ucapan', 'Writing changes|Menulis perubahan']"
+Penile cancer|Kanker penis,"['An area of skin becoming thicker|Area kulit menjadi lebih tebal', 'Changes in the skin color|Perubahan warna kulit', 'A lump|Benjolan', 'An ulcer (sore) that might bleed|Maag (sakit) yang mungkin berdarah', 'A reddish, velvety rash under the foreskin|Ruam kemerahan seperti beludru di bawah kulup', 'Small, crusty bumps|Benjolan kecil dan keras', 'Flat, bluish-brown growths|Pertumbuhan datar, coklat kebiruan']"
+Peripheral neuropathy|Neuropati perifer,"['Sharp, jabbing, throbbing or burning pain|Nyeri tajam, menusuk, berdenyut, atau terbakar', 'Extreme sensitivity to touch|Sensitivitas ekstrim untuk disentuh']"
+Personality disorder|Gangguan kepribadian,"['Unstable relationships |Hubungan yang tidak stabil', 'Unclear or shifting self-image |Citra diri tidak jelas atau bergeser', 'Impulsive, self-destructive behaviors |Perilaku impulsif dan merusak diri sendiri', 'Self-harm |Merugikan diri', 'Extreme emotional swings |Perubahan emosional yang ekstrim', 'Chronic feelings of emptiness |Perasaan kosong yang kronis', 'Explosive anger|Kemarahan yang meledak-ledak']"
+Pleurisy|Pleurisi,['dry cough or fever|batuk kering atau demam']
+Pneumonia|Pneumonia,"['Chest pain when you breathe or cough|Nyeri dada saat bernapas atau batuk', 'Cough, which may produce phlegm|Batuk, yang bisa mengeluarkan dahak', 'Fatigue|Kelelahan', 'Fever, sweating and shaking chills|Demam, berkeringat dan menggigil']"
+Polymyalgia rheumatica|Polymyalgia rheumatica,"['Aches or pain in your shoulders|Sakit atau nyeri di bahu Anda', 'fatigue|kelelahan', 'malaise|tidak nyaman', 'a loss of appetite|kehilangan nafsu makan', 'sudden, unintentional weight loss|penurunan berat badan yang tiba-tiba dan tidak disengaja', 'anemia, or low red blood cell count|anemia, atau jumlah sel darah merah yang rendah', 'depression|depresi', 'a low-grade fever|demam ringan', 'a limited range of motion|rentang gerak terbatas']"
+Post-traumatic stress disorder (PTSD)|Gangguan stres pascatrauma (PTSD),['emotional detachment or unwanted thoughts|detasemen emosional atau pikiran yang tidak diinginkan']
+Postnatal depression|Depresi pascakelahiran,['insomnia or repeatedly going over thoughts|insomnia atau berulang kali memikirkan']
+Pregnancy and baby|Kehamilan dan bayi,"['Mood swings |Perubahan suasana hati', 'Headaches and back pain |Sakit kepala dan sakit punggung', 'Dizziness and fainting|Pusing dan pingsan', 'Feeling sick and vomiting |Merasa mual dan muntah', 'Feeling very tired |Merasa sangat lelah', 'Changes in your breasts |Perubahan pada payudara Anda', 'Bladder changes |Perubahan kandung kemih', 'constipation |sembelit', 'Am I pregnant? |Apakah saya hamil', 'Baby due date|Tanggal lahir bayi']"
+Pressure ulcers|Ulkus tekanan,"['a patch of skin that feels warm, spongy or hard|sepetak kulit yang terasa hangat, kenyal atau keras', 'pain or itchiness in the affected area|nyeri atau gatal di daerah yang terkena', 'Pus draining from the sore|Nanah mengalir dari luka', 'A foul smelling odor|Bau yang tidak sedap', 'Fever|Demam']"
+Prostate cancer|Kanker prostat,"['Frequent urination|Sering buang air kecil', 'The urge to urinate frequently at night|Sering buang air kecil di malam hari', 'Blood in the urine|Darah dalam urin', 'Blood in the seminal fluid|Darah di cairan mani', 'New onset of erectile dysfunction|Onset baru disfungsi ereksi']"
+Psoriasis|Psoriasis,"['Small scaling spots (commonly seen in children)|Bintik bersisik kecil (biasa terlihat pada anak-anak)', 'Dry, cracked skin that may bleed or itch|Kulit kering dan pecah-pecah yang mungkin berdarah atau gatal', 'Itching, burning or soreness|Gatal, terbakar atau nyeri', 'Thickened, pitted or ridged nails|Kuku yang menebal, berlubang atau bergerigi', 'Swollen and stiff joints|Sendi bengkak dan kaku']"
+Psoriatic arthritis|Artritis psoriatis,"['skin rash|ruam kulit', 'fatigue|kelelahan', 'inflamed fingers or toes|jari tangan atau kaki yang meradang', 'itching|gatal', 'physical deformity|deformitas fisik', 'small dents in nails|penyok kecil pada kuku', 'or tendinitis|atau tendinitis']"
+Psychosis|Psikosis,"['memory loss|Hilang ingatan', 'nightmares|mimpi buruk', 'or tactile hallucination|atau halusinasi sentuhan']"
+Raynaud's phenomenon|Fenomena Raynaud,['Cold fingers or toes|Jari tangan atau kaki dingin']
+Reactive arthritis|Artritis reaktif,"['Eye inflammation |Peradangan mata', 'Urinary problems |Masalah kencing', 'Swollen toes or fingers |Jari kaki atau jari tangan bengkak', 'Skin problems |Masalah kulit', 'Low back pain|Nyeri punggung bawah']"
+Restless legs syndrome|Sindrom kaki gelisah,"['Crawling|Merangkak', 'Creeping|Merayap', 'Pulling|Menarik', 'Throbbing|Denyutan', 'Aching|Sakit', 'Itching|Gatal', 'Electric|Listrik']"
+Retinoblastoma|Retinoblastoma,"['Vision problems|Masalah penglihatan', 'Eye pain|Sakit mata', 'Redness of the white part of the eye|Kemerahan pada bagian putih mata', 'Bleeding in the front part of the eye|Pendarahan di bagian depan mata', 'Bulging of the eye|Mata melotot']"
+Retinoblastoma: Children|Retinoblastoma: Anak-anak,"['Reddened, painful eye|Mata memerah dan nyeri', 'Enlarged pupil|Murid membesar', 'Different-colored irises|Iris berwarna berbeda', 'Poor vision|Penglihatan yang buruk', 'Other possible signs and symptoms|Tanda dan gejala lain yang mungkin terjadi']"
+Rheumatoid arthritis|Artritis reumatoid,"['Pain or aching in more than one joint|Nyeri atau pegal di lebih dari satu sendi', 'Stiffness in more than one joint|Kekakuan di lebih dari satu sendi', 'Tenderness and swelling in more than one joint|Nyeri dan bengkak di lebih dari satu sendi', 'Weight loss|Penurunan berat badan', 'Fever|Demam', 'Fatigue or tiredness|Kelelahan atau kelelahan', 'Weakness|Kelemahan']"
+Ringworm and other fungal infections|Kurap dan infeksi jamur lainnya,"['May itch|Mungkin gatal', 'Slightly raised, expanding rings|Cincin yang sedikit terangkat dan melebar', 'A round, flat patch of itchy skin|Kulit gatal yang bulat dan rata', 'Overlapping rings|Cincin yang tumpang tindih']"
+Rosacea|Rosacea,"['Eye problems |Masalah mata', 'Enlarged nose|Hidung membesar']"
+Scabies|Scabies,"['Rash: Many people get the scabies rash |Ruam: Banyak orang mengalami ruam kudis', 'Sores: Scratching the itchy rash can cause sores |Luka: Menggaruk ruam yang gatal bisa menyebabkan luka']"
+Scarlet fever|Demam berdarah,"['Difficulty swallowing|Kesulitan menelan', 'Nausea or vomiting|Mual atau muntah', 'Headache|Sakit kepala']"
+Schizophrenia|Skizofrenia,"['Disorganized thinking (speech) |Pemikiran tidak teratur (ucapan)', 'Negative symptoms|Gejala negatif']"
+Scoliosis|Skoliosis,"['Uneven shoulders and/or hips|Bahu dan / atau pinggul tidak rata', 'Bump in the lower back|Benjolan di punggung bawah', 'Numbness, weakness, or pain in the legs|Mati rasa, lemas, atau nyeri di kaki', 'Trouble walking|Kesulitan berjalan', 'Trouble standing up straight|Kesulitan berdiri tegak', 'Tired feeling|Perasaan lelah', 'Shortness of breath|Sesak napas', 'Loss of height|Kehilangan tinggi', ""one shoulder blade that's higher than the other|satu tulang belikat yang lebih tinggi dari yang lain"", 'uneven hips|pinggul tidak rata', 'a rotating spine|tulang belakang yang berputar', 'back pain|sakit punggung']"
+Septic shock|Syok septik,"['Cool, pale arms and legs|Dingin, lengan dan kaki pucat', 'High or very low temperature, chills|Suhu tinggi atau sangat rendah, dinginkan', 'Lightheadedness|Sakit kepala ringan', 'Little or no urine|Sedikit atau tidak ada urine', 'Low blood pressure, especially when standing|Tekanan darah rendah, terutama saat berdiri', 'Palpitations|Palpitasi', 'Rapid heart rate|Denyut jantung cepat', 'Restlessness, agitation, lethargy, or confusion|Gelisah, gelisah, lesu, atau kebingungan', 'patches of discolored skin|bercak kulit yang berubah warna', 'decreased urination|penurunan buang air kecil', 'changes in mental ability|perubahan kemampuan mental', 'low platelet (blood clotting cells) count|jumlah trombosit rendah (sel pembekuan darah)', 'problems breathing|masalah pernapasan', 'abnormal heart functions|fungsi jantung abnormal', 'chills due to fall in body temperature|menggigil karena penurunan suhu tubuh', 'unconsciousness|ketidaksadaran']"
+Sexually transmitted infections (STIs)|Infeksi Menular Seksual (IMS),"['Painful or burning urination|Buang air kecil yang menyakitkan atau panas', 'Discharge from the penis|Keluarnya cairan dari penis', 'Unusual or odd-smelling vaginal discharge|Keputihan yang tidak biasa atau berbau aneh', 'Unusual vaginal bleeding|Pendarahan vagina yang tidak biasa', 'Pain during sex|Sakit saat berhubungan seks']"
+Shingles|Herpes zoster,"['Pain, burning, numbness or tingling|Nyeri, terbakar, mati rasa atau kesemutan', 'Sensitivity to touch|Sensitivitas untuk disentuh', 'A red rash that begins a few days after the pain|Ruam merah yang dimulai beberapa hari setelah nyeri', 'Itching|Gatal']"
+Shortness of breath|Sesak napas,"['swollen ankles and feet|pergelangan kaki dan kaki bengkak', 'coughing, chills, and elevated body temperature|batuk, menggigil, dan suhu tubuh meningkat', 'blue fingertips or lips|ujung jari atau bibir biru']"
+Sickle cell disease|Penyakit sel sabit,"['abnormal breakdown of red blood cells|kerusakan abnormal sel darah merah', 'delayed development|pembangunan tertunda', 'inflamed fingers or toes|jari tangan atau kaki yang meradang', 'pallor|muka pucat', 'shortness of breath|sesak napas', 'or yellow skin and eyes|atau kulit dan mata kuning']"
+Sinusitis|Sinusitis,"['Postnasal drip|Tetesan postnasal', 'Discolored nasal discharge (greenish in color)|Kotoran hidung berubah warna (berwarna kehijauan)', 'Nasal stuffiness or congestion|Hidung tersumbat atau tersumbat', 'Frontal headaches|Sakit kepala frontal', 'Pain in the teeth|Sakit di gigi', 'Coughing|Batuk', 'Fever|Demam']"
+Sjogren's syndrome|sindrom Sjogren,"['Joint pain, swelling and stiffness|Nyeri sendi, bengkak dan kaku', 'Skin rashes or dry skin|Ruam kulit atau kulit kering', 'Vaginal dryness|Kekeringan vagina', 'Persistent dry cough|Batuk kering yang terus-menerus', 'Prolonged fatigue|Kelelahan berkepanjangan']"
+Slapped cheek syndrome|Sindrom pipi yang ditampar,"['a runny nose|pilek', 'a sore throat|sakit tenggorokan', 'a headache|sakit kepala', 'an upset stomach|sakit perut', 'feeling generally unwell|merasa tidak sehat secara umum']"
+Spleen problems and spleen removal|Masalah limpa dan pengangkatan limpa,"['No symptoms in some cases|Tidak ada gejala dalam beberapa kasus', 'Anemia|Anemia', 'Fatigue|Kelelahan', 'Frequent infections|Infeksi yang sering', 'Easy bleeding|Mudah berdarah']"
+Stomach ache and abdominal pain|Sakit perut dan sakit perut,"['constipation|sembelit', 'diarrhea|diare', 'gastroenteritis (stomach flu)|gastroenteritis (stomach flu)', 'vomiting|muntah', 'stress|menekankan']"
+Stomach cancer|Kanker perut,"['Poor appetite|Nafsu makan buruk', 'Weight loss (without trying)|Penurunan berat badan (tanpa mencoba)', 'Abdominal (belly) pain|Nyeri perut (perut)', 'Heartburn or indigestion|Mulas atau gangguan pencernaan', 'Nausea|Mual', 'Vomiting, with or without blood|Muntah, dengan atau tanpa darah']"
+Stomach ulcer|Sakit maag,"['dull pain in the stomach|nyeri tumpul di perut', 'weight loss|penurunan berat badan', 'not wanting to eat because of pain|tidak mau makan karena kesakitan', 'nausea or vomiting|mual atau muntah', 'bloating|kembung', 'feeling easily full|merasa mudah kenyang', 'burping or acid reflux|bersendawa atau refluks asam']"
+Stroke|Stroke,['Sudden trouble seeing in one or both eyes|Kesulitan melihat secara tiba-tiba di salah satu atau kedua mata']
+Sunburn|Terbakar sinar matahari,"['Changes in skin tone, such as pinkness or redness|Perubahan warna kulit, seperti kemerahan atau kemerahan', 'Skin that feels warm or hot to the touch|Kulit yang terasa hangat atau panas saat disentuh', 'Pain and tenderness|Nyeri dan nyeri tekan', 'Swelling|Pembengkakan', 'Small fluid-filled blisters, which may break|Lepuh kecil berisi cairan, yang bisa pecah', 'Eyes that feel painful or gritty|Mata yang terasa nyeri atau berpasir']"
+Testicular cancer|Kanker testis,"['A painless lump or swelling on either testicle |Benjolan atau pembengkakan yang tidak menimbulkan rasa sakit di salah satu testis', 'Dull ache in the lower abdomen or groin|Nyeri tumpul di perut bagian bawah atau selangkangan']"
+Testicular cancer: Teenagers and young adults|Kanker testis: Remaja dan dewasa muda,"['A lump or enlargement in either testicle|Benjolan atau pembesaran di salah satu testis', 'A feeling of heaviness in the scrotum|Perasaan berat di skrotum', 'A dull ache in the abdomen or groin|Sakit di perut atau selangkangan', 'A sudden collection of fluid in the scrotum|Pengumpulan cairan secara tiba-tiba di skrotum', 'Pain or discomfort in a testicle or the scrotum|Nyeri atau ketidaknyamanan pada testis atau skrotum', 'Enlargement or tenderness of the breasts|Pembesaran atau nyeri pada payudara', 'Back pain|Sakit punggung']"
+Testicular lumps and swellings|Benjolan dan pembengkakan testis,"['An unusual lump|Benjolan yang tidak biasa', 'Sudden pain|Nyeri tiba-tiba', 'Tender, swollen or hardened testicle|Testis lunak, bengkak atau mengeras']"
+Threadworms|Cacing kremi,"['loss of appetite|kehilangan selera makan', 'weight loss|penurunan berat badan', 'bedwetting|mengompol']"
+Thyroid cancer|Kanker tiroid,"['A lump in the neck, sometimes growing quickly|Benjolan di leher, terkadang tumbuh dengan cepat', 'Swelling in the neck|Bengkak di leher', 'Trouble swallowing|Kesulitan menelan', 'Trouble breathing|Kesulitan bernapas']"
+Tinnitus|tinnitus,"['Ringing|Dering', 'Buzzing|Berdengung', 'Roaring|Gemuruh', 'Clicking|Mengklik', 'Hissing|Desis', 'Humming|Bersenandung']"
+Tonsillitis|Tonsilitis,"['Red, swollen tonsils|Merah, amandel bengkak', 'White or yellow coating or patches on the tonsils|Lapisan atau bercak putih atau kuning pada amandel', 'Sore throat|Sakit tenggorokan', 'Difficult or painful swallowing|Sulit atau menyakitkan saat menelan', 'Fever|Demam', 'Enlarged, tender glands (lymph nodes) in the neck|Kelenjar lunak yang membesar (kelenjar getah bening) di leher', 'A scratchy, muffled or throaty voice|Suara serak, teredam, atau serak', 'Bad breath|Bau mulut']"
+Tooth decay|Kerusakan gigi,['bad breath|bau mulut']
+Toothache|Sakit gigi,"['Swelling around the tooth|Pembengkakan di sekitar gigi', 'Fever or headache|Demam atau sakit kepala', 'Foul-tasting drainage from the infected tooth|Drainase berbau busuk dari gigi yang terinfeksi', 'A bad odor from the mouth|Bau tak sedap dari mulut']"
+Transient ischaemic attack (TIA)|Serangan iskemik transien (TIA),['Blindness in one or both eyes or double vision|Kebutaan di satu atau kedua mata atau penglihatan ganda']
+Trigeminal neuralgia|Neuralgia trigeminal,['muscle spasms|kejang otot']
+Tuberculosis (TB)|Tuberkulosis (TB),"['Coughing that lasts three or more weeks|Batuk yang berlangsung tiga minggu atau lebih', 'Coughing up blood|Batuk darah', 'Chest pain, or pain with breathing or coughing|Nyeri dada, atau nyeri saat bernapas atau batuk', 'Unintentional weight loss|Penurunan berat badan yang tidak disengaja', 'Fatigue|Kelelahan', 'Fever|Demam', 'Night sweats|Keringat malam', 'Chills|Panas dingin']"
+Type 1 diabetes|Diabetes tipe 1,"['Increased thirst|Meningkatnya rasa haus', 'Frequent urination|Sering buang air kecil', 'Extreme hunger|Rasa lapar yang ekstrim', 'Unintended weight loss|Penurunan berat badan yang tidak diinginkan', 'Irritability and other mood changes|Iritabilitas dan perubahan mood lainnya', 'Fatigue and weakness|Kelelahan dan kelemahan', 'Blurred vision|Penglihatan kabur']"
+Type 2 diabetes|Diabetes tipe 2,"['Increased thirst|Meningkatnya rasa haus', 'Frequent urination|Sering buang air kecil', 'Increased hunger|Rasa lapar meningkat', 'Unintended weight loss|Penurunan berat badan yang tidak diinginkan', 'Fatigue|Kelelahan', 'Blurred vision|Penglihatan kabur', 'Slow-healing sores|Luka sembuh lambat', 'Frequent infections|Infeksi yang sering']"
+Ulcerative colitis|Kolitis ulseratif,"['Diarrhea, often with blood or pus|Diare, seringkali disertai darah atau nanah', 'Abdominal pain and cramping|Sakit perut dan kram', 'Rectal pain|Nyeri rektal', 'Urgency to defecate|Urgensi untuk buang air besar', 'Inability to defecate despite urgency|Ketidakmampuan untuk buang air besar meski mendesak', 'Weight loss|Penurunan berat badan', 'Fatigue|Kelelahan']"
+Underactive thyroid|Tiroid kurang aktif,"['tiredness|kelelahan', 'being sensitive to cold|peka terhadap dingin', 'weight gain|penambahan berat badan', 'constipation|sembelit', 'depression|depresi', 'slow movements and thoughts|gerakan dan pikiran lambat', 'muscle aches and weakness|nyeri otot dan kelemahan', 'muscle cramps|kram otot']"
+Urinary tract infection (UTI)|Infeksi saluran kemih (ISK),"['A strong, persistent urge to urinate|Dorongan yang kuat dan terus menerus untuk buang air kecil', 'A burning sensation when urinating|Sensasi terbakar saat buang air kecil', 'Passing frequent, small amounts of urine|Sering buang air kecil dalam jumlah sedikit', 'Urine that appears cloudy|Urine yang tampak keruh']"
+Urinary tract infection (UTI) in children|Infeksi saluran kemih (ISK) pada anak-anak,"['Fever|Demam', 'Pain in the low back or around the bladder|Nyeri di punggung bawah atau di sekitar kandung kemih']"
+Urticaria (hives)|Urtikaria (gatal-gatal),"['Itching, which may be severe|Gatal, yang mungkin parah']"
+Vaginal cancer|Kanker vagina,"['Watery vaginal discharge|Keputihan encer', 'A lump or mass in your vagina|Benjolan atau massa di vagina Anda', 'Painful urination|Buang air kecil yang menyakitkan', 'Frequent urination|Sering buang air kecil', 'Constipation|Sembelit', 'Pelvic pain|Nyeri panggul']"
+Vaginal thrush|Sariawan vagina,"['vaginal discomfort – itching or burning|ketidaknyamanan vagina - gatal atau terbakar', 'redness or swelling of the vagina or vulva|kemerahan atau pembengkakan pada vagina atau vulva', 'splits in the genital skin|pecah di kulit genital', 'stinging or burning while urinating or during sex|menyengat atau terbakar saat buang air kecil atau saat berhubungan seks']"
+Varicose eczema|Eksim varises,"['The skin should feel cool to the touch, not warm|Kulit akan terasa sejuk saat disentuh, bukan hangat', 'The skin gets flaky and scaly|Kulit bersisik dan bersisik', ""The skin may also look 'rusty' or brown in colour|Kulit mungkin juga terlihat 'berkarat' atau berwarna coklat""]"
+Varicose veins|Pembuluh mekar,"['An achy or heavy feeling in your legs|Perasaan sakit atau berat di kaki Anda', 'Itching around one or more of your veins|Gatal di sekitar satu atau lebih pembuluh darah Anda', 'Skin discoloration around a varicose vein|Perubahan warna kulit di sekitar varises']"
+Venous leg ulcer|Ulkus kaki vena,"['swollen ankles (oedema)|swollen ankles (oedema)', 'a heavy feeling in your legs|perasaan berat di kaki Anda', 'aching or swelling in your legs|sakit atau bengkak di kaki Anda', 'Unevenly shaped borders|Perbatasan berbentuk tidak rata', 'Leg pain|Sakit kaki']"
+Vertigo|Vertigo,"['Dizziness|Pusing', 'A loss of balance or unsteadiness|Hilangnya keseimbangan atau ketidakstabilan', 'Nausea|Mual', 'Vomiting|Muntah']"
+Vitamin B12 or folate deficiency anaemia|Vitamin B12 atau anemia defisiensi folat,"['extreme tiredness|kelelahan ekstrim', 'a lack of energy|kekurangan energi', 'pins and needles (paraesthesia)|pin dan jarum (paresthesia)', 'a sore and red tongue|lidah sakit dan merah', 'mouth ulcers|sariawan', 'muscle weakness|kelemahan otot', 'disturbed vision|penglihatan terganggu']"
+Vomiting in adults|Muntah pada orang dewasa,"['severe chest pain|nyeri dada yang parah', 'sudden and severe headache|sakit kepala mendadak dan parah', 'shortness of breath|sesak napas', 'blurred vision|penglihatan kabur', 'sudden stomach pain|sakit perut mendadak', 'stiff neck and high fever|leher kaku dan demam tinggi', 'blood in the vomit|darah di muntahan']"
+Vulval cancer|Kanker vulva,"[""Itching that doesn't go away|Gatal yang tidak kunjung sembuh"", 'Pain and tenderness|Nyeri dan nyeri tekan', ""Bleeding that isn't from menstruation|Pendarahan yang bukan dari menstruasi"", 'Skin changes, such as color changes or thickening|Perubahan kulit, seperti perubahan warna atau penebalan', 'A lump, wartlike bumps or an open sore (ulcer)|Benjolan, kutil seperti benjolan atau luka terbuka (maag)']"
+Warts and verrucas|Kutil dan veruka,"['the skin area of the wart is white|area kulit kutil berwarna putih', 'they are not raised from the surface of your skin|mereka tidak terangkat dari permukaan kulit Anda', 'they appear on the soles of your feet|mereka muncul di telapak kaki Anda']"
+Whooping cough|Batuk rejan,"['paroxysmal cough|batuk paroksismal', 'episodes of no breathing|episode tidak bernapas', 'vomiting|muntah', 'or watery eyes|atau mata berair']"
+Wilms’ tumour|Tumor Wilms,"['Fever|Demam', 'Blood in the urine|Darah dalam urin', 'Nausea or vomiting or both|Mual atau muntah atau keduanya', 'Constipation|Sembelit', 'Loss of appetite|Kehilangan selera makan', 'Shortness of breath|Sesak napas', 'High blood pressure|Tekanan darah tinggi']"
+Yellow fever|Demam kuning,"['Fever|Demam', 'Headache|Sakit kepala', 'Muscle aches, particularly in your back and knees|Nyeri otot, terutama di punggung dan lutut', 'Sensitivity to light|Sensitivitas terhadap cahaya', 'Nausea, vomiting or both|Mual, muntah atau keduanya', 'Loss of appetite|Kehilangan selera makan', 'Dizziness|Pusing', 'Red eyes, face or tongue|Mata merah, wajah atau lidah']"
