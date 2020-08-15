@@ -238,6 +238,7 @@ const Chat = ({ location }) => {
         <div className="video1">
           {UserVideo}
         </div>
+        
         <div className="video2conf">
           {PartnerVideo}
 
@@ -253,6 +254,7 @@ const Chat = ({ location }) => {
       </div>
 
     </div>
+    
 
       // <div class="float-container">
       //     <div class="float-child1">

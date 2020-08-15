@@ -81,8 +81,9 @@ export const DataProvider = props => {
         cookie.save("lang", lang, { 'path': '/' })
     }
 
-    const translate = (str, callback) => {console.log(data.lang)
-        if (data.lang === 'i') {
+    const translate = (str, callback) => {
+        var lang = cookie.load('lang');
+        if (lang === 'i') {
             let translation;
             axios.post(
                 "/api/translate",
