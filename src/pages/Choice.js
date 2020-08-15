@@ -8,7 +8,7 @@ import '../styles/choices.css'
 const Choice = props => {
 
   const [selection, setSelection] = useState("")
-  const { getProf, setProf } = useData()
+  const { getRoomId, setProf } = useData()
   const [name, setName] = useState('')
   const [room, setRoom] = useState('')
 
@@ -16,7 +16,9 @@ const Choice = props => {
     e.preventDefault()
 
     setProf(selection)
-    props.history.push(`${selection}/chat?name=${name}&room=${room}`)
+    getRoomId((room_id) =>
+      props.history.push(`${selection}/chat?name=${name}&room=${room_id.data}`)
+    , name);
   }
 
   const clickDoctor = () => {

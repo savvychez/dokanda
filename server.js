@@ -16,10 +16,12 @@ const { addUser, removeUser, getUser, getUsersinRoom } = require('./users.js');
 const io = socketio(server)
 
 const users = {}
-const availableUsers = {}
+// const availableUsers = {}
 
 io.on('connection', socket => {
   socket.on('join', ({ name, room }, callback) => {
+    console.log("JOINING: "+socket.id);
+    console.log("NEW ROOM: "+room)
     const { error, user } = addUser({ id: socket.id, name, room });
     console.log(name, room);
     if(error) return callback(error);
@@ -30,41 +32,61 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     callback();
-});
+  });
 
-socket.on('sendMessage', (message, callback) => {
-  const user = getUser(socket.id);
-  console.log("laks;jdf;lkasdf");
+  socket.on('sendMessage', (message, callback) => {
+    const user = getUser(socket.id);
+    console.log(user);
+    console.log("SEND MESSAGE");
+    io.to(user.room).emit('message', { user: user.name, text: message });
 
-  io.to(user.room).emit('message', { user: user.name, text: message });
+    callback();
+  });
 
-  callback();
-});
+  socket.on('disconnect', () => {
+    const user = removeUser(socket.id);
+    if(user) {
+        io.to(user.room).emit('message',{ user: 'admin', text: `${user.name} has left.`})
+    }
 
-socket.on('disconnect', () => {
-  const user = removeUser(socket.id);
-  if(user) {
-      io.to(user.room).emit('message',{ user: 'admin', text: `${user.name} has left.`})
+
+  });
+
+  if(!users[socket.id]){
+      users[socket.id] = socket.id;
   }
 
-
-});
-
-if(!users[socket.id]){
-    users[socket.id] = socket.id;
-  }
+  // gives everyone the user id
   socket.emit("yourID", socket.id);
-  io.sockets.emit("allUsers", users);
-  socket.on('discconect', () => {
-    delete users[socket.id];
-  })
-  socket.on("callUser", (data) => {
-    delete users[socket.id];
-    io.to(data.userToCall).emit('hey', {signal: data.signalData, from: data.from});
+
+  // returns all users
+  socket.on('getUsers', () => {
+    var user = getUser(socket.id);
+    // console.log(users)
+    // console.log("THE FUTURE")
+    // console.log(Object.keys(io.sockets.sockets))
+    
+
+    var clients = io.sockets.adapter.rooms[user.room].sockets;   
+    console.log(clients)
+
+    io.to(user.room).emit("allUsers", clients);
   })
 
-  socket.on("acceptCall", (data) => {
+  //disconnect users
+  socket.on('disconnect', () => {
     delete users[socket.id];
+  })
+
+  //calls users
+  socket.on("callUser", (data) => {
+    // delete users[socket.id];
+    socket.broadcast.to(data.userToCall).emit('hey', {signal: data.signalData, from: data.from});
+  })
+
+  //return acceptance
+  socket.on("acceptCall", (data) => {
+    // delete users[socket.id];
     io.to(data.to).emit('callAccepted', data.signal);
   })
 })

@@ -20,9 +20,9 @@ export const DataProvider = props => {
 
     //Write functions that call api here
 
-    const getRoomId = (callback) => {
-        console.log(data.prof);
-        if(data.prof==="patient")
+    const getRoomId = (callback, prof) => {
+        // console.log(data.prof);
+        if(prof==="patient")
             axios.get("/patient/chat").then(id => {callback(id)})
         else
         {
