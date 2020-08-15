@@ -14,7 +14,8 @@ const Login = props => {
   const { login, authenticated } = useData();
 
   useEffect(() => {
-  }, [])
+    // alert(authenticated)
+  }, [authenticated])
 
   const logCallback = (errMsg) => {
     setErr({ "msg": errMsg })

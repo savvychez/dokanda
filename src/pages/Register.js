@@ -17,13 +17,10 @@ const Register = props => {
 
   const { register, authenticated } = useData();
 
-  useEffect(() => {
-  }, [])
-
   const regCallback = (authMessage, success) => {
     if (success) {
       console.log(authMessage);
-      props.history.push("/choice")
+      props.history.push("/search")
     } else {
       setErr({ "msg": authMessage })
     }

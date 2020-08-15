@@ -23,20 +23,20 @@ export const DataProvider = props => {
                 { auth_token: authToken, }
             )
                 .then(res => {
-                    let copy = {...data};
+                    let copy = { ...data };
                     if (res.data.success) {
                         copy.authenticated = true;
                     }
                     else {
                         copy.authenticated = false;
                     }
-                    setData(copy)               
+                    setData(copy)
                 })
                 .catch(err => {
                     console.log(err)
                 })
         } else {
-            let copy = {...data};
+            let copy = { ...data };
             copy.authenticated = false;
             setData(copy);
         }
@@ -100,6 +100,10 @@ export const DataProvider = props => {
                 if (res.data.auth_token) {
                     cookie.save('auth-token', res.data.auth_token, { 'path': '/' });
                     callback(res.data.auth_token, true)
+                    let copy = { ...data };
+                    copy.authenticated = true;
+                    setData(copy);
+
                 } else {
                     callback(res.data.statusMessage, false)
                 }
@@ -113,19 +117,19 @@ export const DataProvider = props => {
         axios.post(
             '/api/login',
             { email: email, password: password }
-        ).then (res => {
-            if(res.data.success) {
+        ).then(res => {
+            if (res.data.success) {
                 console.log("Logged In!")
                 cookie.save("auth-token", res.data.auth_token)
-                let copy = {...data};
+                let copy = { ...data };
                 copy.authenticated = true;
                 setData(copy);
             } else {
                 callback("Login Failed!")
             }
-        }).catch (err => {
+        }).catch(err => {
             console.error(err)
-        })   
+        })
     }
 
     const logout = () => {
@@ -135,15 +139,15 @@ export const DataProvider = props => {
             axios.post(
                 '/api/confirmAuthToken',
                 { auth_token: authToken, }
-            ).then (res => {
-                if(res.data.success) {
+            ).then(res => {
+                if (res.data.success) {
                     console.log("Logged Out!")
                     cookie.remove("auth-token")
-                    let copy = {...data};
+                    let copy = { ...data };
                     copy.authenticated = false;
                     setData(copy);
                 }
-            }).catch (err => {
+            }).catch(err => {
                 console.log("LOG OUT ERROR")
                 console.log(err)
                 console.error(err)
@@ -151,7 +155,7 @@ export const DataProvider = props => {
         }
     }
 
-    const functions = { ...data, setData, getProf, setProf, getRoomId, query, register, login,  logout}
+    const functions = { ...data, setData, getProf, setProf, getRoomId, query, register, login, logout }
     return <DataContext.Provider value={functions} {...props} />
 }
 
