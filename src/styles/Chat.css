@@ -8,20 +8,18 @@
    */
   .float-container {
     border: 3px solid #fff;
-    padding: 20px;
+    padding-top: 85px;
   }
 
   .float-child1 {
       width: 70%;
       float: left;
       padding: 20px;
-      border: 2px solid red;
   }  
   .float-child2 {
     width: 30%;
     float: left;
-    /* padding: 20px; */
-    border: 2px solid red;
+    padding: 20px;
 }  
   .container {
     display: flex;
@@ -30,7 +28,7 @@
     background: white;
     border-radius: 8px;
     border: 1.5px solid #a5a5a5;
-    height: 70vh;
+    height: 85vh;
     width: 100%;
   }
   

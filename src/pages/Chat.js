@@ -185,7 +185,11 @@ const Chat = ({ location }) => {
   return (
       <div class="float-container">
           <div class="float-child1">
-            <div class="green">Float Column 1</div>
+            <div class="green">
+              {UserVideo}
+              {PartnerVideo}
+
+            </div>
           </div>
           
           <div class="float-child2">
@@ -199,7 +203,6 @@ const Chat = ({ location }) => {
           </div>
             {/* <Row>
                 {UserVideo}
-                {PartnerVideo}
             </Row>
             <Row>
                 {Object.keys(users).map(key => {
