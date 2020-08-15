@@ -14,6 +14,8 @@ PeerServer({port: 3001, path: '/' });
 const io = socketio(server)
 
 const users = {}
+const availableUsers = {}
+
 io.on('connection', socket => {
   if(!users[socket.id]){
     users[socket.id] = socket.id;
@@ -24,10 +26,12 @@ io.on('connection', socket => {
     delete users[socket.id];
   })
   socket.on("callUser", (data) => {
+    delete users[socket.id];
     io.to(data.userToCall).emit('hey', {signal: data.signalData, from: data.from});
   })
 
   socket.on("acceptCall", (data) => {
+    delete users[socket.id];
     io.to(data.to).emit('callAccepted', data.signal);
   })
 })

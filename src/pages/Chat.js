@@ -65,21 +65,6 @@ const Chat = () => {
     const peer = new Peer({
       initiator: true,
       trickle: false,
-    //   config: {
-
-    //     iceServers: [
-    //         {
-    //             urls: "stun:numb.viagenie.ca",
-    //             username: "sultan1640@gmail.com",
-    //             credential: "98376683"
-    //         },
-    //         {
-    //             urls: "turn:numb.viagenie.ca",
-    //             username: "sultan1640@gmail.com",
-    //             credential: "98376683"
-    //         }
-    //     ]
-    //},
       stream: stream,
     });
 
@@ -101,6 +86,7 @@ const Chat = () => {
   }
 
   function acceptCall() {
+
     setCallAccepted(true);
     const peer = new Peer({
       initiator: false,
@@ -133,7 +119,7 @@ const Chat = () => {
   }
 
   let incomingCall;
-  if (receivingCall) {
+  if (receivingCall && !callAccepted) {
     incomingCall = (
       <div>
         <h1>{caller} is calling you</h1>
@@ -152,9 +138,12 @@ const Chat = () => {
           if (key === yourID) {
             return null;
           }
-          return (
-            <button onClick={() => callPeer(key)}>Call {key}</button>
-          );
+          if(!callAccepted)
+          {
+            return (
+                <button onClick={() => callPeer(key)}>Call {key}</button>
+            );
+          }
         })}
       </Row>
       <Row>
