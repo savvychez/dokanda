@@ -18,7 +18,7 @@ const Choice = props => {
     if(selection) {
       setProf(selection)
       getRoomId((room_id) =>
-        props.history.push(`${selection}/chat?name=${name}&room=${room_id.data}`)
+        props.history.push(`${selection}/chat?name=${selection}&room=${room_id.data}`)
       , name);
     }
   }

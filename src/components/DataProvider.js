@@ -140,7 +140,7 @@ export const DataProvider = props => {
                     cookie.save('auth-token', res.data.auth_token, { 'path': '/' });
                     callback(res.data.auth_token, true)
                     let copy = { ...data };
-                    copy.prof = res.data.prof
+                    copy.prof = profession
                     copy.authenticated = true;
                     setData(copy);
 
