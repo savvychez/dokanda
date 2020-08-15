@@ -30,7 +30,7 @@ const Chat = ({ location }) => {
   const [caller, setCaller] = useState("");
   const [callerSignal, setCallerSignal] = useState();
   const [callAccepted, setCallAccepted] = useState(false);
-  const {translate} = useData();
+  const {translate, prof} = useData();
 
 //   const { getRoomId }  = useData();
 
@@ -111,7 +111,7 @@ const Chat = ({ location }) => {
     event.preventDefault();
 
     if(message) {
-        socket.current.emit('sendMessage', message, () => setMessage(''));
+        socket.current.emit('sendMessage', name , message, () => setMessage(''));
     }
   }
 
@@ -193,9 +193,11 @@ const Chat = ({ location }) => {
 
   let incomingCall;
   if (receivingCall && !callAccepted) {
+    console.log("INCOMING")
+    // console.error(prof)
     incomingCall = (
-      <div>
-        <h1 class="acceptCall">{caller} is calling you</h1>
+      <div className="callwindow">
+        <h1 class="acceptCall">{prof == "d" ? "doctor" : "patient"} is calling you</h1>
         <button class="acceptCall" onClick={acceptCall}>Accept</button>
       </div>
     )
@@ -218,7 +220,7 @@ const Chat = ({ location }) => {
               if(!callAccepted)
               {
                   return (
-                      <button class="callPeer" onClick={() => callPeer(key)}>Call {key}</button>
+                  <button class="callPeer" onClick={() => callPeer(key)}>{`Call ${key}`}</button>
                   );
               }
             })}
@@ -227,11 +229,11 @@ const Chat = ({ location }) => {
         </div>
         </div>
       </div>
-
-      <div className="interface">
+      {/* <p className="scrolldown">Scroll down for text chat</p> */}
+      <div className="interface normalinterface">
         <div className="chat">
           <InfoBar room={room}/>
-          <Messages messages={messages} name={name}/>
+          <Messages messages={messages} name={name} className="msgbox"/>
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
         </div>    
       </div>

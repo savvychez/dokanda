@@ -35,11 +35,11 @@ io.on('connection', socket => {
     callback();
   });
 
-  socket.on('sendMessage', (message, callback) => {
+  socket.on('sendMessage', (name, message, callback) => {
     const user = getUser(socket.id);
     console.log(user);
     console.log("SEND MESSAGE");
-    io.to(user.room).emit('message', { user: user.name, text: message });
+    io.to(user.room).emit('message', { user: name, text: message });
 
     callback();
   });

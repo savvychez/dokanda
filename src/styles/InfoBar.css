@@ -1,9 +1,10 @@
-.infoBar {
+.infoBar {z-index: -1;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #222222;
-    /* border-radius: 4px 4px 0 0; */
+    background: #1C9CE5;
+    border: 2px solid #1C9CE5;
+    border-radius: 10px 10px 0 0;
     height: 5vh;
     width: 100%;
   }

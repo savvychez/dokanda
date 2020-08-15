@@ -1,20 +1,23 @@
 .messageBox {
     background: #F3F3F3;
     border-radius: 20px;
+    margin: 2.5% 0 0 0;
     padding: 5px 20px;
     color: white;
-    display: inline-block;
-    max-width: 80%;
+    display: block;
+    /* width: auto; */
+    width: 300px;
+    /* max-width:; */
   }
   
   .messageText {
     width: 100%;
     letter-spacing: 0;
     float: left;
-    font-size: .9em;
+    font-size: 1.1em;
     word-wrap: break-word;
     font-family: "metropolismedium";
-    padding: 2%;
+    padding: 3%;
   }
   
   .messageText img {

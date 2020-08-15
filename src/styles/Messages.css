@@ -1,14 +1,14 @@
 .messages {
-    padding: 5% 0;
-    overflow: auto;
-    flex: auto;
-    height: 40vh;
+  display: block;
+  padding: 0 0 2.5% 0;
+  overflow: auto;
+  flex: auto;
+  height: 400px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .messages {
+    height: 15vh;
   }
-  
-  @media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .messages {
-      height: 15vh;
-    }
-  
-  }
+}
