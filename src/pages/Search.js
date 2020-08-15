@@ -12,6 +12,10 @@ const Search = props => {
   const [input, setInput] = useState("")
 
   useEffect(() => {
+    query(input, "e", resCallback)
+  },[])
+
+  useEffect(() => {
     console.log(input);
     query(input, "e", resCallback)
   }, [input])

@@ -9,13 +9,13 @@ export const useData = () => {
 
 export const DataProvider = props => {
     const user = {
-        "id": "4"
+        "authenticated" : false
     }
 
     const [data, setData] = useState(user)
 
     useEffect(() => {
-        //Runs on page load
+
     })
 
     //Write functions that call api here

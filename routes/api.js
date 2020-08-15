@@ -114,7 +114,7 @@ router.post("/login",async (req,res,next)=>
     var statusMessage = "Unsuccessful Login";
     var auth_token = uuidv4();
 
-    await client.query(query,values).then((res) => 
+    await client.query(query,values).then(async (res) => 
     {
         if(res.rows.length!=0)
         {

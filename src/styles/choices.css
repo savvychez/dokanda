@@ -9,8 +9,6 @@
     text-align: center;
 }
 
-
-
 button {
     display: block;
     text-decoration: none;
@@ -30,4 +28,8 @@ button {
 
 button:active {
     background-color: #303030;
+}
+
+@media screen and (min-width: 800px) {
+
 }
