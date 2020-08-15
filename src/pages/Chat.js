@@ -157,6 +157,11 @@ const Chat = ({ location }) => {
       peer.signal(signal);
     })
 
+
+    socket.current.on('user-disconnected', () => {
+      setCallAccepted(false);
+    })
+
   }
 
   function acceptCall() {
@@ -179,6 +184,10 @@ const Chat = ({ location }) => {
     peer.on("stream", stream => {
       partnerVideo.current.srcObject = stream;
     });
+
+    socket.current.on('user-disconnected', () => {
+      setCallAccepted(false);
+    })
 
     // send reception of call
     peer.signal(callerSignal);
