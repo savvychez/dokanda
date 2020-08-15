@@ -220,7 +220,7 @@ const Chat = ({ location }) => {
               if(!callAccepted)
               {
                   return (
-                  <button class="callPeer" onClick={() => callPeer(key)}>{`Call ${key}`}</button>
+                  <button class="callPeer" onClick={() => callPeer(key)}>{`Call`}</button>
                   );
               }
             })}
