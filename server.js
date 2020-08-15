@@ -7,7 +7,7 @@ const socketio = require('socket.io')
 const { v4: uuidV4 } = require('uuid')
 const request = require('request');
 const axios = require('axios')
-
+const path = require('path');
 // const { PeerServer } = require('peer');
 var queue = [];
 // PeerServer({port: 3001, path: '/' });
@@ -119,6 +119,11 @@ const apiRoute = require('./routes/api');
 app.use('/api', apiRoute.router)
 
 
+//static files connection
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 server.listen(port, () => {
   console.log(`Server running on port ${port}`)

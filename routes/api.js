@@ -3,7 +3,6 @@ const router = express.Router();
 const pg = require('pg');
 const { v4: uuidv4 } = require('uuid');
 var sha256 = require('js-sha256');
-const { restart } = require('nodemon');
 const translate = require('@k3rn31p4nic/google-translate-api');
 var client = null
 var diseases = []
@@ -151,7 +150,7 @@ router.post("/logout", async (req, res, next) => {
     var query = "UPDATE users SET auth_token=$1 WHERE auth_token=$2";
     var values = [null, req.body.auth_token]
     var success = true;
-    console.log(client)
+    // console.log(client)
     await client.query(query, values).then((res) => { })
     res.json({ "success": success })
 })
