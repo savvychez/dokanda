@@ -54,7 +54,7 @@ router.post('/matching', (req, res, next) =>
 
 router.get("/createUsers",async (req,res,next)=>
 {
-    const query = "CREATE table users(id SERIAL,firstName text,lastName text,email text,password text, pharmacy text,auth_token text)";
+    const query = "CREATE table users(id SERIAL,firstName text,lastName text,email text,password text, pharmacy text,profession text,auth_token text)";
     await client.query(query).then((res) => {console.log(res)}).catch( err => console.log(err))
     console.log("Made Table")
 })
@@ -87,8 +87,8 @@ router.post("/registerUser",async (req,res,next)=>
 
     if(status)
     {
-        query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,auth_token) VALUES ($1,$2,$3,$4,$5,$6)";
-        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,auth_token]
+        query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,profession,auth_token) VALUES ($1,$2,$3,$4,$5,$6,$7)";
+        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,req.body.profession,auth_token]
 
         await client.query(query,values).then((res) => 
         {
@@ -180,7 +180,7 @@ router.post("/logout",async(req,res,next)=>
 
 router.post("/userDescription",async(req,res,next)=>
 {
-    var query = "SELECT id,firstName,lastName,email,pharmacy,auth_token FROM users WHERE auth_token=$1";
+    var query = "SELECT id,firstName,lastName,email,pharmacy,profession,auth_token FROM users WHERE auth_token=$1";
     var values = [req.body.auth_token]
     var statusMessage = "Unsuccessful Retreival";
     var description = null;

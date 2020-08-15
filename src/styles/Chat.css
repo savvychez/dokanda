@@ -6,17 +6,21 @@
     background-color: #1A1A1D;
   }
    */
-   .float-container {
-    /* border: 3px solid #fff; */
-    padding: 20px;
-}
+  .float-container {
+    border: 3px solid #fff;
+    padding-top: 85px;
+  }
 
-  .float-child {
-      width: 50%;
+  .float-child1 {
+      width: 70%;
       float: left;
       padding: 20px;
-      border: 1.5px solid #a5a5a5;
-    }  
+  }  
+  .float-child2 {
+    width: 30%;
+    float: left;
+    padding: 20px;
+}  
   .container {
     display: flex;
     flex-direction: column;
@@ -24,7 +28,7 @@
     background: white;
     border-radius: 8px;
     border: 1.5px solid #a5a5a5;
-    height: 50vh;
+    height: 85vh;
     width: 100%;
   }
   
