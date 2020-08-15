@@ -225,8 +225,8 @@ const Chat = ({ location }) => {
   if (receivingCall && !callAccepted) {
     incomingCall = (
       <div>
-        <h1>{caller} is calling you</h1>
-        <button onClick={acceptCall}>Accept</button>
+        <h1 class="acceptCall">{caller} is calling you</h1>
+        <button class="acceptCall" onClick={acceptCall}>Accept</button>
       </div>
     )
   }
@@ -237,11 +237,24 @@ const Chat = ({ location }) => {
       <div className="interface"> 
         <div className="video1">
           {UserVideo}
-        </div>
-        
-        <div className="video2conf">
-          {PartnerVideo}
 
+        </div>
+        <div className="video2conf">
+            {PartnerVideo}
+            {Object.keys(users).map(key => {
+              if (key === yourID) {
+                return null;
+              }
+              if(!callAccepted)
+              {
+                  return (
+                      <button class="callPeer" onClick={() => callPeer(key)}>Call {key}</button>
+                  );
+              }
+            })}
+        <div>
+            {incomingCall}
+        </div>
         </div>
       </div>
 

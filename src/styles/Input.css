@@ -9,7 +9,7 @@
     padding-left: 5%;
     width: 70%;
     font-size: .9em;
-    /* height: 5%; */
+    height: 6vh;
   }
   
   input:focus, textarea:focus, select:focus{
@@ -32,5 +32,5 @@
     border: 2px solid #619bff;
     border-radius: 20px;
     padding: 1% 4%;
-    margin: 3%;
+    /* margin: 3%; */
   }

@@ -2,6 +2,13 @@
     padding: 5% 0;
     overflow: auto;
     flex: auto;
-    height: 50vh;
+    height: 40vh;
   }
   
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .messages {
+      height: 15vh;
+    }
+  
+  }
