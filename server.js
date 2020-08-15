@@ -7,9 +7,11 @@ const socketio = require('socket.io')
 const { v4: uuidV4 } = require('uuid')
 const request = require('request');
 const axios = require('axios')
-const { PeerServer } = require('peer');
+// const { PeerServer } = require('peer');
 var queue = [];
-PeerServer({port: 3001, path: '/' });
+// PeerServer({port: 3001, path: '/' });
+
+const { addUser, removeUser, getUser, getUsersinRoom } = require('./users.js');
 
 const io = socketio(server)
 
@@ -17,7 +19,38 @@ const users = {}
 const availableUsers = {}
 
 io.on('connection', socket => {
-  if(!users[socket.id]){
+  socket.on('join', ({ name, room }, callback) => {
+    const { error, user } = addUser({ id: socket.id, name, room });
+    console.log(name, room);
+    if(error) return callback(error);
+
+    socket.emit('message', { user: 'admin', text: `${user.name}, welcome to the room ${user.room}`});
+    socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name}, has joined!`});
+
+    socket.join(user.room);
+
+    callback();
+});
+
+socket.on('sendMessage', (message, callback) => {
+  const user = getUser(socket.id);
+  console.log("laks;jdf;lkasdf");
+
+  io.to(user.room).emit('message', { user: user.name, text: message });
+
+  callback();
+});
+
+socket.on('disconnect', () => {
+  const user = removeUser(socket.id);
+  if(user) {
+      io.to(user.room).emit('message',{ user: 'admin', text: `${user.name} has left.`})
+  }
+
+
+});
+
+if(!users[socket.id]){
     users[socket.id] = socket.id;
   }
   socket.emit("yourID", socket.id);
