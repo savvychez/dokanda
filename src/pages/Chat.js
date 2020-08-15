@@ -16,7 +16,7 @@ import '../styles/Chat.css';
 
 
 const Container = styled.div`
-  height: 100vh;
+  height: 40vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -180,7 +180,6 @@ const Chat = ({ location }) => {
   }
   return (
       <div>
-          <Container>
             <Row>
                 {UserVideo}
                 {PartnerVideo}
@@ -201,16 +200,13 @@ const Chat = ({ location }) => {
             <Row>
                 {incomingCall}
             </Row>
-            </Container>
             <Container>
-                <div className="outerContainer">
                     <div className="container">
                         <InfoBar room={room}/>
                         <Messages messages={messages} name={name}/>
                         <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
                     </div>
-                </div>
-    </Container>
+            </Container>
       </div>
     
   );
