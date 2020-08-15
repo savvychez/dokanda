@@ -15,195 +15,177 @@ router.get('/articles', (req, res, next) => {
 })
 
 
-router.post('/matching', (req, res, next) => 
-{
+router.post('/matching', (req, res, next) => {
     //Input is [String text, String language]
     var matchingDiseases = [];
     var langLoc = 0;
     var matched = new Set();
-    if(req.body.data[1]==="i")
-    {
+    if (req.body.data[1] === "i") {
         langLoc = 1;
     }
-    diseases.forEach((d)=>
-    {
+    diseases.forEach((d) => {
         var symptoms = d.symptoms
-        symptoms.forEach((symptom)=>
-        {
+        symptoms.forEach((symptom) => {
             var s = symptom.split("|")[langLoc].toLowerCase();
-            if(s.includes(req.body.data[0].toLowerCase()) && !matched.has(d.name))
-            {
-                matchingDiseases.push(new disease(d.name.split("|")[langLoc].toLowerCase(),d.symptoms.map((s)=>s)));
+            if (s.includes(req.body.data[0].toLowerCase()) && !matched.has(d.name)) {
+                matchingDiseases.push(new disease(d.name.split("|")[langLoc].toLowerCase(), d.symptoms.map((s) => s)));
                 matched.add(d.name);
             }
         })
     })
     console.log("AAAAAAAA")
 
-    for(var x=0;x<matchingDiseases.length;x++)
-    {
+    for (var x = 0; x < matchingDiseases.length; x++) {
         s = matchingDiseases[x].symptoms;
 
-        for(var i=0;i<s.length;i++)
-        {
+        for (var i = 0; i < s.length; i++) {
             s[i] = s[i].split("|")[langLoc].toLowerCase();
         }
     }
     console.log(matchingDiseases)
-    res.json({"matchingDiseases":matchingDiseases})
+    res.json({ "matchingDiseases": matchingDiseases })
 })
 
-router.get("/createUsers",async (req,res,next)=>
-{
+router.get("/createUsers", async (req, res, next) => {
     const query = "CREATE table users(id SERIAL,firstName text,lastName text,email text,password text, pharmacy text,profession text,auth_token text)";
-    await client.query(query).then((res) => {console.log(res)}).catch( err => console.log(err))
+    await client.query(query).then((res) => { console.log(res) }).catch(err => console.log(err))
     console.log("Made Table")
 })
 
-router.post("/registerUser",async (req,res,next)=>
-{
+router.post("/registerUser", async (req, res, next) => {
     var query = "SELECT * FROM users WHERE email=$1";
     var values = [req.body.email]
     var status = true;
     var statusMessage;
     var auth_token = uuidv4();
 
-    await client.query(query,values).then((res) => 
-    {
-        if(res.rows.length!=0)
-        {
+    await client.query(query, values).then((res) => {
+        if (res.rows.length != 0) {
             status = false;
             statusMessage = "Email Already Taken"
-            auth_token=null;
+            auth_token = null;
         }
-    }).catch((err) => 
-    {
+    }).catch((err) => {
         console.log(err);
         status = false;
         statusMessage = "Error While Registering";
-        auth_token=null;
+        auth_token = null;
     })
 
     let sCode;
 
-    if(status)
-    {
+    if (status) {
         query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,profession,auth_token) VALUES ($1,$2,$3,$4,$5,$6,$7)";
-        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,req.body.profession,auth_token]
+        values = [req.body.firstName, req.body.lastName, req.body.email, sha256(req.body.password), req.body.pharmacy, req.body.profession, auth_token]
 
-        await client.query(query,values).then((res) => 
-        {
+        await client.query(query, values).then((res) => {
             console.log(res)
             sCode = 200
             statusMessage = "Successful Registration"
-        }).catch( (err) => 
-        {
+        }).catch((err) => {
             console.log(err)
             sCode = 401
             statusMessage = "Error While Registering"
-            auth_token=null;
+            auth_token = null;
         })
-    }        
+    }
 
     printUsers();
 
     res.json(
-    {
-        "statusMessage":statusMessage,
-        "auth_token": auth_token
-    })
+        {
+            "statusMessage": statusMessage,
+            "auth_token": auth_token
+        })
     res.status(sCode)
 })
-router.post("/login",async (req,res,next)=>
-{
+router.post("/login", async (req, res, next) => {
     var query = "SELECT auth_token FROM users WHERE email=$1 AND password=$2";
-    var values = [req.body.email,sha256(req.body.password)]
+    var values = [req.body.email, sha256(req.body.password)]
     var success = false;
     var auth_token = uuidv4();
 
-    await client.query(query,values).then(async (res) => 
-    {
-        if(res.rows.length!=0)
-        {
+    await client.query(query, values).then(async (res) => {
+        if (res.rows.length != 0) {
             query = "UPDATE users SET auth_token=$1 WHERE email=$2";
-            values = [auth_token,req.body.email]
-            await client.query(query,values).then((res) => {success = true}).catch((err) => 
-            {
+            values = [auth_token, req.body.email]
+            await client.query(query, values).then((res) => { success = true }).catch((err) => {
                 console.log(err);
-                auth_token=null;
+                auth_token = null;
             })
         }
         else
-            auth_token=null;
-    }).catch((err) => 
-    {
+            auth_token = null;
+    }).catch((err) => {
         console.log(err)
-        auth_token=null;
+        auth_token = null;
     })
 
     printUsers()
 
     res.json(
-    {
-        "success": success,
-        "auth_token": auth_token
-    })
+        {
+            "success": success,
+            "auth_token": auth_token
+        })
 })
 
-router.post("/confirmAuthToken",async(req,res,next)=>
-{
+router.post("/confirmAuthToken", async (req, res, next) => {
     var query = "SELECT * FROM users WHERE auth_token=$1";
     var values = [req.body.auth_token]
     var statusMessage = "Invalid Auth Token";
     var success = false;
 
-    await client.query(query,values).then((res)=>
-    {
+    await client.query(query, values).then((res) => {
         console.log(res.rows.length)
-        if(res.rows.length!=0) {
+        if (res.rows.length != 0) {
             statusMessage = "Valid Auth Token";
             success = true;
         }
     })
 
-    res.json({"statusMessage":statusMessage, "success": success})
+    res.json({ "statusMessage": statusMessage, "success": success })
 })
 
-router.post("/logout",async(req,res,next)=>
-{
+router.post("/logout", async (req, res, next) => {
     var query = "UPDATE users SET auth_token=$1 WHERE auth_token=$2";
-    var values = [null,req.body.auth_token]
+    var values = [null, req.body.auth_token]
     var success = true;
-    await client.query(query,values).then((res)=>{})
-    res.json({"success":success})
+    await client.query(query, values).then((res) => { })
+    res.json({ "success": success })
 })
 
 
-router.post("/userDescription",async(req,res,next)=>
-{
+router.post("/userDescription", async (req, res, next) => {
     var query = "SELECT id,firstName,lastName,email,pharmacy,profession,auth_token FROM users WHERE auth_token=$1";
     var values = [req.body.auth_token]
     var statusMessage = "Unsuccessful Retreival";
     var description = null;
-    await client.query(query,values).then((res)=>
-    {
+    await client.query(query, values).then((res) => {
         description = res.rows[0]
-        statusMessage="Successful Retreival"
-    }).catch((err)=>{console.log(err)})
+        statusMessage = "Successful Retreival"
+    }).catch((err) => { console.log(err) })
 
     res.json(
-    {
-        "description":description,
-        "statusMessage":statusMessage
-    })
+        {
+            "description": description,
+            "statusMessage": statusMessage
+        })
 })
 
+router.post("/translate", async (req, res, next) => {
+    text = req.body.text;
+    translate(text, { from: 'en', to: 'id' }).then(result => {
+        res.json({ "text": result.text });
+    }).catch(err => {
+        res.json({ "error": err });
+    });
+})
 
-const init = ()=>
-{
+const init = () => {
     const config = {
         host: 'ec2-52-72-34-184.compute-1.amazonaws.com',
-        user: 'mimsvndxbgrmep',     
+        user: 'mimsvndxbgrmep',
         password: '01752f23d29059300fbb6b0a4d3eb3337dabc23780deffe5e5d3bad88adc3ddb',
         database: 'dbsfa958kpt335',
         port: 5432,
@@ -211,52 +193,44 @@ const init = ()=>
         ssl: { rejectUnauthorized: false },
         rejectUnauthorized: false
     };
-    
+
     const clientInstance = new pg.Client(config);
-    
-    clientInstance.connect(async (err) => 
-    {
-        if (err) 
-            console.log(err) ;
-        else 
-        {
+
+    clientInstance.connect(async (err) => {
+        if (err)
+            console.log(err);
+        else {
             client = clientInstance;
             await initData(client);
         }
     });
 }
 
-const printUsers = async()=>
-{
+const printUsers = async () => {
     const query = "SELECT * FROM users";
 
-    await client.query(query).then((res) => 
-    {
-        res.rows.forEach((row)=>
-        {
+    await client.query(query).then((res) => {
+        res.rows.forEach((row) => {
             console.log(row)
         })
     }).catch
-    (
-        err => console.log(err)
-    )
+        (
+            err => console.log(err)
+        )
 }
 
-const initData = async (client) =>
-{
+const initData = async (client) => {
     const query = "SELECT * FROM diseases";
 
-    await client.query(query).then((res) => 
-    {
-        res.rows.forEach((row)=>
-        {
+    await client.query(query).then((res) => {
+        res.rows.forEach((row) => {
             // console.log(row.name+" "+row.symptoms)
-            diseases.push(new disease(row.name,row.symptoms))
+            diseases.push(new disease(row.name, row.symptoms))
         })
     }).catch
-    (
-        err => console.log(err)
-    )
+        (
+            err => console.log(err)
+        )
 }
 
 module.exports.router = router;
@@ -264,8 +238,7 @@ module.exports.init = init;
 
 
 
-function disease(name,symptoms)
-{
-    this.name=name;
-    this.symptoms=symptoms;
+function disease(name, symptoms) {
+    this.name = name;
+    this.symptoms = symptoms;
 }

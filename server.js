@@ -7,7 +7,6 @@ const socketio = require('socket.io')
 const { v4: uuidV4 } = require('uuid')
 const request = require('request');
 const axios = require('axios')
-const translate = require('@k3rn31p4nic/google-translate-api');
 
 // const { PeerServer } = require('peer');
 var queue = [];
@@ -125,18 +124,6 @@ server.listen(port, () => {
   console.log(`Server running on port ${port}`)
   apiRoute.init()
 });
-
-
-const translateText = async (text,language) =>
-{
-  text = req.body.text;
-  translate(text, { from: 'en', to: 'id' }).then(result => {
-      return result.text;
-  }).catch(err => {
-      console.error(err);
-  });
-}
-
 
 
 

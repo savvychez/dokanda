@@ -10,7 +10,8 @@ export const useData = () => {
 
 export const DataProvider = props => {
     let user = {
-        "authenticated": "PENDING"
+        "authenticated": "PENDING",
+        "lang": cookie.load('lang') || "e"
     }
 
     const [data, setData] = useState(user)
@@ -42,6 +43,10 @@ export const DataProvider = props => {
         }
     }, [])
 
+    useEffect(() => {
+        console.log(data)
+    }, [data])
+
     //Write functions that call api here
 
     const getRoomId = (callback, prof) => {
@@ -64,12 +69,48 @@ export const DataProvider = props => {
         })
     }
 
+    const getLang = () => {
+        return data.lang;
+    }
+
+    const setLang = (lang) => {
+        setData({
+            ...data,
+            "lang": lang
+        })
+        cookie.save("lang",lang)
+    }
+
+    const translate = (str) => {
+        if (data.lang == 'i') {
+            let translation;
+            axios.post(
+                "/api/translate",
+                {
+                    "text": str
+                }
+            ).then(res => {
+                if (res.data.text) {
+                    translation = res.data.text
+                    console.log(translation)
+                    return translation
+                } else {
+                    console.log(res.data)
+                }
+            }).finally(() => {
+                // transCallback()
+            })
+        } else {
+            return str;
+        }
+    }
+
     //SEARCH FUNCTIONS
     const query = (qString, lang, callback) => {
         axios.post(
             "/api/matching",
             {
-                "data": [qString, lang]
+                "data": [qString, data.lang]
             }
         )
             .then(res => {
@@ -155,7 +196,7 @@ export const DataProvider = props => {
         }
     }
 
-    const functions = { ...data, setData, getProf, setProf, getRoomId, query, register, login, logout }
+    const functions = { ...data, translate, setData, getProf, setProf, getLang, setLang, getRoomId, query, register, login, logout }
     return <DataContext.Provider value={functions} {...props} />
 }
 

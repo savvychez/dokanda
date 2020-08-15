@@ -7,16 +7,20 @@ import SwitchModeButton from '../components/SwitchModeButton';
 
 
 const Search = props => {
-  const { query } = useData();
+  const { query, lang } = useData();
   const [res, setRes] = useState([])
   const [input, setInput] = useState("")
 
   useEffect(() => {
-    query(input, "e", resCallback)
+    query(" ", lang, resCallback)
   }, [])
 
   useEffect(() => {
-    query(input, "e", resCallback)
+    query(input, lang, resCallback)
+  }, [lang])
+
+  useEffect(() => {
+    query(input, lang, resCallback)
   }, [input])
 
   const resCallback = (diseases) => {
@@ -33,7 +37,7 @@ const Search = props => {
 
   return (
     <div className="search">
-      <DebounceInput className="input-field search-input" type="text" placeholder="Enter Symptoms..." value={input} debounceTimeout={300} onChange={handleInput} />
+      <DebounceInput className="input-field search-input" type="text" placeholder={lang == 'e' ? "Enter Symptoms..." : "Masuk Gejala..."} value={input} debounceTimeout={300} onChange={handleInput} />
       <MobileTable results={res} />
       <SwitchModeButton onClick={goToDoctor} />
     </div>

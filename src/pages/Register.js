@@ -6,6 +6,7 @@ import '../styles/form.css'
 
 
 const Register = props => {
+
   const [fName, setFName] = useState("")
   const [lName, setLName] = useState("")
   const [email, setEmail] = useState("")
@@ -15,7 +16,7 @@ const Register = props => {
 
   const [err, setErr] = useState({})
 
-  const { register, authenticated } = useData();
+  const { translate, register, authenticated, lang } = useData();
 
   const regCallback = (authMessage, success) => {
     if (success) {
@@ -38,9 +39,10 @@ const Register = props => {
     }
   }
 
-  function validate(mail) {
+  const validate = (mail) => {
     return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
   }
+
 
   if (authenticated === false) {
     return (
@@ -48,33 +50,32 @@ const Register = props => {
         <div className={`login-main ${err.classes}`}>
           <div className="login_container">
             <form className={"form_container"} onSubmit={formHandler}>
-              <h1 className="register">Register</h1>
-              <a href="login">Or login</a>
+              <h1 className="register">{lang == 'e' ? "Register" : "Daftar"}</h1>
+              <a href="login">{lang == 'e' ? "Have an account? Login" : "Punya akun? Login"}</a>
 
-              <label htmlFor="firstname">First Name</label>
+              <label htmlFor="firstname">{lang == 'e' ? "First Name" : "Nama depan"}</label>
               <input id="firstname" className={`text_field fname ${err.classes}`} onClick={() => setErr({})} type="text" value={fName} onChange={e => setFName(e.target.value)} />
 
-              <label htmlFor="lastname">Last Name</label>
+              <label htmlFor="lastname">{lang == 'e' ? "Last Name" : "Nama keluarga"}</label>
               <input id="lastname" className={`text_field lname ${err.classes}`} onClick={() => setErr({})} type="text" value={lName} onChange={e => setLName(e.target.value)} />
 
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">{lang == 'e' ? "Email" : "Email"}</label>
               <input id="email" className={`text_field email ${err.classes}`} onClick={() => setErr({})} type="text" value={email} onChange={e => setEmail(e.target.value)} />
 
-              <label htmlFor="pharmacy">Pharmacy Address</label>
+              <label htmlFor="pharmacy">{lang == 'e' ? "Pharmacy Address" : "Alamat Apotek"}</label>
               <input id="pharmacy" className={`text_field pharmacy ${err.classes}`} onClick={() => setErr({})} type="username" value={pharmacy} onChange={e => setPharmacy(e.target.value)} />
 
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">{lang == 'e' ? "Password" : "Password"}</label>
               <input id="password" className={`text_field pass ${err.classes}`} onClick={() => setErr({})} type="password" value={pass} onChange={e => setPass(e.target.value)} />
 
-              <label htmlFor="">Are you a patient or a doctor?</label>
+              <label htmlFor="">{lang == 'e' ? "Why'd you join?" : "Apa profesimu?"}</label>
               <div className="radio_container">
-                <input type="radio" id="female" name="prof" checked={selectedP} onChange={() => setSelectedP(!selectedP)}/>
-                <label for="female">Patient</label>
+                <input type="radio" id="p" name="prof" checked={selectedP} onChange={() => setSelectedP(!selectedP)}/>
+                <label htmlFor="p">{lang == 'e' ? "Patient" : "Pasien"}</label>
                 <br />
-                <input type="radio" id="male" name="prof" checked={!selectedP} onChange={() => setSelectedP(!selectedP)}/>
-                <label for="male">Doctor</label>
+                <input type="radio" id="d" name="prof" checked={!selectedP} onChange={() => setSelectedP(!selectedP)}/>
+                <label htmlFor="d">{lang == 'e' ? "Doctor" : "Dokter"}</label>
               </div>
-
 
               <button className="form-button">Register</button>
               <p className={`error-msg ${err.classes}`}>{err.msg}&nbsp;</p>
