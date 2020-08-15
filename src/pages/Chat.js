@@ -16,29 +16,6 @@ import {useData} from '../components/DataProvider';
 // import '../styles/Chat.css';
 import '../styles/temp.css';
 
-
-// const Container = styled.div`
-//   height: 40npm vh;
-//   width: 100%;
-//   display: flex;
-//   flex-direction: column;
-//   margin: 20px;
-//   border-radius: 8px;
-
-// `;
-
-// const Row = styled.div`
-//   border-radius: 8px;
-//   display: flex;
-//   width: 100%;
-// `;
-
-// const Video = styled.video`
-//   border: 1px solid blue;
-//   width: 100%;
-//   height: 50%;
-// `;
-
 const Chat = ({ location }) => {
   const [err, setErr] = useState("")
   const [name, setName] = useState('');
@@ -61,13 +38,6 @@ const Chat = ({ location }) => {
   const partnerVideo = useRef();
   const socket = useRef();
 
-  // useEffect(()=>{
-  //   var newMessages = []
-  //   messages.map(message => {
-  //     newMessages.push(translate(message));
-  //   })
-  //   setMessages(newMessages)
-  // }, [])
     
   useEffect(() => {
     

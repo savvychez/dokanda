@@ -180,7 +180,7 @@ router.post("/userDescription", async (req, res, next) => {
 })
 
 router.post("/translate", async (req, res, next) => {
-    text = req.body.text;
+    var text = req.body.text;
     if(req.body.lang==="e")
     {
         translate(text, {to: 'en' }).then(result => {
