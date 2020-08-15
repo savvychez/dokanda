@@ -215,6 +215,22 @@ const Chat = ({ location }) => {
 
             </div>
           </div>
+          <div class="float-child1">
+            {/* <div class="green"> */}
+            {Object.keys(users).map(key => {
+                if (key === yourID) {
+                    return null;
+                }
+                if(!callAccepted)
+                {
+                    return (
+                        <button onClick={() => callPeer(key)}>Call {key}</button>
+                    );
+                }
+                })}
+                {incomingCall}
+            {/* </div> */}
+          </div>
           
           <div class="float-child2">
             <div class="outerContainer">

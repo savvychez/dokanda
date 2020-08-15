@@ -16,30 +16,33 @@ export const DataProvider = props => {
     const [data, setData] = useState(user)
 
     useEffect(() => {
-        var authToken = cookie.load('auth-token')
-		if (authToken) {
-			axios.post(
-				'/api/registerUser',
-				{ authtoken: authToken, }
-			)
-				.then(res => {
-					if (res.data.success) {
-                        let old = data;
-                        old.authenticated = true;
-                        setData(old)
-                    }
-					else {
-                        let old = data;
-                        old.authenticated = false;
-                        setData(old)
-                    }
-				})
-				.catch(err => {
-					console.log(err)
-				})
-		} else {
-			setAuthData({ "authenticated": false })
-		}
+        // var authToken = cookie.load('auth-token')
+		// if (authToken) {
+		// 	axios.post(
+		// 		'/api/registerUser',
+		// 		{ authtoken: authToken, }
+		// 	)
+		// 		.then(res => {
+		// 			if (res.data.success) {
+        //                 let old = data;
+        //                 old.authenticated = true;
+        //                 setData(old)
+        //             }
+		// 			else {
+        //                 let old = data;
+        //                 old.authenticated = false;
+        //                 setData(old)
+        //             }
+		// 		})
+		// 		.catch(err => {
+		// 			console.log(err)
+		// 		})
+		// } else {
+		// 	setAuthData({ "authenticated": false })
+        // }
+        let old = data;
+        old.authenticated = true;
+        setData(old);
     })
 
     //Write functions that call api here
