@@ -64,18 +64,29 @@ router.post("/registerUser",async (req,res,next)=>
     var values = [req.body.email]
     var status = true;
     var statusMessage;
+    var auth_token = uuidv4();
+
     await client.query(query,values).then((res) => 
     {
         if(res.rows.length!=0)
         {
             status = false;
             statusMessage = "Email Already Taken"
+            auth_token=null;
         }
-    }).catch(err => console.log(err))
+    }).catch((err) => 
+    {
+        console.log(err);
+        status = false;
+        statusMessage = "Error While Registering";
+        auth_token=null;
+    })
+
     if(status)
     {
         query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,auth_token) VALUES ($1,$2,$3,$4,$5,$6)";
-        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,uuidv4()]
+        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,auth_token]
+
         await client.query(query,values).then((res) => 
         {
             console.log(res)
@@ -84,30 +95,96 @@ router.post("/registerUser",async (req,res,next)=>
         {
             console.log(err)
             statusMessage = "Error While Registering"
+            auth_token=null;
         })
     }        
+
     printUsers();
-    res.json({"statusMessage":statusMessage})
-})
-router.post("/verifyLogin",async (req,res,next)=>
-{
-    var query = "SELECT auth_token FROM users WHERE email=$1 AND password=$2";
-    var values = [req.body.email,sha256(req.body.password)]
-    var statusMessage = "Unsuccessful Login";
-    var auth_token = null;
-    await client.query(query,values).then((res) => 
-    {
-        if(res.rows.length!=0)
-        {
-            statusMessage = "Successful Login"
-            auth_token = res.rows[0]
-        }
-    }).catch(err => console.log(err))
-  
+
     res.json(
     {
         "statusMessage":statusMessage,
         "auth_token": auth_token
+    })
+})
+router.post("/login",async (req,res,next)=>
+{
+    var query = "SELECT auth_token FROM users WHERE email=$1 AND password=$2";
+    var values = [req.body.email,sha256(req.body.password)]
+    var statusMessage = "Unsuccessful Login";
+    var auth_token = uuidv4();
+
+    await client.query(query,values).then(async (res) => 
+    {
+        if(res.rows.length!=0)
+        {
+            query = "UPDATE users SET auth_token=$1 WHERE email=$2";
+            values = [auth_token,req.body.email]
+            await client.query(query,values).then((res) => {statusMessage = "Successful Login"}).catch((err) => 
+            {
+                console.log(err);
+                auth_token=null;
+            })
+        }
+        else
+            auth_token=null;
+    }).catch((err) => 
+    {
+        console.log(err)
+        auth_token=null;
+    })
+
+    printUsers()
+
+    res.json(
+    {
+        "statusMessage":statusMessage,
+        "auth_token": auth_token
+    })
+})
+
+router.post("/confirmAuthToken",async(req,res,next)=>
+{
+    var query = "SELECT * FROM users WHERE auth_token=$1";
+    var values = [req.body.auth_token]
+    var statusMessage = "Invalid Auth Token";
+
+    await client.query(query,values).then((res)=>
+    {
+        console.log(res.rows.length)
+        if(res.rows.length!=0)
+            statusMessage = "Valid Auth Token";
+    })
+
+    res.json({"statusMessage":statusMessage})
+})
+
+router.post("/logout",async(req,res,next)=>
+{
+    var query = "UPDATE users SET auth_token=$1 WHERE auth_token=$2";
+    var values = [null,req.body.auth_token]
+    var statusMessage = "Successful Logout";
+    await client.query(query,values).then((res)=>{})
+    res.json({"statusMessage":statusMessage})
+})
+
+
+router.post("/userDescription",async(req,res,next)=>
+{
+    var query = "SELECT id,firstName,lastName,email,pharmacy,auth_token FROM users WHERE auth_token=$1";
+    var values = [req.body.auth_token]
+    var statusMessage = "Unsuccessful Retreival";
+    var description = null;
+    await client.query(query,values).then((res)=>
+    {
+        description = res.rows[0]
+        statusMessage="Successful Retreival"
+    }).catch((err)=>{console.log(err)})
+
+    res.json(
+    {
+        "description":description,
+        "statusMessage":statusMessage
     })
 })
 
