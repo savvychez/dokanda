@@ -19,12 +19,12 @@
 .form_container > a {
     font-family: 'metropolismedium';
     text-decoration: none;
-    color: rgb(55, 108, 255);
+    color: #1C9CE5;
     margin: 1% 0 10%;
 }
 
 .form_container > a:hover, .form_container > a:active {
-    color: rgb(34, 78, 199);
+    color: #0074E1;
 }
 
 .text_field {
@@ -74,4 +74,10 @@
 .form-button {
     margin-top: 10%;
     margin-bottom: 0;
+    background-color: #1C9CE5;
+    transition: 0.25s;
+}
+
+.form-button:hover {
+    background-color: #0074E1;
 }

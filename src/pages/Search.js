@@ -32,7 +32,7 @@ const Search = props => {
   }
 
   const goToDoctor = (e) => {
-    props.history.push("/patient/chat")
+    props.history.push("/choice")
   }
 
   return (

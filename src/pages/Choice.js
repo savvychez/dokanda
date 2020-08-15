@@ -3,22 +3,24 @@ import BigButton from '../components/BigButton';
 import { FaNotesMedical, FaProcedures } from "react-icons/fa"
 import { useData } from '../components/DataProvider';
 import '../styles/choices.css'
+import { select } from 'react-cookies';
 
 
 const Choice = props => {
 
-  const [selection, setSelection] = useState("")
+  const [selection, setSelection] = useState(false)
   const { getRoomId, setProf } = useData()
   const [name, setName] = useState('')
   const [room, setRoom] = useState('')
 
   const formHandler = (e) => {
     e.preventDefault()
-
-    setProf(selection)
-    getRoomId((room_id) =>
-      props.history.push(`${selection}/chat?name=${name}&room=${room_id.data}`)
-    , name);
+    if(selection) {
+      setProf(selection)
+      getRoomId((room_id) =>
+        props.history.push(`${selection}/chat?name=${name}&room=${room_id.data}`)
+      , name);
+    }
   }
 
   const clickDoctor = () => {

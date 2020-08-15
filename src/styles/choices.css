@@ -7,6 +7,7 @@
     font-family: 'metropolisbold';
     padding: 100px 0 0% 0;
     text-align: center;
+    color: #0074E1;
 }
 
 button {
@@ -15,7 +16,7 @@ button {
     font-family: 'metropolisbold', sans-serif;
     font-size: 1.2em;
     color: #FFF;
-    background-color: #5e5e5e;
+    background-color: #1C9CE5;
     padding: 10px 40px;
     text-align: center;
     border: 0;
@@ -26,10 +27,17 @@ button {
     cursor: pointer;
 }
 
-button:active {
-    background-color: #303030;
+button:active, button:hover {
+    background-color: #0074E1;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
+    .doc {
+        margin-top: 2.5%;
+    }
 
+    .choices-header {
+        text-align: left;
+        font-size: 2.5em;
+    }
 }
