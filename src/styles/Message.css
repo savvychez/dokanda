@@ -5,15 +5,16 @@
     color: white;
     display: inline-block;
     max-width: 80%;
-    height: 50%;
   }
   
   .messageText {
     width: 100%;
     letter-spacing: 0;
     float: left;
-    font-size: 1.1em;
+    font-size: .9em;
     word-wrap: break-word;
+    font-family: "metropolismedium";
+    padding: 2%;
   }
   
   .messageText img {
