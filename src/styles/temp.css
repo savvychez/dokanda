@@ -1,4 +1,4 @@
-.row::after {
+/* .row::after {
     content: "";
     clear: both;
     display: block;
@@ -7,7 +7,6 @@
 [class*="col-"] {
   left: 0;
   float: left;
-  /* padding: 15px; */
 }
 
 
@@ -31,7 +30,7 @@
 
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    .container{
+    /* .container{
         width: 100%;
     }
     .uservid {
@@ -41,4 +40,43 @@
         display: flex;
         flex-direction: row;
     }
+  } */ 
+
+.rows{
+    padding: 3%;
+
+
+}
+
+.video1 {
+    margin-right: 20px;
+}
+
+.uservid {
+    width: 100%;
+    /* padding-right: 3% */
+    border: 1px solid blue;
+}
+
+.interface {
+    width: 50%;
+    float: left;
+    /* padding: 20px; */
+    border: 2px solid red;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .uservid {
+      width: 100%
   }
+  .interface {
+      width: 100%
+  }
+  .video1 {
+      margin-right: 0px;
+  }
+
+}

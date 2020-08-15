@@ -207,7 +207,7 @@ const Chat = ({ location }) => {
   let PartnerVideo;
   if (callAccepted) {
     PartnerVideo = (
-      <video playsInline ref={partnerVideo} autoPlay />
+      <video className="uservid"playsInline ref={partnerVideo} autoPlay />
     );
   }
 
@@ -221,26 +221,30 @@ const Chat = ({ location }) => {
     )
   }
   return (
-    <div className="row">
-      <div className="col-1">
-        <div className="uservid">
-          
+    
+    <div class="rows">
+
+      <div class="interface"> 
+        <div class="video1">
           {UserVideo}
+        </div>
+        <div class="video2conf">
+          {PartnerVideo}
+          hi
 
         </div>
-        
       </div>
-      <div className="col-2">
-        <div className="container">
-           <InfoBar room={room}/>
-           <Messages messages={messages} name={name}/>
-           <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
-        </div>   
 
-        {/* the text chat */}
+      <div class="interface">
+        <div class="chat">
+          <InfoBar room={room}/>
+          <Messages messages={messages} name={name}/>
+          <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+        </div>    
       </div>
 
     </div>
+
       // <div class="float-container">
       //     <div class="float-child1">
       //       <div class="green">
