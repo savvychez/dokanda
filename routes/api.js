@@ -33,16 +33,16 @@ router.post('/matching', (req, res, next) => {
             }
         })
     })
-    console.log("AAAAAAAA")
+    // console.log("AAAAAAAA")
 
     for (var x = 0; x < matchingDiseases.length; x++) {
-        s = matchingDiseases[x].symptoms;
+        let s = matchingDiseases[x].symptoms;
 
         for (var i = 0; i < s.length; i++) {
             s[i] = s[i].split("|")[langLoc].toLowerCase();
         }
     }
-    console.log(matchingDiseases)
+    // console.log(matchingDiseases)
     res.json({ "matchingDiseases": matchingDiseases })
 })
 
@@ -137,8 +137,8 @@ router.post("/confirmAuthToken", async (req, res, next) => {
     var success = false;
 
     await client.query(query, values).then((res) => {
-        console.log(res.rows.length)
-        if (res.rows.length != 0) {
+        // console.log(res.rows.length)
+        if (res.rows.length !== 0) {
             statusMessage = "Valid Auth Token";
             success = true;
         }
@@ -151,6 +151,7 @@ router.post("/logout", async (req, res, next) => {
     var query = "UPDATE users SET auth_token=$1 WHERE auth_token=$2";
     var values = [null, req.body.auth_token]
     var success = true;
+    console.log(client)
     await client.query(query, values).then((res) => { })
     res.json({ "success": success })
 })
@@ -174,7 +175,7 @@ router.post("/userDescription", async (req, res, next) => {
 })
 
 router.post("/translate", async (req, res, next) => {
-    text = req.body.text;
+    var text = req.body.text;
     translate(text, { from: 'en', to: 'id' }).then(result => {
         res.json({ "text": result.text });
     }).catch(err => {
@@ -200,10 +201,12 @@ const init = () => {
         if (err)
             console.log(err);
         else {
+            // console.log(clientInstance)
             client = clientInstance;
             await initData(client);
         }
     });
+    // console.log(client);
 }
 
 const printUsers = async () => {
@@ -211,7 +214,7 @@ const printUsers = async () => {
 
     await client.query(query).then((res) => {
         res.rows.forEach((row) => {
-            console.log(row)
+            // console.log(row)
         })
     }).catch
         (

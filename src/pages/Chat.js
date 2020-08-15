@@ -53,6 +53,7 @@ const Chat = ({ location }) => {
   const [caller, setCaller] = useState("");
   const [callerSignal, setCallerSignal] = useState();
   const [callAccepted, setCallAccepted] = useState(false);
+  const {translate} = useData();
 
 //   const { getRoomId }  = useData();
 
@@ -60,6 +61,13 @@ const Chat = ({ location }) => {
   const partnerVideo = useRef();
   const socket = useRef();
 
+  // useEffect(()=>{
+  //   var newMessages = []
+  //   messages.map(message => {
+  //     newMessages.push(translate(message));
+  //   })
+  //   setMessages(newMessages)
+  // }, [])
     
   useEffect(() => {
     
@@ -123,9 +131,17 @@ const Chat = ({ location }) => {
 
   useEffect(() => {
     socket.current.on('message', (message) => {
-        setMessages([...messages, message]);
+      translate(message.text, (newMessage) => {
+        console.log("MESSAGE")
+        console.log(message);
+        message.text = newMessage;
+        messages.push(message)
+        // setMessages([...messages, message]);
+        setMessages(messages);
+      })
+
     })
-  }, [messages])
+  }, [])
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -222,21 +238,20 @@ const Chat = ({ location }) => {
   }
   return (
     
-    <div class="rows">
+    <div className="rows">
 
-      <div class="interface"> 
-        <div class="video1">
+      <div className="interface"> 
+        <div className="video1">
           {UserVideo}
         </div>
-        <div class="video2conf">
+        <div className="video2conf">
           {PartnerVideo}
-          hi
 
         </div>
       </div>
 
-      <div class="interface">
-        <div class="chat">
+      <div className="interface">
+        <div className="chat">
           <InfoBar room={room}/>
           <Messages messages={messages} name={name}/>
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
