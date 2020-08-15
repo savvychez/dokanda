@@ -59,7 +59,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
   "devDependencies": {
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.4"

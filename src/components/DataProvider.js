@@ -11,6 +11,7 @@ export const useData = () => {
 export const DataProvider = props => {
     let user = {
         "authenticated": "PENDING",
+        "prof": null,
         "lang": cookie.load('lang') || "e"
     }
 
@@ -26,6 +27,7 @@ export const DataProvider = props => {
                 .then(res => {
                     let copy = { ...data };
                     if (res.data.success) {
+                        copy.prof = res.data.prof
                         copy.authenticated = true;
                     }
                     else {
@@ -138,6 +140,7 @@ export const DataProvider = props => {
                     cookie.save('auth-token', res.data.auth_token, { 'path': '/' });
                     callback(res.data.auth_token, true)
                     let copy = { ...data };
+                    copy.prof = res.data.prof
                     copy.authenticated = true;
                     setData(copy);
 
@@ -159,6 +162,7 @@ export const DataProvider = props => {
                 console.log("Logged In!")
                 cookie.save("auth-token", res.data.auth_token, { 'path': '/' })
                 let copy = { ...data };
+                copy.prof = res.data.prof
                 copy.authenticated = true;
                 setData(copy);
             } else {
@@ -174,7 +178,7 @@ export const DataProvider = props => {
         var authToken = cookie.load('auth-token')
         if (authToken) {
             axios.post(
-                '/api/confirmAuthToken',
+                '/api/logout',
                 { auth_token: authToken, }
             ).then(res => {
                 if (res.data.success) {

@@ -175,7 +175,6 @@ router.post("/userDescription", async (req, res, next) => {
 })
 
 router.post("/translate", async (req, res, next) => {
-<<<<<<< HEAD
     text = req.body.text;
     if(req.body.lang==="e")
     {
@@ -193,14 +192,6 @@ router.post("/translate", async (req, res, next) => {
             res.json({ "error": err });
         });
     }
-=======
-    var text = req.body.text;
-    translate(text, { from: 'en', to: 'id' }).then(result => {
-        res.json({ "text": result.text });
-    }).catch(err => {
-        res.json({ "error": err });
-    });
->>>>>>> 6cd23283b3157a94cb3b19c05e8b625b1b3e7576
 })
 
 const init = () => {
