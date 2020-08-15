@@ -1,0 +1,44 @@
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+[class*="col-"] {
+  left: 0;
+  float: left;
+  /* padding: 15px; */
+}
+
+
+
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    background: white;
+    border-radius: 8px;
+    border: 1.5px solid #a5a5a5;
+    height: auto;
+    width: 100%; 
+  }
+
+  .uservid {
+    width: 100%;
+    height: auto;
+  }
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .container{
+        width: 100%;
+    }
+    .uservid {
+        width: 100%
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+  }

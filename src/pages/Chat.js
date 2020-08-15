@@ -14,29 +14,30 @@ import Input from '../components/Input';
 import {useData} from '../components/DataProvider';
 
 // import '../styles/Chat.css';
+import '../styles/temp.css';
 
 
-const Container = styled.div`
-  height: 40npm vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  border-radius: 8px;
+// const Container = styled.div`
+//   height: 40npm vh;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   margin: 20px;
+//   border-radius: 8px;
 
-`;
+// `;
 
-const Row = styled.div`
-  border-radius: 8px;
-  display: flex;
-  width: 100%;
-`;
+// const Row = styled.div`
+//   border-radius: 8px;
+//   display: flex;
+//   width: 100%;
+// `;
 
-const Video = styled.video`
-  border: 1px solid blue;
-  width: 50%;
-  height: 50%;
-`;
+// const Video = styled.video`
+//   border: 1px solid blue;
+//   width: 100%;
+//   height: 50%;
+// `;
 
 const Chat = ({ location }) => {
   const [name, setName] = useState('');
@@ -186,14 +187,14 @@ const Chat = ({ location }) => {
   let UserVideo;
   if (stream) {
     UserVideo = (
-      <Video playsInline muted ref={userVideo} autoPlay />
+      <video class="uservid" playsInline muted ref={userVideo} autoPlay />
     );
   }
 
   let PartnerVideo;
   if (callAccepted) {
     PartnerVideo = (
-      <Video playsInline ref={partnerVideo} autoPlay />
+      <video playsInline ref={partnerVideo} autoPlay />
     );
   }
 
@@ -207,41 +208,61 @@ const Chat = ({ location }) => {
     )
   }
   return (
-      <div class="float-container">
-          <div class="float-child1">
-            <div class="green">
-              {UserVideo}
-              {PartnerVideo}
-            </div>
-            <div>
-                {Object.keys(users).map(key => {
-                if (key === yourID) {
-                    return null;
-                }
-                if(!callAccepted)
-                {
-                    return (
-                        <button onClick={() => callPeer(key)}>Call {key}</button>
-                    );
-                }
-                })}
-            </div>
-            <div>
-                {incomingCall}
-            </div>
-          </div>
+    <div class="row">
+      <div class="col-1">
+        <div class="uservid">
+          
+          {UserVideo}
 
-          <div class="float-child2">
-            <div class="outerContainer">
-              <div className="container">
-                <InfoBar room={room}/>
-                <Messages messages={messages} name={name}/>
-                <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
-              </div>    
-            </div>
-          </div>
-
+        </div>
+        
       </div>
+      <div class="col-2">
+        <div className="container">
+           <InfoBar room={room}/>
+           <Messages messages={messages} name={name}/>
+           <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+        </div>   
+
+        {/* the text chat */}
+      </div>
+
+    </div>
+      // <div class="float-container">
+      //     <div class="float-child1">
+      //       <div class="green">
+      //         {UserVideo}
+      //         {PartnerVideo}
+      //       </div>
+      //       <div>
+      //           {Object.keys(users).map(key => {
+      //           if (key === yourID) {
+      //               return null;
+      //           }
+      //           if(!callAccepted)
+      //           {
+      //               return (
+      //                   <button onClick={() => callPeer(key)}>Call {key}</button>
+      //               );
+      //           }
+      //           })}
+      //       </div>
+      //       <div>
+      //           {incomingCall}
+      //       </div>
+      //     </div>
+
+      //     <div class="float-child2">
+      //       <div class="outerContainer">
+      //         <div className="container">
+      //           <InfoBar room={room}/>
+      //           <Messages messages={messages} name={name}/>
+      //           <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+      //         </div>    
+      //       </div>
+      //     </div>
+
+      // </div>
     
   );
 }

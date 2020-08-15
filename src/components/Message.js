@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import '../styles/Message.css';
+// import '../styles/Message.css';
 
 
 const Message = ({ message: { user, text }, name }) => {
