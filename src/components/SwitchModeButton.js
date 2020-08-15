@@ -7,7 +7,7 @@ const SwitchModeButton = props => {
   const { lang } = useData();
 
   return (
-    <button className="switchButton" onClick={props.onClick}>{lang == 'e' ? "Doctor" : "Dokter"}<FaPhoneAlt size="40"/></button>
+    <button className="switchButton" onClick={props.onClick}>{lang === 'e' ? "Doctor" : "Dokter"}<FaPhoneAlt size="40"/></button>
   )
 }
 
