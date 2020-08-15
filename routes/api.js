@@ -53,7 +53,7 @@ router.get("/createUsers", async (req, res, next) => {
 })
 
 router.post("/registerUser", async (req, res, next) => {
-    var query = "SELECT * FROM users WHERE email=$1";
+    var query = "SELECT profession FROM users WHERE email=$1";
     var values = [req.body.email]
     var status = true;
     var statusMessage;
@@ -100,13 +100,15 @@ router.post("/registerUser", async (req, res, next) => {
     res.status(sCode)
 })
 router.post("/login", async (req, res, next) => {
-    var query = "SELECT auth_token FROM users WHERE email=$1 AND password=$2";
+    var query = "SELECT profession FROM users WHERE email=$1 AND password=$2";
     var values = [req.body.email, sha256(req.body.password)]
     var success = false;
     var auth_token = uuidv4();
+    var prof = null;
 
     await client.query(query, values).then(async (res) => {
         if (res.rows.length != 0) {
+            prof = res.rows[0];
             query = "UPDATE users SET auth_token=$1 WHERE email=$2";
             values = [auth_token, req.body.email]
             await client.query(query, values).then((res) => { success = true }).catch((err) => {
@@ -126,25 +128,28 @@ router.post("/login", async (req, res, next) => {
     res.json(
         {
             "success": success,
-            "auth_token": auth_token
+            "auth_token": auth_token,
+            "prof":prof
         })
 })
 
 router.post("/confirmAuthToken", async (req, res, next) => {
-    var query = "SELECT * FROM users WHERE auth_token=$1";
+    var query = "SELECT profession FROM users WHERE auth_token=$1";
     var values = [req.body.auth_token]
     var statusMessage = "Invalid Auth Token";
     var success = false;
+    var prof = null;
 
     await client.query(query, values).then((res) => {
         // console.log(res.rows.length)
         if (res.rows.length !== 0) {
             statusMessage = "Valid Auth Token";
             success = true;
+            prof = res.rows[0]
         }
     })
 
-    res.json({ "statusMessage": statusMessage, "success": success })
+    res.json({ "statusMessage": statusMessage, "success": success , "prof":prof})
 })
 
 router.post("/logout", async (req, res, next) => {
@@ -175,7 +180,6 @@ router.post("/userDescription", async (req, res, next) => {
 })
 
 router.post("/translate", async (req, res, next) => {
-<<<<<<< HEAD
     text = req.body.text;
     if(req.body.lang==="e")
     {
@@ -193,14 +197,6 @@ router.post("/translate", async (req, res, next) => {
             res.json({ "error": err });
         });
     }
-=======
-    var text = req.body.text;
-    translate(text, { from: 'en', to: 'id' }).then(result => {
-        res.json({ "text": result.text });
-    }).catch(err => {
-        res.json({ "error": err });
-    });
->>>>>>> 6cd23283b3157a94cb3b19c05e8b625b1b3e7576
 })
 
 const init = () => {
