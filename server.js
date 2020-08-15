@@ -7,6 +7,8 @@ const socketio = require('socket.io')
 const { v4: uuidV4 } = require('uuid')
 const request = require('request');
 const axios = require('axios')
+const translate = require('@k3rn31p4nic/google-translate-api');
+
 // const { PeerServer } = require('peer');
 var queue = [];
 // PeerServer({port: 3001, path: '/' });
@@ -98,7 +100,7 @@ const enqueue = (roomId)=>
 }
 const dequeue = ()=>
 {
-  return queue.pop(0);
+  return queue.shift()
 }
 
 require('dotenv').config();
@@ -125,7 +127,15 @@ server.listen(port, () => {
 });
 
 
-
+const translateText = async (text,language) =>
+{
+  text = req.body.text;
+  translate(text, { from: 'en', to: 'id' }).then(result => {
+      return result.text;
+  }).catch(err => {
+      console.error(err);
+  });
+}
 
 
 
