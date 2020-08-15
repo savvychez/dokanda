@@ -7,7 +7,7 @@ import SwitchModeButton from '../components/SwitchModeButton';
 
 
 const Search = props => {
-  const { query, lang } = useData();
+  const { getRoomId, query, lang, prof } = useData();
   const [res, setRes] = useState([])
   const [input, setInput] = useState("")
 
@@ -32,7 +32,12 @@ const Search = props => {
   }
 
   const goToDoctor = (e) => {
-    props.history.push("/choice")
+    const selection = prof == "d" ? "doctor" : "patient"
+    if(selection) {
+      getRoomId((room_id) =>
+        props.history.push(`${selection}/chat?name=${selection}&room=${room_id.data}`)
+      , selection);
+    }
   }
 
   return (
