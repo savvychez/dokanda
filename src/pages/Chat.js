@@ -16,13 +16,17 @@ import '../styles/Chat.css';
 
 
 const Container = styled.div`
-  height: 40vh;
+  height: 40npm vh;
   width: 100%;
   display: flex;
   flex-direction: column;
+  margin: 20px;
+  border-radius: 8px;
+
 `;
 
 const Row = styled.div`
+  border-radius: 8px;
   display: flex;
   width: 100%;
 `;
@@ -179,8 +183,21 @@ const Chat = ({ location }) => {
     )
   }
   return (
-      <div>
-            <Row>
+      <div class="float-container">
+          <div class="float-child1">
+            <div class="green">Float Column 1</div>
+          </div>
+          
+          <div class="float-child2">
+            <div class="outerContainer">
+              <div className="container">
+                        <InfoBar room={room}/>
+                        <Messages messages={messages} name={name}/>
+                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+              </div>    
+            </div>
+          </div>
+            {/* <Row>
                 {UserVideo}
                 {PartnerVideo}
             </Row>
@@ -206,7 +223,7 @@ const Chat = ({ location }) => {
                         <Messages messages={messages} name={name}/>
                         <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
                     </div>
-            </Container>
+            </Container> */}
       </div>
     
   );
