@@ -175,11 +175,22 @@ router.post("/userDescription", async (req, res, next) => {
 
 router.post("/translate", async (req, res, next) => {
     text = req.body.text;
-    translate(text, { from: 'en', to: 'id' }).then(result => {
-        res.json({ "text": result.text });
-    }).catch(err => {
-        res.json({ "error": err });
-    });
+    if(req.body.lang==="e")
+    {
+        translate(text, {to: 'en' }).then(result => {
+            res.json({ "text": result.text });
+        }).catch(err => {
+            res.json({ "error": err });
+        });
+    }
+    else
+    {
+        translate(text, {to: 'id' }).then(result => {
+            res.json({ "text": result.text });
+        }).catch(err => {
+            res.json({ "error": err });
+        });
+    }
 })
 
 const init = () => {
