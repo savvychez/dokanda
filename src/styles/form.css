@@ -1,0 +1,48 @@
+.form_container {
+    background-color: #f8f8f8;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 2.5% 10%;
+    width: max-content;
+    margin: 10px auto 10px auto;
+}
+
+.form_container > * {
+    display: block;
+}
+
+.form_container > h1 {
+    font-family: 'metropolisbold';
+    padding: 2.5% 0 5%;
+}
+
+.text_field {
+    margin: 5px 0 20px 0;
+    padding: 10px;
+    border: 0;
+    height: 40px;
+    color: var(--text_grey);
+    background: none;
+    outline: none;
+    background-color: #fcfcfc;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    border-spacing: 10px;
+    font-family: 'metropolisregular', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    transition: all 0.5s;
+}
+
+.form_container > label {
+    font-family: 'metropolisbold', sans-serif;
+}
+
+.error-msg {
+    font-family: 'metropolisregular', sans-serif;
+    font-size: 0.9em;
+    padding: 5% 0;
+    color: rgb(230, 0, 0);
+    text-align: center;
+}

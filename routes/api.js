@@ -3,6 +3,7 @@ const router = express.Router();
 const pg = require('pg');
 const { v4: uuidv4 } = require('uuid');
 var sha256 = require('js-sha256');
+const { restart } = require('nodemon');
 var client = null
 var diseases = []
 
@@ -53,7 +54,7 @@ router.post('/matching', (req, res, next) =>
 
 router.get("/createUsers",async (req,res,next)=>
 {
-    const query = "CREATE table users(id SERIAL,firstName text,lastName text,email text,password text, pharmacy text,auth_token text)";
+    const query = "CREATE table users(id SERIAL,firstName text,lastName text,email text,password text, pharmacy text,profession text,auth_token text)";
     await client.query(query).then((res) => {console.log(res)}).catch( err => console.log(err))
     console.log("Made Table")
 })
@@ -82,18 +83,22 @@ router.post("/registerUser",async (req,res,next)=>
         auth_token=null;
     })
 
+    let sCode;
+
     if(status)
     {
-        query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,auth_token) VALUES ($1,$2,$3,$4,$5,$6)";
-        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,auth_token]
+        query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,profession,auth_token) VALUES ($1,$2,$3,$4,$5,$6,$7)";
+        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,req.body.profession,auth_token]
 
         await client.query(query,values).then((res) => 
         {
             console.log(res)
+            sCode = 200
             statusMessage = "Successful Registration"
         }).catch( (err) => 
         {
             console.log(err)
+            sCode = 401
             statusMessage = "Error While Registering"
             auth_token=null;
         })
@@ -106,6 +111,7 @@ router.post("/registerUser",async (req,res,next)=>
         "statusMessage":statusMessage,
         "auth_token": auth_token
     })
+    res.status(sCode)
 })
 router.post("/login",async (req,res,next)=>
 {
@@ -148,15 +154,18 @@ router.post("/confirmAuthToken",async(req,res,next)=>
     var query = "SELECT * FROM users WHERE auth_token=$1";
     var values = [req.body.auth_token]
     var statusMessage = "Invalid Auth Token";
+    var success = false;
 
     await client.query(query,values).then((res)=>
     {
         console.log(res.rows.length)
-        if(res.rows.length!=0)
+        if(res.rows.length!=0) {
             statusMessage = "Valid Auth Token";
+            success = true;
+        }
     })
 
-    res.json({"statusMessage":statusMessage})
+    res.json({"statusMessage":statusMessage, "success": success})
 })
 
 router.post("/logout",async(req,res,next)=>
@@ -171,7 +180,7 @@ router.post("/logout",async(req,res,next)=>
 
 router.post("/userDescription",async(req,res,next)=>
 {
-    var query = "SELECT id,firstName,lastName,email,pharmacy,auth_token FROM users WHERE auth_token=$1";
+    var query = "SELECT id,firstName,lastName,email,pharmacy,profession,auth_token FROM users WHERE auth_token=$1";
     var values = [req.body.auth_token]
     var statusMessage = "Unsuccessful Retreival";
     var description = null;

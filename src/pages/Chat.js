@@ -11,8 +11,9 @@ import queryString from 'query-string';
 import Messages from '../components/Messages';
 import InfoBar from '../components/InfoBar';
 import Input from '../components/Input';
+import {useData} from '../components/DataProvider';
 
-import '../styles/Chat.css';
+// import '../styles/Chat.css';
 
 
 const Container = styled.div`
@@ -43,8 +44,6 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
-
-
   const [yourID, setYourID] = useState("");
   const [users, setUsers] = useState({});
   const [stream, setStream] = useState();
@@ -52,6 +51,8 @@ const Chat = ({ location }) => {
   const [caller, setCaller] = useState("");
   const [callerSignal, setCallerSignal] = useState();
   const [callAccepted, setCallAccepted] = useState(false);
+
+//   const { getRoomId }  = useData();
 
   const userVideo = useRef();
   const partnerVideo = useRef();
@@ -61,17 +62,19 @@ const Chat = ({ location }) => {
   useEffect(() => {
     
     const { name, room } = queryString.parse(location.search);
+
+    
     console.log(name, room);
 
+    //socket connection
     socket.current = io.connect("/");
 
+    //save to name and room
     setName(name);
+    // room_id = room_id.data;
     setRoom(room);
 
-    socket.current.emit('join', { name, room },  () => {
-        console.log("hello");
-    });
-
+    // getting audio/video
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
       setStream(stream);
       if (userVideo.current) {
@@ -79,23 +82,37 @@ const Chat = ({ location }) => {
       }
     })
 
-    socket.current.on("yourID", (id) => {
-      setYourID(id);
-    })
-    socket.current.on("allUsers", (users) => {
-      setUsers(users);
-    })
+    
 
+    // received call from new user
     socket.current.on("hey", (data) => {
       setReceivingCall(true);
       setCaller(data.from);
       setCallerSignal(data.signal);
     })
 
-    return () => {
-        socket.emit('discconect');
+    socket.current.emit('join', { name, room },  () => {
+        console.log("hello");
+        
+    });
 
-        socket.off();
+    // set personal id upon receiving id
+    socket.current.on("yourID", (id) => {
+        setYourID(id);
+    })
+
+    // gets list of users in database
+    socket.current.emit("getUsers");
+    socket.current.on("allUsers", (users) => {
+      // console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+      setUsers(users);
+      console.log(users)
+    })
+
+    return () => {
+        socket.current.emit('disconnect');
+
+        socket.current.off();
     }
   }, []);
 
@@ -113,9 +130,7 @@ const Chat = ({ location }) => {
     }
   }
 
-
-  console.log(message, messages);
-
+  // call peer upon button click (Show user is calling)
   function callPeer(id) {
     const peer = new Peer({
       initiator: true,
@@ -123,16 +138,19 @@ const Chat = ({ location }) => {
       stream: stream,
     });
 
+    // sends signal for callUser
     peer.on("signal", data => {
       socket.current.emit("callUser", { userToCall: id, signalData: data, from: yourID })
     })
 
+    // receive stream from partner
     peer.on("stream", stream => {
       if (partnerVideo.current) {
         partnerVideo.current.srcObject = stream;
       }
     });
 
+    //send signal to caller for call accepted
     socket.current.on("callAccepted", signal => {
       setCallAccepted(true);
       peer.signal(signal);
@@ -141,21 +159,27 @@ const Chat = ({ location }) => {
   }
 
   function acceptCall() {
-
+    // peer accepts call
     setCallAccepted(true);
+
+    // peer
     const peer = new Peer({
       initiator: false,
       trickle: false,
       stream: stream,
     });
+
+    // peer receives signal for call accept
     peer.on("signal", data => {
       socket.current.emit("acceptCall", { signal: data, to: caller })
     })
 
+    // received stream from partner
     peer.on("stream", stream => {
       partnerVideo.current.srcObject = stream;
     });
 
+    // send reception of call
     peer.signal(callerSignal);
   }
 

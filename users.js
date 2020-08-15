@@ -1,9 +1,9 @@
 const users = [];
 
 const addUser = ({ id, name, room }) => {
-    console.log(name);
+    // console.log(name);
     name = name.trim().toLowerCase();
-    room - room.trim().toLowerCase();
+    // room = room.trim().toLowerCase();
 
     const existingUser = users.find((user) => user.room === room && user.name === name);
 
@@ -12,7 +12,7 @@ const addUser = ({ id, name, room }) => {
     }
     
     const user = { id, name, room};
-
+    console.log(user);
     users.push(user);
 
     return { user }
