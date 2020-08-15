@@ -17,14 +17,17 @@ import {useData} from '../components/DataProvider';
 
 
 const Container = styled.div`
-  height: 100vh;
+  height: 40npm vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin: 20px;
+  border-radius: 8px;
+
 `;
 
 const Row = styled.div`
+  border-radius: 8px;
   display: flex;
   width: 100%;
 `;
@@ -101,7 +104,7 @@ const Chat = ({ location }) => {
     // gets list of users in database
     socket.current.emit("getUsers");
     socket.current.on("allUsers", (users) => {
-      console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+      // console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
       setUsers(users);
       console.log(users)
     })
@@ -204,11 +207,26 @@ const Chat = ({ location }) => {
     )
   }
   return (
-      <div>
-          <Container>
-            <Row>
+      <div class="float-container">
+          <div class="float-child1">
+            <div class="green">
+              {UserVideo}
+              {PartnerVideo}
+
+            </div>
+          </div>
+          
+          <div class="float-child2">
+            <div class="outerContainer">
+              <div className="container">
+                        <InfoBar room={room}/>
+                        <Messages messages={messages} name={name}/>
+                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+              </div>    
+            </div>
+          </div>
+            {/* <Row>
                 {UserVideo}
-                {PartnerVideo}
             </Row>
             <Row>
                 {Object.keys(users).map(key => {
@@ -233,9 +251,7 @@ const Chat = ({ location }) => {
                         <Messages messages={messages} name={name}/>
                         <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
                     </div>
-                </div>
-            </Row>
-            </Container>
+            </Container> */}
       </div>
     
   );

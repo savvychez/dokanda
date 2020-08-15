@@ -1,19 +1,35 @@
-.outerContainer {
+/* .outerContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #1A1A1D;
   }
-  
+   */
+  .float-container {
+    border: 3px solid #fff;
+    padding-top: 85px;
+  }
+
+  .float-child1 {
+      width: 70%;
+      float: left;
+      padding: 20px;
+  }  
+  .float-child2 {
+    width: 30%;
+    float: left;
+    padding: 20px;
+}  
   .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: #FFFFFF;
+    background: white;
     border-radius: 8px;
-    height: 60%;
-    width: 35%;
+    border: 1.5px solid #a5a5a5;
+    height: 85vh;
+    width: 100%;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {

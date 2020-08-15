@@ -5,7 +5,12 @@
     -webkit-tap-highlight-color: transparent;
 }
 
-body {
+.content{
     padding: 0 4%;
-    /* height: 100vh; */
+}
+
+@media screen and (min-width: 1000px) {
+    .content{
+        padding: 0 20%;
+    }
 }

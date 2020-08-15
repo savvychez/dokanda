@@ -36,3 +36,9 @@
     border-color: #00529e;
     background-color: #f7f7ff;
 }
+
+@media screen and (min-width: 800px) {
+    .bigButton {
+        padding: 5%;
+    }
+}
