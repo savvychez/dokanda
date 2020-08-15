@@ -53,6 +53,7 @@ const Chat = ({ location }) => {
   const [caller, setCaller] = useState("");
   const [callerSignal, setCallerSignal] = useState();
   const [callAccepted, setCallAccepted] = useState(false);
+  const {translate} = useData();
 
 //   const { getRoomId }  = useData();
 
@@ -60,21 +61,22 @@ const Chat = ({ location }) => {
   const partnerVideo = useRef();
   const socket = useRef();
 
+  // useEffect(()=>{
+  //   var newMessages = []
+  //   messages.map(message => {
+  //     newMessages.push(translate(message));
+  //   })
+  //   setMessages(newMessages)
+  // }, [])
     
   useEffect(() => {
     
     const { name, room } = queryString.parse(location.search);
-
-    
     console.log(name, room);
 
     //socket connection
     socket.current = io.connect("/");
 
-    //save to name and room
-    setName(name);
-    // room_id = room_id.data;
-    setRoom(room);
 
     // getting audio/video
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
@@ -123,9 +125,17 @@ const Chat = ({ location }) => {
 
   useEffect(() => {
     socket.current.on('message', (message) => {
-        setMessages([...messages, message]);
+      translate(message.text, (newMessage) => {
+        console.log("MESSAGE")
+        console.log(message);
+        message.text = newMessage;
+        messages.push(message)
+        // setMessages([...messages, message]);
+        setMessages(messages);
+      })
+
     })
-  }, [messages])
+  }, [])
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -215,28 +225,41 @@ const Chat = ({ location }) => {
   if (receivingCall && !callAccepted) {
     incomingCall = (
       <div>
-        <h1>{caller} is calling you</h1>
-        <button onClick={acceptCall}>Accept</button>
+        <h1 class="acceptCall">{caller} is calling you</h1>
+        <button class="acceptCall" onClick={acceptCall}>Accept</button>
       </div>
     )
   }
   return (
     
-    <div class="rows">
+    <div className="rows">
 
-      <div class="interface"> 
-        <div class="video1">
+      <div className="interface"> 
+        <div className="video1">
           {UserVideo}
-        </div>
-        <div class="video2conf">
-          {PartnerVideo}
-          hi
 
+        </div>
+        <div className="video2conf">
+            {PartnerVideo}
+            {Object.keys(users).map(key => {
+              if (key === yourID) {
+                return null;
+              }
+              if(!callAccepted)
+              {
+                  return (
+                      <button class="callPeer" onClick={() => callPeer(key)}>Call {key}</button>
+                  );
+              }
+            })}
+        <div>
+            {incomingCall}
+        </div>
         </div>
       </div>
 
-      <div class="interface">
-        <div class="chat">
+      <div className="interface">
+        <div className="chat">
           <InfoBar room={room}/>
           <Messages messages={messages} name={name}/>
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
@@ -244,6 +267,7 @@ const Chat = ({ location }) => {
       </div>
 
     </div>
+    
 
       // <div class="float-container">
       //     <div class="float-child1">

@@ -78,31 +78,27 @@ export const DataProvider = props => {
             ...data,
             "lang": lang
         })
-        cookie.save("lang",lang)
+        cookie.save("lang", lang, { 'path': '/' })
     }
 
-    const translate = (str) => {
-        if (data.lang == 'i') {
-            let translation;
-            axios.post(
-                "/api/translate",
-                {
-                    "text": str
-                }
-            ).then(res => {
-                if (res.data.text) {
-                    translation = res.data.text
-                    console.log(translation)
-                    return translation
-                } else {
-                    console.log(res.data)
-                }
-            }).finally(() => {
-                // transCallback()
-            })
-        } else {
-            return str;
-        }
+    const translate = (str, callback) => {
+        var lang = cookie.load('lang');
+        let translation;
+        axios.post(
+            "/api/translate",
+            {
+                "text": str,
+                "lang": lang
+            }
+        ).then(res => {
+            if (res.data.text) {
+                translation = res.data.text
+                console.log(translation)
+                callback(translation);
+            } else {
+                console.log(res.data)
+            }
+        })
     }
 
     //SEARCH FUNCTIONS
@@ -161,7 +157,7 @@ export const DataProvider = props => {
         ).then(res => {
             if (res.data.success) {
                 console.log("Logged In!")
-                cookie.save("auth-token", res.data.auth_token)
+                cookie.save("auth-token", res.data.auth_token, { 'path': '/' })
                 let copy = { ...data };
                 copy.authenticated = true;
                 setData(copy);

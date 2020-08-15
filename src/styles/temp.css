@@ -42,30 +42,69 @@
     }
   } */ 
 
+.body {
+    /* border: 2px solid blue; */
+
+}
 .rows{
     padding: 3%;
+    margin:10%;
+    /* border: 2px solid blue; */
+
 
 
 }
 
 .video1 {
-    margin-right: 20px;
+    /* margin-right: 20px; */
+    /* padding-right: 1vw; */
+    /* height:30vh; */
+    /* border: 2px solid blue; */
+
 }
 
+.vid2conf {
+    /* border: 2px solid blue; */
+    /* height: 25vh; */
+}
 .uservid {
     width: 100%;
     /* padding-right: 3% */
-    border: 1px solid blue;
+    /* border: 2px solid white; */
 }
 
 .interface {
     width: 50%;
     float: left;
+    /* border: 2px solid blue; */
+
     /* padding: 20px; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    /* height: 50vh; */
 
 }
 
+.chat {
+    border: .5px solid black;
+
+}
+
+.callPeer {
+    font-size: .9em;
+    /* border: 2px solid blue;
+     */
+     padding-right: 1vw;
+
+
+
+}
+
+.acceptCall {
+    font-size: .9em;
+    border: 2px solid blue;
+
+
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -73,10 +112,16 @@
       width: 100%
   }
   .interface {
-      width: 100%
+      width: 100%;
+      /* height: 60vh; */
   }
   .video1 {
       margin-right: 0px;
+      margin-bottom: 4vh;
   }
 
+  .rows {
+    padding: 5%;
+    margin-top: 0%;
+  }
 }

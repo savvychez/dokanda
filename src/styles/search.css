@@ -1,23 +1,23 @@
 .search-input {
     display: block;
-    margin: 20px auto 20px auto;
+    margin: 0px auto 20px auto;
     font-family: 'metropolisregular';
     font-size: 1.4em;
     width: 100%;
     padding: 10px 00px 10px 40px ;
-    background: rgba(252, 252, 252, 1)  url(../assets/search.svg);
+    background: url(../assets/search.svg);
     background-color: white;
     background-position: 10px 15px;
     background-repeat: no-repeat;
     background-size: 0.8em;
     outline: none;
-    border: 1.2px solid #999999;
+    border: 1.2px solid #1C9CE5;
     border-radius: 5px;
     transition: 0.25s;
 }
 
 .search-input:active, .search-input:focus{
-    border: 1.2px solid #0045a0;
+    border: 1.2px solid #0074E1;
     color: #001e44;
 }
 
