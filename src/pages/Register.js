@@ -56,7 +56,7 @@ const Register = props => {
               <label htmlFor="firstname">{lang == 'e' ? "First Name" : "Nama depan"}</label>
               <input id="firstname" className={`text_field fname ${err.classes}`} onClick={() => setErr({})} type="text" value={fName} onChange={e => setFName(e.target.value)} />
 
-              <label htmlFor="lastname">{lang == 'e' ? "Last Name" : "Nama keluarga"}</label>
+              <label htmlFor="lastname">{lang == 'e' ? "Last Name" : "Nama belakang"}</label>
               <input id="lastname" className={`text_field lname ${err.classes}`} onClick={() => setErr({})} type="text" value={lName} onChange={e => setLName(e.target.value)} />
 
               <label htmlFor="email">{lang == 'e' ? "Email" : "Email"}</label>
@@ -68,7 +68,7 @@ const Register = props => {
               <label htmlFor="password">{lang == 'e' ? "Password" : "Password"}</label>
               <input id="password" className={`text_field pass ${err.classes}`} onClick={() => setErr({})} type="password" value={pass} onChange={e => setPass(e.target.value)} />
 
-              <label htmlFor="">{lang == 'e' ? "Why'd you join?" : "Apa profesimu?"}</label>
+              <label htmlFor="">{lang == 'e' ? "I am a..." : "Apa profesimu?"}</label>
               <div className="radio_container">
                 <input type="radio" id="p" name="prof" checked={selectedP} onChange={() => setSelectedP(!selectedP)}/>
                 <label htmlFor="p">{lang == 'e' ? "Patient" : "Pasien"}</label>
