@@ -9,6 +9,7 @@ import './assets/metropolis/metropolis.css'
 import './styles/styles.css'
 import Search from './pages/Search';
 import Login from './pages/Login';
+import PrivateRoute from './components/PrivateRoute';
 
 
 const App = () => {
@@ -20,10 +21,10 @@ const App = () => {
           <Switch>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path="/choice" component={Choice} />
-            <Route path="/search" component={Search} />
-            <Route path="/patient/chat" component={Chat} />
-            <Route path="/doctor/chat" component={Chat} />
+            <PrivateRoute path="/choice" component={Choice} />
+            <PrivateRoute path="/search" component={Search} />
+            <PrivateRoute path="/patient/chat" component={Chat} />
+            <PrivateRoute path="/doctor/chat" component={Chat} />
             <Redirect to="/search" />
           </Switch>
         </Router>

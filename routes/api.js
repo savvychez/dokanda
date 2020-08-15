@@ -117,7 +117,7 @@ router.post("/login",async (req,res,next)=>
 {
     var query = "SELECT auth_token FROM users WHERE email=$1 AND password=$2";
     var values = [req.body.email,sha256(req.body.password)]
-    var statusMessage = "Unsuccessful Login";
+    var success = false;
     var auth_token = uuidv4();
 
     await client.query(query,values).then(async (res) => 
@@ -126,7 +126,7 @@ router.post("/login",async (req,res,next)=>
         {
             query = "UPDATE users SET auth_token=$1 WHERE email=$2";
             values = [auth_token,req.body.email]
-            await client.query(query,values).then((res) => {statusMessage = "Successful Login"}).catch((err) => 
+            await client.query(query,values).then((res) => {success = true}).catch((err) => 
             {
                 console.log(err);
                 auth_token=null;
@@ -144,7 +144,7 @@ router.post("/login",async (req,res,next)=>
 
     res.json(
     {
-        "statusMessage":statusMessage,
+        "success": success,
         "auth_token": auth_token
     })
 })
@@ -172,9 +172,9 @@ router.post("/logout",async(req,res,next)=>
 {
     var query = "UPDATE users SET auth_token=$1 WHERE auth_token=$2";
     var values = [null,req.body.auth_token]
-    var statusMessage = "Successful Logout";
+    var success = true;
     await client.query(query,values).then((res)=>{})
-    res.json({"statusMessage":statusMessage})
+    res.json({"success":success})
 })
 
 

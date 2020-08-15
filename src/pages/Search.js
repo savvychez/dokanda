@@ -13,10 +13,9 @@ const Search = props => {
 
   useEffect(() => {
     query(input, "e", resCallback)
-  },[])
+  }, [])
 
   useEffect(() => {
-    console.log(input);
     query(input, "e", resCallback)
   }, [input])
 
@@ -36,7 +35,7 @@ const Search = props => {
     <div className="search">
       <DebounceInput className="input-field search-input" type="text" placeholder="Enter Symptoms..." value={input} debounceTimeout={300} onChange={handleInput} />
       <MobileTable results={res} />
-      <SwitchModeButton onClick={goToDoctor}/>
+      <SwitchModeButton onClick={goToDoctor} />
     </div>
   )
 }

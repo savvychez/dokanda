@@ -11,6 +11,7 @@ const Register = props => {
   const [email, setEmail] = useState("")
   const [pharmacy, setPharmacy] = useState("")
   const [pass, setPass] = useState("")
+  const [selectedP, setSelectedP] = useState(true)
 
   const [err, setErr] = useState({})
 
@@ -24,21 +25,21 @@ const Register = props => {
       console.log(authMessage);
       props.history.push("/choice")
     } else {
-      setErr({ "msg": "One or more fields are empty!" })
+      setErr({ "msg": authMessage })
     }
   }
 
   const formHandler = (e) => {
     e.preventDefault()
-    if (!fName || !lName || !email || !pharmacy || !pass || !regCallback) {
-      setErr({ "msg": "One or more fields are empty!" })
+    if (!fName || !lName || !email || !pharmacy || !pass) {
+      setErr({ "msg": `One or more fields are empty!` })
     } else if (!validate(email)) {
       setErr({ "msg": "Email not valid" })
-    }else {
-      register(fName, lName, email, pharmacy, pass, regCallback)
+    } else {
+      const selected = selectedP ? "p" : "d"
+      register(fName, lName, email, pharmacy, pass, selected, regCallback)
     }
   }
-
 
   function validate(mail) {
     return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
@@ -50,7 +51,9 @@ const Register = props => {
         <div className={`login-main ${err.classes}`}>
           <div className="login_container">
             <form className={"form_container"} onSubmit={formHandler}>
-              <h1>Register</h1>
+              <h1 className="register">Register</h1>
+              <a href="login">Or login</a>
+
               <label htmlFor="firstname">First Name</label>
               <input id="firstname" className={`text_field fname ${err.classes}`} onClick={() => setErr({})} type="text" value={fName} onChange={e => setFName(e.target.value)} />
 
@@ -66,7 +69,17 @@ const Register = props => {
               <label htmlFor="password">Password</label>
               <input id="password" className={`text_field pass ${err.classes}`} onClick={() => setErr({})} type="password" value={pass} onChange={e => setPass(e.target.value)} />
 
-              <button className="button">Register</button>
+              <label htmlFor="">Are you a patient or a doctor?</label>
+              <div className="radio_container">
+                <input type="radio" id="female" name="prof" checked={selectedP} onChange={() => setSelectedP(!selectedP)}/>
+                <label for="female">Patient</label>
+                <br />
+                <input type="radio" id="male" name="prof" checked={!selectedP} onChange={() => setSelectedP(!selectedP)}/>
+                <label for="male">Doctor</label>
+              </div>
+
+
+              <button className="form-button">Register</button>
               <p className={`error-msg ${err.classes}`}>{err.msg}&nbsp;</p>
             </form>
           </div>
@@ -77,6 +90,8 @@ const Register = props => {
     return (
       <Redirect to="/app" />
     )
+  } else {
+    return <></>
   }
 }
 

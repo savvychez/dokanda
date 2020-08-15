@@ -1,10 +1,13 @@
 .table  {
     border: 1.2px solid #999999;
     border-radius: 5px;
-    height: 75vh;
-    /* overflow-y: scroll; */
+    height: 70vh;
+    overflow: hidden;
 }
 
+.table > * {
+    overflow: hidden;
+}
 
 .tablerow > h1 {
     font-family: 'metropolisbold';

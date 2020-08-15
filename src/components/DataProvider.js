@@ -9,51 +9,47 @@ export const useData = () => {
 }
 
 export const DataProvider = props => {
-    const user = {
-        "authenticated" : false
+    let user = {
+        "authenticated": "PENDING"
     }
 
     const [data, setData] = useState(user)
 
     useEffect(() => {
-        // var authToken = cookie.load('auth-token')
-		// if (authToken) {
-		// 	axios.post(
-		// 		'/api/registerUser',
-		// 		{ authtoken: authToken, }
-		// 	)
-		// 		.then(res => {
-		// 			if (res.data.success) {
-        //                 let old = data;
-        //                 old.authenticated = true;
-        //                 setData(old)
-        //             }
-		// 			else {
-        //                 let old = data;
-        //                 old.authenticated = false;
-        //                 setData(old)
-        //             }
-		// 		})
-		// 		.catch(err => {
-		// 			console.log(err)
-		// 		})
-		// } else {
-		// 	setAuthData({ "authenticated": false })
-        // }
-        let old = data;
-        old.authenticated = true;
-        setData(old);
-    })
+        var authToken = cookie.load('auth-token')
+        if (authToken) {
+            axios.post(
+                '/api/confirmAuthToken',
+                { auth_token: authToken, }
+            )
+                .then(res => {
+                    let copy = {...data};
+                    if (res.data.success) {
+                        copy.authenticated = true;
+                    }
+                    else {
+                        copy.authenticated = false;
+                    }
+                    setData(copy)               
+                })
+                .catch(err => {
+                    console.log(err)
+                })
+        } else {
+            let copy = {...data};
+            copy.authenticated = false;
+            setData(copy);
+        }
+    }, [])
 
     //Write functions that call api here
 
     const getRoomId = (callback, prof) => {
         // console.log(data.prof);
-        if(prof==="patient")
-            axios.get("/patient/chat").then(id => {callback(id)})
-        else
-        {
-            axios.get("/doctor/chat").then(id => {callback(id)})
+        if (prof === "patient")
+            axios.get("/patient/chat").then(id => { callback(id) })
+        else {
+            axios.get("/doctor/chat").then(id => { callback(id) })
         }
     }
 
@@ -77,8 +73,8 @@ export const DataProvider = props => {
             }
         )
             .then(res => {
-                if (res.data.auth_token) {
-                    callback(res.data.auth_token)
+                if (res.data.matchingDiseases) {
+                    callback(res.data.matchingDiseases)
                 }
             })
             .catch(err => {
@@ -87,22 +83,22 @@ export const DataProvider = props => {
     }
 
     //AUTH FUNCTIONS
-    const register = (fName, lName, email, pharmacy, pass, callback) => {
-        console.log("Reg")
+    const register = (fName, lName, email, pharmacy, pass, profession, callback) => {
         axios.post(
             "/api/registerUser",
             {
-                "firstName" : fName,
-                "lastName" : lName,
-                "email" : email,
-                "password" : pass,
-                "pharmacy" : pharmacy
+                "firstName": fName,
+                "lastName": lName,
+                "email": email,
+                "password": pass,
+                "pharmacy": pharmacy,
+                "profession": profession
             }
         )
             .then(res => {
                 console.log(res.data)
                 if (res.data.auth_token) {
-					cookie.save('auth-token', res.data.auth_token, { 'path': '/' });
+                    cookie.save('auth-token', res.data.auth_token, { 'path': '/' });
                     callback(res.data.auth_token, true)
                 } else {
                     callback(res.data.statusMessage, false)
@@ -113,7 +109,49 @@ export const DataProvider = props => {
             })
     }
 
-    const functions = { ...data, setData, getProf, setProf, getRoomId, query, register /* Add every function you wrote above here */ }
+    const login = (email, password, callback) => {
+        axios.post(
+            '/api/login',
+            { email: email, password: password }
+        ).then (res => {
+            if(res.data.success) {
+                console.log("Logged In!")
+                cookie.save("auth-token", res.data.auth_token)
+                let copy = {...data};
+                copy.authenticated = true;
+                setData(copy);
+            } else {
+                callback("Login Failed!")
+            }
+        }).catch (err => {
+            console.error(err)
+        })   
+    }
+
+    const logout = () => {
+        console.log("BEGIN LOG OUT")
+        var authToken = cookie.load('auth-token')
+        if (authToken) {
+            axios.post(
+                '/api/confirmAuthToken',
+                { auth_token: authToken, }
+            ).then (res => {
+                if(res.data.success) {
+                    console.log("Logged Out!")
+                    cookie.remove("auth-token")
+                    let copy = {...data};
+                    copy.authenticated = false;
+                    setData(copy);
+                }
+            }).catch (err => {
+                console.log("LOG OUT ERROR")
+                console.log(err)
+                console.error(err)
+            })
+        }
+    }
+
+    const functions = { ...data, setData, getProf, setProf, getRoomId, query, register, login,  logout}
     return <DataContext.Provider value={functions} {...props} />
 }
 
