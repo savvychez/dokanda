@@ -194,10 +194,10 @@ const Chat = ({ location }) => {
   let incomingCall;
   if (receivingCall && !callAccepted) {
     console.log("INCOMING")
-    // console.error(prof)
+    console.log(prof.profession )
     incomingCall = (
       <div className="callwindow">
-        <h1 class="acceptCall">{prof == "d" ? "doctor" : "patient"} is calling you</h1>
+        <h1 class="acceptCall">{prof.profession == "d" ? "Doctor" : "Patient"} is calling you</h1>
         <button class="acceptCall" onClick={acceptCall}>Accept</button>
       </div>
     )

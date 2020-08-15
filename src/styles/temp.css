@@ -99,7 +99,7 @@
 
 .chat {
     border: 2px solid rgb(179, 179, 179);
-    border-radius: 12px 13px 0 0;
+    border-radius: 12px 13px 12px 12px;
     height: 100%;
 }
 
@@ -113,13 +113,15 @@
 .callwindow {
     background-color: #e7e7e7;
     border: 2px solid #e7e7e7;
-
+    border-radius: 10px;
+    padding: 10px 0 30px 0;
 }
 
 .callwindow > .acceptCall {
     font-family: "metropolisregular";
     font-size: 1.2em;
-    /* padding: 20px 10px; */
+    margin-top: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
     text-align: center;
 }
