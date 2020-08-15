@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const pg = require('pg');
+const { v4: uuidv4 } = require('uuid');
+var sha256 = require('js-sha256');
 var client = null
 var diseases = []
 
@@ -49,6 +51,66 @@ router.post('/matching', (req, res, next) =>
     res.json({"matchingDiseases":matchingDiseases})
 })
 
+router.get("/createUsers",async (req,res,next)=>
+{
+    const query = "CREATE table users(id SERIAL,firstName text,lastName text,email text,password text, pharmacy text,auth_token text)";
+    await client.query(query).then((res) => {console.log(res)}).catch( err => console.log(err))
+    console.log("Made Table")
+})
+
+router.post("/registerUser",async (req,res,next)=>
+{
+    var query = "SELECT * FROM users WHERE email=$1";
+    var values = [req.body.email]
+    var status = true;
+    var statusMessage;
+    await client.query(query,values).then((res) => 
+    {
+        if(res.rows.length!=0)
+        {
+            status = false;
+            statusMessage = "Email Already Taken"
+        }
+    }).catch(err => console.log(err))
+    if(status)
+    {
+        query = "INSERT INTO users(firstName,lastName,email,password,pharmacy,auth_token) VALUES ($1,$2,$3,$4,$5,$6)";
+        values = [req.body.firstName,req.body.lastName,req.body.email,sha256(req.body.password),req.body.pharmacy,uuidv4()]
+        await client.query(query,values).then((res) => 
+        {
+            console.log(res)
+            statusMessage = "Successful Registration"
+        }).catch( (err) => 
+        {
+            console.log(err)
+            statusMessage = "Error While Registering"
+        })
+    }        
+    printUsers();
+    res.json({"statusMessage":statusMessage})
+})
+router.post("/verifyLogin",async (req,res,next)=>
+{
+    var query = "SELECT auth_token FROM users WHERE email=$1 AND password=$2";
+    var values = [req.body.email,sha256(req.body.password)]
+    var statusMessage = "Unsuccessful Login";
+    var auth_token = null;
+    await client.query(query,values).then((res) => 
+    {
+        if(res.rows.length!=0)
+        {
+            statusMessage = "Successful Login"
+            auth_token = res.rows[0]
+        }
+    }).catch(err => console.log(err))
+  
+    res.json(
+    {
+        "statusMessage":statusMessage,
+        "auth_token": auth_token
+    })
+})
+
 const init = ()=>
 {
     const config = {
@@ -74,6 +136,22 @@ const init = ()=>
             await initData(client);
         }
     });
+}
+
+const printUsers = async()=>
+{
+    const query = "SELECT * FROM users";
+
+    await client.query(query).then((res) => 
+    {
+        res.rows.forEach((row)=>
+        {
+            console.log(row)
+        })
+    }).catch
+    (
+        err => console.log(err)
+    )
 }
 
 const initData = async (client) =>
