@@ -4,7 +4,7 @@
     border-radius: 5px;
     padding: 2.5% 10%;
     width: max-content;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 10px auto;
 }
 
 .form_container > * {
@@ -37,5 +37,12 @@
 
 .form_container > label {
     font-family: 'metropolisbold', sans-serif;
+}
 
+.error-msg {
+    font-family: 'metropolisregular', sans-serif;
+    font-size: 0.9em;
+    padding: 5% 0;
+    color: rgb(230, 0, 0);
+    text-align: center;
 }
