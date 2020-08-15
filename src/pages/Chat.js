@@ -188,23 +188,8 @@ const Chat = ({ location }) => {
             <div class="green">
               {UserVideo}
               {PartnerVideo}
-
             </div>
-          </div>
-          
-          <div class="float-child2">
-            <div class="outerContainer">
-              <div className="container">
-                        <InfoBar room={room}/>
-                        <Messages messages={messages} name={name}/>
-                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
-              </div>    
-            </div>
-          </div>
-            {/* <Row>
-                {UserVideo}
-            </Row>
-            <Row>
+            <div>
                 {Object.keys(users).map(key => {
                 if (key === yourID) {
                     return null;
@@ -216,17 +201,22 @@ const Chat = ({ location }) => {
                     );
                 }
                 })}
-            </Row>
-            <Row>
+            </div>
+            <div>
                 {incomingCall}
-            </Row>
-            <Container>
-                    <div className="container">
-                        <InfoBar room={room}/>
-                        <Messages messages={messages} name={name}/>
-                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
-                    </div>
-            </Container> */}
+            </div>
+          </div>
+
+          <div class="float-child2">
+            <div class="outerContainer">
+              <div className="container">
+                <InfoBar room={room}/>
+                <Messages messages={messages} name={name}/>
+                <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+              </div>    
+            </div>
+          </div>
+
       </div>
     
   );
