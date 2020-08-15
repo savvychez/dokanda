@@ -197,8 +197,8 @@ const Chat = ({ location }) => {
     console.log(prof.profession )
     incomingCall = (
       <div className="callwindow">
-        <h1 class="acceptCall">{prof.profession == "d" ? "Doctor" : "Patient"} is calling you</h1>
-        <button class="acceptCall" onClick={acceptCall}>Accept</button>
+        <h1 className="acceptCall">{prof.profession == "d" ? "Doctor" : "Patient"} is calling you</h1>
+        <button className="acceptCall" onClick={acceptCall}>Accept</button>
       </div>
     )
   }
@@ -220,7 +220,7 @@ const Chat = ({ location }) => {
               if(!callAccepted)
               {
                   return (
-                  <button class="callPeer" onClick={() => callPeer(key)}>{`Call ${key}`}</button>
+                  <button class="callPeer" onClick={() => callPeer(key)}>{`Call`}</button>
                   );
               }
             })}

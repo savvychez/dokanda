@@ -7,6 +7,7 @@
     width: 70%;
     font-size: .9em;
     height: 6vh;
+    
   }
   
   input:focus, textarea:focus, select:focus{
@@ -16,17 +17,18 @@
   .sendButton {
     font-size: .9em;
     color: #fff;
-    /* text-transform: uppercase;
-    text-decoration: none; */
-    /* background: #2979FF; */
-    /* padding: 10px 20px; */
-    /* display: inline-block; */
-    /* border: none; */
-    /* text-transform: none; */
-    /* text-decoration: none; */
+    text-transform: uppercase;
+    text-decoration: none; 
+    background: #2979FF;
+    padding: 10px 20px;
+    display: inline-block;
+    border: none;
+    width: 100px;
+    text-transform: none;
+    text-decoration: none;
     background: #2979FF;
     border: 2px solid #619bff;
     border-radius: 20px;
-    padding: 1% 6%;
-    /* margin: 3%; */
+    padding: 1% 4%;
+    margin: 3%;
   }
