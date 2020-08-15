@@ -126,6 +126,8 @@ router.post("/login",async (req,res,next)=>
                 auth_token=null;
             })
         }
+        else
+            auth_token=null;
     }).catch((err) => 
     {
         console.log(err)
@@ -147,8 +149,9 @@ router.post("/confirmAuthToken",async(req,res,next)=>
     var values = [req.body.auth_token]
     var statusMessage = "Invalid Auth Token";
 
-    client.query(query,values).then((res)=>
+    await client.query(query,values).then((res)=>
     {
+        console.log(res.rows.length)
         if(res.rows.length!=0)
             statusMessage = "Valid Auth Token";
     })
@@ -161,10 +164,28 @@ router.post("/logout",async(req,res,next)=>
     var query = "UPDATE users SET auth_token=$1 WHERE auth_token=$2";
     var values = [null,req.body.auth_token]
     var statusMessage = "Successful Logout";
-
-    client.query(query,values).then((res)=>{})
-
+    await client.query(query,values).then((res)=>{})
     res.json({"statusMessage":statusMessage})
+})
+
+
+router.post("/userDescription",async(req,res,next)=>
+{
+    var query = "SELECT id,firstName,lastName,email,pharmacy,auth_token FROM users WHERE auth_token=$1";
+    var values = [req.body.auth_token]
+    var statusMessage = "Unsuccessful Retreival";
+    var description = null;
+    await client.query(query,values).then((res)=>
+    {
+        description = res.rows[0]
+        statusMessage="Successful Retreival"
+    }).catch((err)=>{console.log(err)})
+
+    res.json(
+    {
+        "description":description,
+        "statusMessage":statusMessage
+    })
 })
 
 const init = ()=>
