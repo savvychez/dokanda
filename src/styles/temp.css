@@ -62,10 +62,15 @@
     width: 50%;
     float: left;
     /* padding: 20px; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
+    height: 50vh;
 
 }
 
+.chat {
+    border: 2px solid grey;
+
+}
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */

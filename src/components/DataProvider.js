@@ -78,7 +78,7 @@ export const DataProvider = props => {
             ...data,
             "lang": lang
         })
-        cookie.save("lang",lang)
+        cookie.save("lang", lang, { 'path': '/' })
     }
 
     const translate = (str, callback) => {console.log(data.lang)
@@ -162,7 +162,7 @@ export const DataProvider = props => {
         ).then(res => {
             if (res.data.success) {
                 console.log("Logged In!")
-                cookie.save("auth-token", res.data.auth_token)
+                cookie.save("auth-token", res.data.auth_token, { 'path': '/' })
                 let copy = { ...data };
                 copy.authenticated = true;
                 setData(copy);

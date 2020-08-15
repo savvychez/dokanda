@@ -72,17 +72,11 @@ const Chat = ({ location }) => {
   useEffect(() => {
     
     const { name, room } = queryString.parse(location.search);
-
-    
     console.log(name, room);
 
     //socket connection
     socket.current = io.connect("/");
 
-    //save to name and room
-    setName(name);
-    // room_id = room_id.data;
-    setRoom(room);
 
     // getting audio/video
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
