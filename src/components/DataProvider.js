@@ -83,28 +83,22 @@ export const DataProvider = props => {
 
     const translate = (str, callback) => {
         var lang = cookie.load('lang');
-        if (lang === 'i') {
-            let translation;
-            axios.post(
-                "/api/translate",
-                {
-                    "text": str
-                }
-            ).then(res => {
-                if (res.data.text) {
-                    translation = res.data.text
-                    console.log(translation)
-                    callback(translation);
-                    // return translation
-                    
-                } else {
-                    console.log(res.data)
-                }
-            })
-        } else {
-            // return str;
-            callback(str);
-        }
+        let translation;
+        axios.post(
+            "/api/translate",
+            {
+                "text": str,
+                "lang": lang
+            }
+        ).then(res => {
+            if (res.data.text) {
+                translation = res.data.text
+                console.log(translation)
+                callback(translation);
+            } else {
+                console.log(res.data)
+            }
+        })
     }
 
     //SEARCH FUNCTIONS
