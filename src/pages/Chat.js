@@ -6,6 +6,14 @@ import React, {
 import io from "socket.io-client";
 import Peer from "simple-peer";
 import styled from "styled-components";
+import queryString from 'query-string'; 
+
+import Messages from '../components/Messages';
+import InfoBar from '../components/InfoBar';
+import Input from '../components/Input';
+
+import '../styles/Chat.css';
+
 
 const Container = styled.div`
   height: 100vh;
@@ -25,7 +33,14 @@ const Video = styled.video`
   height: 50%;
 `;
 
-const Chat = () => {
+const Chat = ({ location }) => {
+  const [name, setName] = useState('');
+  const [room, setRoom] = useState('');
+  const [message, setMessage] = useState('');
+  const [messages, setMessages] = useState([]);
+
+
+
   const [yourID, setYourID] = useState("");
   const [users, setUsers] = useState({});
   const [stream, setStream] = useState();
@@ -38,8 +53,21 @@ const Chat = () => {
   const partnerVideo = useRef();
   const socket = useRef();
 
+    
   useEffect(() => {
+    
+    const { name, room } = queryString.parse(location.search);
+    console.log(name, room);
+
     socket.current = io.connect("/");
+
+    setName(name);
+    setRoom(room);
+
+    socket.current.emit('join', { name, room },  () => {
+        console.log("hello");
+    });
+
     navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
       setStream(stream);
       if (userVideo.current) {
@@ -59,7 +87,30 @@ const Chat = () => {
       setCaller(data.from);
       setCallerSignal(data.signal);
     })
+
+    return () => {
+        socket.emit('discconect');
+
+        socket.off();
+    }
   }, []);
+
+  useEffect(() => {
+    socket.current.on('message', (message) => {
+        setMessages([...messages, message]);
+    })
+  }, [messages])
+
+  const sendMessage = (event) => {
+    event.preventDefault();
+
+    if(message) {
+        socket.current.emit('sendMessage', message, () => setMessage(''));
+    }
+  }
+
+
+  console.log(message, messages);
 
   function callPeer(id) {
     const peer = new Peer({
@@ -128,28 +179,40 @@ const Chat = () => {
     )
   }
   return (
-    <Container>
-      <Row>
-        {UserVideo}
-        {PartnerVideo}
-      </Row>
-      <Row>
-        {Object.keys(users).map(key => {
-          if (key === yourID) {
-            return null;
-          }
-          if(!callAccepted)
-          {
-            return (
-                <button onClick={() => callPeer(key)}>Call {key}</button>
-            );
-          }
-        })}
-      </Row>
-      <Row>
-        {incomingCall}
-      </Row>
+      <div>
+          <Container>
+            <Row>
+                {UserVideo}
+                {PartnerVideo}
+            </Row>
+            <Row>
+                {Object.keys(users).map(key => {
+                if (key === yourID) {
+                    return null;
+                }
+                if(!callAccepted)
+                {
+                    return (
+                        <button onClick={() => callPeer(key)}>Call {key}</button>
+                    );
+                }
+                })}
+            </Row>
+            <Row>
+                {incomingCall}
+            </Row>
+            </Container>
+            <Container>
+                <div className="outerContainer">
+                    <div className="container">
+                        <InfoBar room={room}/>
+                        <Messages messages={messages} name={name}/>
+                        <Input message={message} setMessage={setMessage} sendMessage={sendMessage}/>
+                    </div>
+                </div>
     </Container>
+      </div>
+    
   );
 }
 

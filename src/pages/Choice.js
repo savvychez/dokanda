@@ -7,22 +7,28 @@ import '../styles/choices.css'
 
 const Choice = props => {
 
-  const [selection, setSelection] = useState("");
-  const { getProf, setProf } = useData();
+  const [selection, setSelection] = useState("")
+  const { getProf, setProf } = useData()
+  const [name, setName] = useState('')
+  const [room, setRoom] = useState('')
 
   const formHandler = (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
     setProf(selection)
-    props.history.push(`${selection}/chat`)
+    props.history.push(`${selection}/chat?name=${name}&room=${room}`)
   }
 
   const clickDoctor = () => {
     setSelection("doctor")
+    setName("doctor")
+    setRoom("Appointment");
   }
 
   const clickPatient = () => {
     setSelection("patient")
+    setName("patient");
+    setRoom("Appointment");
   }
 
 
