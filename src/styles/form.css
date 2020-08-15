@@ -2,7 +2,7 @@
     background-color: #f8f8f8;
     border: 1px solid #dddddd;
     border-radius: 5px;
-    padding: 2.5% 10%;
+    padding: 0 10% 0 10%;
     width: max-content;
     margin: 10px auto 10px auto;
 }
@@ -13,7 +13,18 @@
 
 .form_container > h1 {
     font-family: 'metropolisbold';
-    padding: 2.5% 0 5%;
+    padding: 25% 0 0%;
+}
+
+.form_container > a {
+    font-family: 'metropolismedium';
+    text-decoration: none;
+    color: rgb(55, 108, 255);
+    margin: 1% 0 10%;
+}
+
+.form_container > a:hover, .form_container > a:active {
+    color: rgb(34, 78, 199);
 }
 
 .text_field {
@@ -39,10 +50,28 @@
     font-family: 'metropolisbold', sans-serif;
 }
 
+.form_container > .radio_container {
+    font-family: 'metropolisregular', sans-serif;
+    margin-top: 1%;
+}
+
+.radio_container > * {
+    margin: 2.5% 0;
+}
+
+.radio_container > label {
+    margin: 5% 0 5% 5%;
+}
+
 .error-msg {
     font-family: 'metropolisregular', sans-serif;
     font-size: 0.9em;
-    padding: 5% 0;
+    padding: 10% 0;
     color: rgb(230, 0, 0);
     text-align: center;
+}
+
+.form-button {
+    margin-top: 10%;
+    margin-bottom: 0;
 }

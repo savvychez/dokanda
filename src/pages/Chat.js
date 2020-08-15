@@ -40,6 +40,7 @@ import '../styles/temp.css';
 // `;
 
 const Chat = ({ location }) => {
+  const [err, setErr] = useState("")
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   const [message, setMessage] = useState('');
@@ -81,6 +82,9 @@ const Chat = ({ location }) => {
       if (userVideo.current) {
         userVideo.current.srcObject = stream;
       }
+    }).catch(err => {
+      console.log("ERROR:")
+      setErr("Error: No input stream (webcam) detected!")
     })
 
     
@@ -196,7 +200,7 @@ const Chat = ({ location }) => {
   let UserVideo;
   if (stream) {
     UserVideo = (
-      <video class="uservid" playsInline muted ref={userVideo} autoPlay />
+      <video className="uservid" playsInline muted ref={userVideo} autoPlay />
     );
   }
 
@@ -217,16 +221,16 @@ const Chat = ({ location }) => {
     )
   }
   return (
-    <div class="row">
-      <div class="col-1">
-        <div class="uservid">
+    <div className="row">
+      <div className="col-1">
+        <div className="uservid">
           
           {UserVideo}
 
         </div>
         
       </div>
-      <div class="col-2">
+      <div className="col-2">
         <div className="container">
            <InfoBar room={room}/>
            <Messages messages={messages} name={name}/>
