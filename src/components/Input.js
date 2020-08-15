@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import '../styles/Input.css';
+import '../styles/Input.css';
 
 const Input = ({ message, setMessage, sendMessage }) => (
     <form className="form">

@@ -4,7 +4,7 @@
     justify-content: space-between;
     background: #222222;
     /* border-radius: 4px 4px 0 0; */
-    height: 60px;
+    height: 40px;
     width: 100%;
   }
   
@@ -13,7 +13,7 @@
     flex: 0.5;
     display: flex;
     align-items: center;
-    margin-left: 2%;
+    margin-left: 20px;
     color: white;
     font-family: 'metropolisbold';
     color: #ffffff;
@@ -23,7 +23,7 @@
     display: flex;
     flex: 0.5;
     justify-content: flex-end;
-    margin-right: 2%;
+    margin-right: 20px;
   }
   
   .onlineIcon {
