@@ -4,6 +4,7 @@ const pg = require('pg');
 const { v4: uuidv4 } = require('uuid');
 var sha256 = require('js-sha256');
 const { restart } = require('nodemon');
+const translate = require('@k3rn31p4nic/google-translate-api');
 var client = null
 var diseases = []
 
@@ -196,6 +197,7 @@ router.post("/userDescription",async(req,res,next)=>
         "statusMessage":statusMessage
     })
 })
+
 
 const init = ()=>
 {
