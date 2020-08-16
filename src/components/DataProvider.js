@@ -27,7 +27,7 @@ export const DataProvider = props => {
                 .then(res => {
                     let copy = { ...data };
                     if (res.data.success) {
-                        copy.prof = res.data.prof
+                        copy.prof = res.data.prof.profession
                         copy.authenticated = true;
                     }
                     else {
@@ -162,7 +162,7 @@ export const DataProvider = props => {
                 console.log("Logged In!")
                 cookie.save("auth-token", res.data.auth_token, { 'path': '/' })
                 let copy = { ...data };
-                copy.prof = res.data.prof
+                copy.prof = res.data.prof.profession
                 copy.authenticated = true;
                 setData(copy);
             } else {
