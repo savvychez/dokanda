@@ -34,8 +34,10 @@ const Search = props => {
   const goToDoctor = (e) => {
     const selection = prof == "d" ? "doctor" : "patient"
     if(selection) {
-      getRoomId((room_id) =>
+      getRoomId((room_id) =>{
+        console.log("rm: "+room_id);
         props.history.push(`${selection}/chat?name=${selection}&room=${room_id.data}`)
+      }
       , selection);
     }
   }
