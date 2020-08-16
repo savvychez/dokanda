@@ -30,7 +30,8 @@
 
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
-    /* .container{
+
+/* .container{
         width: 100%;
     }
     .uservid {
@@ -40,19 +41,15 @@
         display: flex;
         flex-direction: row;
     }
-  } */ 
+  } */
 
 .body {
     /* border: 2px solid blue; */
-
 }
-.rows{
-    padding: 3%;
-    margin:10%;
-    /* border: 2px solid blue; */
 
-
-
+.rows {
+    padding: 0;
+    margin: 0;
 }
 
 .video1 {
@@ -60,68 +57,130 @@
     /* padding-right: 1vw; */
     /* height:30vh; */
     /* border: 2px solid blue; */
-
 }
 
-.vid2conf {
-    /* border: 2px solid blue; */
-    /* height: 25vh; */
+.chat {
+    margin: 0 0;
 }
+
 .uservid {
+    display: block;
     width: 100%;
-    /* padding-right: 3% */
+    border-radius: 10px;
+    height: 50%;
+    margin-right: 100px;
+    margin: 0 0 5px 0;
     /* border: 2px solid white; */
+}
+
+.rows {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* align-items: space-around; */
+}
+
+.rows > * {
+    margin: 10px;
 }
 
 .interface {
     width: 50%;
-    float: left;
     /* border: 2px solid blue; */
-
     /* padding: 20px; */
     /* border: 2px solid red; */
     /* height: 50vh; */
+}
 
+.normalinterface {
+    background-color: #ffffff;
+    margin-right: 5px;
 }
 
 .chat {
-    border: .5px solid black;
-
+    border: 2px solid rgb(179, 179, 179);
+    border-radius: 12px 13px 12px 12px;
+    height: 100%;
 }
 
 .callPeer {
     font-size: .9em;
     /* border: 2px solid blue;
      */
-     padding-right: 1vw;
-
-
-
+    /* padding-right: 1vw; */
 }
 
-.acceptCall {
-    font-size: .9em;
-    border: 2px solid blue;
+.callwindow {
+    background-color: #e7e7e7;
+    border: 2px solid #e7e7e7;
+    border-radius: 10px;
+    padding: 10px 0 30px 0;
+}
 
+.callwindow > .acceptCall {
+    font-family: "metropolisregular";
+    font-size: 1.2em;
+    margin-top: 20px;
+    /* padding: 20px; */
+    border-radius: 10px;
+    text-align: center;
+}
 
+.callwindow > button {
+    margin: 0 auto;
+}
+
+.scrolldown {
+    font-family: "metropolisregular";
+    color: #333333;
+    display: none;
+}
+
+.form {
+    display: flex;
+    background: none;
+    font-size: 1.2em;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+    border-top: 2px solid #bdbdbd;
+}
+
+.input {
+    background: none;
+    font-family: "metropolismedium";
 }
 
 @media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  .uservid {
-      width: 100%
-  }
-  .interface {
-      width: 100%;
-      /* height: 60vh; */
-  }
-  .video1 {
-      margin-right: 0px;
-      margin-bottom: 4vh;
-  }
+    .rows {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .rows {
-    padding: 5%;
-    margin-top: 0%;
-  }
+    .scrolldown {
+        display: block;
+    }
+
+    /* For mobile phones: */
+    .uservid {
+        width: 100%
+    }
+    .interface {
+        width: 100%;
+        /* height: 600px; */
+        float: none;
+        /* height: 60vh; */
+    }
+    .messages {
+        height: 300px;
+    }
+    .video1 {
+        margin-right: 0px;
+        margin-bottom: 4vh;
+    }
+    .rows {
+        padding: 0 0 5% 0;
+        margin-top: 0%;
+    }
 }
