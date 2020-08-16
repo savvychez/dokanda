@@ -37,13 +37,13 @@ const Chat = ({ location }) => {
   const userVideo = useRef();
   const partnerVideo = useRef();
   const socket = useRef();
-
+  var username = "";
     
   useEffect(() => {
     
     const { name, room } = queryString.parse(location.search);
     console.log(name, room);
-
+    setName(name);
     //socket connection
     socket.current = io.connect("/");
 
@@ -111,7 +111,8 @@ const Chat = ({ location }) => {
     event.preventDefault();
 
     if(message) {
-        socket.current.emit('sendMessage', name , message, () => setMessage(''));
+        console.log(username);
+        socket.current.emit('sendMessage',name, message, () => setMessage(''));
     }
   }
 
@@ -197,7 +198,7 @@ const Chat = ({ location }) => {
     console.log(prof.profession )
     incomingCall = (
       <div className="callwindow">
-        <h1 className="acceptCall">{prof.profession == "d" ? "Doctor" : "Patient"} is calling you</h1>
+        <h1 className="acceptCall">{prof.profession === "d" ? "Doctor" : "Patient"} is calling you</h1>
         <button className="acceptCall" onClick={acceptCall}>Accept</button>
       </div>
     )
