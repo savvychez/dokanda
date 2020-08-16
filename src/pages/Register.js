@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { useData } from '../components/DataProvider';
 import '../styles/form.css'
 
@@ -50,10 +50,10 @@ const Register = props => {
         <div className={`login-main ${err.classes}`}>
           <div className="login_container">
             <form className={"form_container"} onSubmit={formHandler}>
-              <h1 className="register">{lang == 'e' ? "Register" : "Daftar"}</h1>
-              <a href="login">{lang == 'e' ? "Have an account? Login" : "Punya akun? Login"}</a>
+              <h1 className="register">{lang === 'e' ? "Register" : "Daftar"}</h1>
+              <Link to="/login">{lang === 'e' ? "Have an account? Login" : "Punya akun? Login"}</Link>
 
-              <label htmlFor="firstname">{lang == 'e' ? "First Name" : "Nama depan"}</label>
+              <label htmlFor="firstname">{lang === 'e' ? "First Name" : "Nama depan"}</label>
               <input id="firstname" className={`text_field fname ${err.classes}`} onClick={() => setErr({})} type="text" value={fName} onChange={e => setFName(e.target.value)} />
 
               <label htmlFor="lastname">{lang == 'e' ? "Last Name" : "Nama belakang"}</label>

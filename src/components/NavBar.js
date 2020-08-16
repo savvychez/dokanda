@@ -34,7 +34,7 @@ const NavBar = props => {
         checked: <img src={USA} />,
         unchecked: <img src={Indonesia} />,
       }} />
-      {authenticated === true ? <a href="" onClick={logoutFunc}>{lang == 'e' ? "Logout" : "Keluar"}</a> : authenticated === false && <a href="/login" >{lang == 'e' ? "Login" : "Login"}</a>}
+      {authenticated === true && <a href="" onClick={logoutFunc}>{lang === 'e' ? "Logout" : "Keluar"}</a> }
     </div>
   )
 }

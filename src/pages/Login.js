@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { useData } from '../components/DataProvider';
 import '../styles/form.css'
 
@@ -28,8 +28,8 @@ const Login = props => {
         <div className={`login-main ${err.classes}`}>
           <div className="login_container">
             <form className={"form_container"} onSubmit={formHandler}>
-              <h1>{lang == 'e' ? "Login" : "Login"}</h1>
-              <a href="register">{lang == 'e' ? "Or create an account" : "Buat sebuah akun"}</a>
+              <h1>{lang === 'e' ? "Login" : "Login"}</h1>
+              <Link to="/register">{lang == 'e' ? "Or create an account" : "Buat sebuah akun"}</Link>
               <label htmlFor="email">Email</label>
               <input id="email" className={`text_field email ${err.classes}`} onClick={() => setErr({})} type="text" value={email} onChange={e => setEmail(e.target.value)} />
 
