@@ -5,8 +5,6 @@ import App from './App';
 require('dotenv').config()
 
 
-axios.defaults.baseURL = process.env.HOST || 'http://localhost:5000';
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
